@@ -1,0 +1,6 @@
+[
+  { "id": "CP-28", "regla": "C1", "condicion": "First Name vacio (Last Name y Postal Code cualquiera)", "first": "", "last": "Perez", "postal": "110111", "esperado": "error", "mensaje": "Error: First Name is required" },
+  { "id": "CP-29", "regla": "C2", "condicion": "First Name lleno, Last Name vacio (Postal Code cualquiera)", "first": "Ana", "last": "", "postal": "110111", "esperado": "error", "mensaje": "Error: Last Name is required" },
+  { "id": "CP-30", "regla": "C3", "condicion": "First Name y Last Name llenos, Postal Code vacio", "first": "Ana", "last": "Perez", "postal": "", "esperado": "error", "mensaje": "Error: Postal Code is required" },
+  { "id": "CP-31", "regla": "C4", "condicion": "Los tres campos llenos", "first": "Ana", "last": "Perez", "postal": "110111", "esperado": "continua", "mensaje": "" }
+]

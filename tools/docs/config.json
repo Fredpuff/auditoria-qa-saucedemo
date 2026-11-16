@@ -1,0 +1,13 @@
+{
+  "consultora": "[NOMBRE DE LA CONSULTORA]",
+  "integrante_1": "Frederick Alexandro Abril Mogollón",
+  "integrante_2": "Santiago Abril",
+  "docente": "[NOMBRE DOCENTE]",
+  "universidad": "Corporación Universitaria Minuto de Dios - UNIMINUTO",
+  "programa": "Tecnología en Desarrollo de Software",
+  "asignatura": "Electiva Testing y QA",
+  "ciudad": "Bogotá D.C.",
+  "fecha_ejecucion": "2026-11-16",
+  "fecha_texto": "16 de noviembre de 2026",
+  "repositorio": "https://github.com/Fredpuff/auditoria-qa-saucedemo"
+}

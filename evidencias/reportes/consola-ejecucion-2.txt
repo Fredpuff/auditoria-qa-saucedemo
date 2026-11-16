@@ -1,0 +1,1926 @@
+
+Running 110 tests using 4 workers
+
+  ✓    2 [chromium] › tests\carrito.spec.ts:24:5 › Carrito › CP-14 | valor limite: carrito con 0 productos y contador del badge @valor-limite (1.7s)
+  ✓    3 [chromium] › tests\carrito.spec.ts:24:5 › Carrito › CP-15 | valor limite: carrito con 1 productos y contador del badge @valor-limite (3.7s)
+  ✓    4 [chromium] › tests\carrito.spec.ts:24:5 › Carrito › CP-16 | valor limite: carrito con 5 productos y contador del badge @valor-limite (4.0s)
+  ✓    5 [chromium] › tests\carrito.spec.ts:24:5 › Carrito › CP-17 | valor limite: carrito con 6 productos y contador del badge @valor-limite (3.3s)
+  ✓    8 [chromium] › tests\checkout.spec.ts:26:3 › Checkout › CP-05 | compra completa con standard_user (smoke) @smoke @positiva (1.2s)
+  ✓    9 [chromium] › tests\checkout.spec.ts:38:3 › Checkout › CP-09 | continuar el checkout sin datos muestra error @negativa (1.1s)
+  ✘   10 [chromium] › tests\checkout.spec.ts:47:3 › Checkout › CP-10 | BUG-14 | no se debe poder iniciar el checkout con el carrito vacio @negativa @defecto (6.0s)
+  ✓    1 [chromium] › tests\carrito.spec.ts:13:3 › Carrito › CP-02 | agregar un producto al carrito @positiva @smoke (23.0s)
+  ✓   12 [chromium] › tests\checkout.spec.ts:69:3 › Checkout › CP-18 | valor limite: calculo de impuesto y total con 1 producto @valor-limite (1.1s)
+  ✓   13 [chromium] › tests\checkout.spec.ts:83:3 › Checkout › CP-19 | valor limite: calculo de impuesto y total con los 6 productos @valor-limite (1.4s)
+  ✓   14 [chromium] › tests\checkout.spec.ts:102:5 › Checkout › CP-20 | valor limite: First Name con 1 y 50 caracteres @valor-limite (1.2s)
+  ✓   15 [chromium] › tests\checkout.spec.ts:102:5 › Checkout › CP-21 | valor limite: First Name con 255 caracteres @valor-limite (1.1s)
+  ✓   16 [chromium] › tests\checkout.spec.ts:118:5 › Checkout › CP-28 | tabla de decision checkout C1: First Name vacio (Last Name y Postal Code cualquiera) @tabla-decision (1.1s)
+  ✘    6 [chromium] › tests\carrito.spec.ts:37:3 › Carrito › CP-37 | BUG-15 | Reset App State debe vaciar el carrito y restaurar los botones @transicion @defecto (24.2s)
+  ✘    7 [chromium] › tests\carrito.spec.ts:48:3 › Carrito › CP-52 | BUG-16 | el carrito de un usuario no debe aparecer al iniciar sesion con otro @defecto (23.9s)
+  ✓   17 [chromium] › tests\checkout.spec.ts:118:5 › Checkout › CP-29 | tabla de decision checkout C2: First Name lleno, Last Name vacio (Postal Code cualquiera) @tabla-decision (1.2s)
+  ✓   18 [chromium] › tests\checkout.spec.ts:132:3 › Checkout › CP-32 | transicion valida Inventario > Carrito > Informacion > Resumen > Completado > Inventario @transicion (1.5s)
+  ✓   19 [chromium] › tests\checkout.spec.ts:118:5 › Checkout › CP-30 | tabla de decision checkout C3: First Name y Last Name llenos, Postal Code vacio @tabla-decision (1.4s)
+  ✓   20 [chromium] › tests\checkout.spec.ts:118:5 › Checkout › CP-31 | tabla de decision checkout C4: Los tres campos llenos @tabla-decision (1.5s)
+  ✓   21 [chromium] › tests\checkout.spec.ts:147:3 › Checkout › CP-33 | transicion Cancel en Informacion vuelve al carrito y en Resumen al inventario @transicion (1.7s)
+  ✓   23 [chromium] › tests\checkout.spec.ts:177:1 › CP-34 | transicion invalida: /checkout-step-two.html sin sesion redirige al login @transicion @negativa (920ms)
+  ✘   24 [chromium] › tests\defectos.spec.ts:42:3 › problem_user › CP-42 | BUG-02 | ordenar Z-A con problem_user @defecto (1.2s)
+  ✘   11 [chromium] › tests\checkout.spec.ts:58:3 › Checkout › CP-11 | BUG-17 | el codigo postal no debe aceptar letras ni simbolos @negativa @defecto (7.8s)
+  ✘   25 [chromium] › tests\defectos.spec.ts:49:3 › problem_user › CP-43 | BUG-03 | Add to cart y Remove responden en todos los productos con problem_user @defecto (1.5s)
+  ✘   22 [chromium] › tests\checkout.spec.ts:167:3 › Checkout › CP-35 | BUG-19 | no se debe mostrar la confirmacion de compra entrando directo a /checkout-complete.html @transicion @defecto (6.3s)
+  ✘   26 [chromium] › tests\defectos.spec.ts:55:3 › problem_user › CP-44 | BUG-04 | escribir el apellido no debe cambiar el nombre con problem_user @defecto (3.5s)
+  ✘   27 [chromium] › tests\defectos.spec.ts:63:3 › problem_user › CP-45 | BUG-05 | el detalle corresponde al producto seleccionado con problem_user @defecto (4.5s)
+  ✘   29 [chromium] › tests\defectos.spec.ts:94:3 › error_user › CP-47 | BUG-08 | Add to cart y Remove responden en todos los productos con error_user @defecto (2.6s)
+  ✘   28 [chromium] › tests\defectos.spec.ts:77:3 › problem_user › CP-46 | BUG-06 | el enlace About lleva a una pagina valida con problem_user @defecto (6.6s)
+  ✘   30 [chromium] › tests\defectos.spec.ts:101:3 › error_user › CP-48 | BUG-09 | el campo Last Name acepta texto con error_user @defecto (3.0s)
+  ✘   31 [chromium] › tests\defectos.spec.ts:109:3 › error_user › CP-49 | BUG-10 | Finish completa la compra con error_user @defecto (7.6s)
+  ✘   34 [chromium] › tests\defectos.spec.ts:172:1 › CP-53 | BUG-18 | las paginas internas responden HTTP 200 al abrirlas directamente @defecto (3.1s)
+  ✘   33 [chromium] › tests\defectos.spec.ts:149:1 › CP-51 | BUG-13 | los elementos de visual_user estan alineados igual que en standard_user @defecto (3.4s)
+  ✓   35 [chromium] › tests\inventario.spec.ts:15:3 › Catalogo, ordenamiento y detalle › CP-03 | ordenar por nombre A-Z y Z-A @positiva (3.0s)
+  ✓   37 [chromium] › tests\inventario.spec.ts:24:3 › Catalogo, ordenamiento y detalle › CP-04 | ordenar por precio menor a mayor y mayor a menor @positiva (2.5s)
+  ✓   36 [chromium] › tests\inventario.spec.ts:33:3 › Catalogo, ordenamiento y detalle › CP-07 | el detalle muestra el producto seleccionado @positiva (3.8s)
+  ✓   38 [chromium] › tests\inventario.spec.ts:46:3 › Catalogo, ordenamiento y detalle › CP-56 | la opcion All Items del menu vuelve al catalogo @positiva (2.1s)
+  ✓   41 [chromium] › tests\login.spec.ts:19:3 › Login y sesion › CP-06 | logout desde el menu cierra la sesion @positiva (1.9s)
+  ✓   42 [chromium] › tests\login.spec.ts:31:3 › Login y sesion › CP-08 | acceso a /inventory.html sin sesion redirige al login @negativa (1.1s)
+  ✓   40 [chromium] › tests\login.spec.ts:8:3 › Login y sesion › CP-01 | login valido con standard_user (smoke) @smoke @positiva (4.5s)
+  ✓   39 [chromium] › tests\inventario.spec.ts:58:3 › Catalogo, ordenamiento y detalle › CP-57 | Dynamic Catalog muestra productos en Lazy Load, Spinner y Slider @positiva (5.3s)
+  ✓   43 [chromium] › tests\login.spec.ts:39:3 › Login y sesion › CP-12 | usuario con mayusculas no es aceptado @negativa (776ms)
+  ✓   44 [chromium] › tests\login.spec.ts:47:3 › Login y sesion › CP-13 | contrasena en mayusculas no es aceptada @negativa (837ms)
+  ✓   45 [chromium] › tests\login.spec.ts:57:5 › Login y sesion › CP-22 | tabla de decision login R1: Usuario vacio, contrasena cualquiera @tabla-decision (809ms)
+  ✓   46 [chromium] › tests\login.spec.ts:57:5 › Login y sesion › CP-23 | tabla de decision login R2: Usuario no vacio (valido, invalido o bloqueado), contrasena vacia @tabla-decision (910ms)
+  ✓   48 [chromium] › tests\login.spec.ts:57:5 › Login y sesion › CP-25 | tabla de decision login R4: Usuario bloqueado, contrasena correcta @tabla-decision (992ms)
+  ✓   47 [chromium] › tests\login.spec.ts:57:5 › Login y sesion › CP-24 | tabla de decision login R3: Usuario valido, contrasena correcta @tabla-decision (1.1s)
+  ✓   49 [chromium] › tests\login.spec.ts:57:5 › Login y sesion › CP-26 | tabla de decision login R5: Usuario valido o bloqueado, contrasena incorrecta @tabla-decision (1.1s)
+  ✓   50 [chromium] › tests\login.spec.ts:57:5 › Login y sesion › CP-27 | tabla de decision login R6: Usuario invalido, contrasena correcta o incorrecta @tabla-decision (971ms)
+  ✓   51 [chromium] › tests\login.spec.ts:71:3 › Login y sesion › CP-36 | Back despues de logout no debe mostrar el catalogo @transicion (2.2s)
+  ✓   52 [chromium] › tests\regresion.spec.ts:21:3 › CP-38 | regresion del flujo de compra con standard_user @regresion @smoke (1.7s)
+  ✘   55 [chromium] › tests\regresion.spec.ts:21:3 › CP-41 | BUG-12 | regresion del flujo de compra con visual_user @regresion @defecto (1.3s)
+  ✘   53 [chromium] › tests\regresion.spec.ts:21:3 › CP-39 | BUG-01 | regresion del flujo de compra con problem_user @regresion @defecto (1.3s)
+  ✘   54 [chromium] › tests\regresion.spec.ts:21:3 › CP-40 | BUG-07 | regresion del flujo de compra con error_user @regresion @defecto (1.3s)
+  ✓   56 [firefox] › tests\carrito.spec.ts:13:3 › Carrito › CP-02 | agregar un producto al carrito @positiva @smoke (9.3s)
+  ✓   57 [firefox] › tests\carrito.spec.ts:24:5 › Carrito › CP-14 | valor limite: carrito con 0 productos y contador del badge @valor-limite (8.8s)
+  ✓   58 [firefox] › tests\carrito.spec.ts:24:5 › Carrito › CP-16 | valor limite: carrito con 5 productos y contador del badge @valor-limite (1.9s)
+  ✓   60 [firefox] › tests\carrito.spec.ts:24:5 › Carrito › CP-17 | valor limite: carrito con 6 productos y contador del badge @valor-limite (2.0s)
+  ✓   59 [firefox] › tests\carrito.spec.ts:24:5 › Carrito › CP-15 | valor limite: carrito con 1 productos y contador del badge @valor-limite (8.5s)
+  ✘   61 [firefox] › tests\carrito.spec.ts:37:3 › Carrito › CP-37 | BUG-15 | Reset App State debe vaciar el carrito y restaurar los botones @transicion @defecto (7.9s)
+  ✘   62 [firefox] › tests\carrito.spec.ts:48:3 › Carrito › CP-52 | BUG-16 | el carrito de un usuario no debe aparecer al iniciar sesion con otro @defecto (8.1s)
+  ✓   63 [firefox] › tests\checkout.spec.ts:26:3 › Checkout › CP-05 | compra completa con standard_user (smoke) @smoke @positiva (1.9s)
+  ✘   32 [chromium] › tests\defectos.spec.ts:122:1 › CP-50 | BUG-11 | el login de performance_glitch_user tarda menos de 2000 ms @defecto @rendimiento (29.7s)
+  ✓   64 [firefox] › tests\checkout.spec.ts:38:3 › Checkout › CP-09 | continuar el checkout sin datos muestra error @negativa (6.9s)
+  ✘   65 [firefox] › tests\checkout.spec.ts:58:3 › Checkout › CP-11 | BUG-17 | el codigo postal no debe aceptar letras ni simbolos @negativa @defecto (7.4s)
+  ✓   68 [firefox] › tests\checkout.spec.ts:83:3 › Checkout › CP-19 | valor limite: calculo de impuesto y total con los 6 productos @valor-limite (2.4s)
+  ✓   70 [firefox] › tests\checkout.spec.ts:102:5 › Checkout › CP-21 | valor limite: First Name con 255 caracteres @valor-limite (1.9s)
+  ✘   66 [firefox] › tests\checkout.spec.ts:47:3 › Checkout › CP-10 | BUG-14 | no se debe poder iniciar el checkout con el carrito vacio @negativa @defecto (11.1s)
+  ✓   71 [firefox] › tests\checkout.spec.ts:118:5 › Checkout › CP-28 | tabla de decision checkout C1: First Name vacio (Last Name y Postal Code cualquiera) @tabla-decision (2.5s)
+  ✓   73 [firefox] › tests\checkout.spec.ts:118:5 › Checkout › CP-30 | tabla de decision checkout C3: First Name y Last Name llenos, Postal Code vacio @tabla-decision (1.7s)
+  ✓   74 [firefox] › tests\checkout.spec.ts:118:5 › Checkout › CP-31 | tabla de decision checkout C4: Los tres campos llenos @tabla-decision (1.9s)
+  ✓   75 [firefox] › tests\checkout.spec.ts:132:3 › Checkout › CP-32 | transicion valida Inventario > Carrito > Informacion > Resumen > Completado > Inventario @transicion (1.9s)
+  ✓   76 [firefox] › tests\checkout.spec.ts:147:3 › Checkout › CP-33 | transicion Cancel en Informacion vuelve al carrito y en Resumen al inventario @transicion (2.1s)
+  ✓   72 [firefox] › tests\checkout.spec.ts:118:5 › Checkout › CP-29 | tabla de decision checkout C2: First Name lleno, Last Name vacio (Postal Code cualquiera) @tabla-decision (9.9s)
+  ✓   67 [firefox] › tests\checkout.spec.ts:69:3 › Checkout › CP-18 | valor limite: calculo de impuesto y total con 1 producto @valor-limite (19.9s)
+  ✓   69 [firefox] › tests\checkout.spec.ts:102:5 › Checkout › CP-20 | valor limite: First Name con 1 y 50 caracteres @valor-limite (15.0s)
+  ✓   78 [firefox] › tests\checkout.spec.ts:177:1 › CP-34 | transicion invalida: /checkout-step-two.html sin sesion redirige al login @transicion @negativa (1.3s)
+  ✘   79 [firefox] › tests\defectos.spec.ts:42:3 › problem_user › CP-42 | BUG-02 | ordenar Z-A con problem_user @defecto (1.8s)
+  ✘   81 [firefox] › tests\defectos.spec.ts:55:3 › problem_user › CP-44 | BUG-04 | escribir el apellido no debe cambiar el nombre con problem_user @defecto (2.2s)
+  ✘   80 [firefox] › tests\defectos.spec.ts:49:3 › problem_user › CP-43 | BUG-03 | Add to cart y Remove responden en todos los productos con problem_user @defecto (2.8s)
+  ✘   77 [firefox] › tests\checkout.spec.ts:167:3 › Checkout › CP-35 | BUG-19 | no se debe mostrar la confirmacion de compra entrando directo a /checkout-complete.html @transicion @defecto (7.1s)
+  ✘   85 [firefox] › tests\defectos.spec.ts:101:3 › error_user › CP-48 | BUG-09 | el campo Last Name acepta texto con error_user @defecto (12.3s)
+  ✘   83 [firefox] › tests\defectos.spec.ts:94:3 › error_user › CP-47 | BUG-08 | Add to cart y Remove responden en todos los productos con error_user @defecto (14.3s)
+  ✘   82 [firefox] › tests\defectos.spec.ts:63:3 › problem_user › CP-45 | BUG-05 | el detalle corresponde al producto seleccionado con problem_user @defecto (18.5s)
+  ✘   84 [firefox] › tests\defectos.spec.ts:77:3 › problem_user › CP-46 | BUG-06 | el enlace About lleva a una pagina valida con problem_user @defecto (24.9s)
+  ✘   88 [firefox] › tests\defectos.spec.ts:149:1 › CP-51 | BUG-13 | los elementos de visual_user estan alineados igual que en standard_user @defecto (15.3s)
+  ✘   89 [firefox] › tests\defectos.spec.ts:172:1 › CP-53 | BUG-18 | las paginas internas responden HTTP 200 al abrirlas directamente @defecto (8.1s)
+  ✘   86 [firefox] › tests\defectos.spec.ts:109:3 › error_user › CP-49 | BUG-10 | Finish completa la compra con error_user @defecto (22.6s)
+  ✓   91 [firefox] › tests\inventario.spec.ts:24:3 › Catalogo, ordenamiento y detalle › CP-04 | ordenar por precio menor a mayor y mayor a menor @positiva (12.6s)
+  ✓   90 [firefox] › tests\inventario.spec.ts:15:3 › Catalogo, ordenamiento y detalle › CP-03 | ordenar por nombre A-Z y Z-A @positiva (12.0s)
+  ✓   92 [firefox] › tests\inventario.spec.ts:33:3 › Catalogo, ordenamiento y detalle › CP-07 | el detalle muestra el producto seleccionado @positiva (8.8s)
+  ✓   95 [firefox] › tests\login.spec.ts:8:3 › Login y sesion › CP-01 | login valido con standard_user (smoke) @smoke @positiva (1.7s)
+  ✓   93 [firefox] › tests\inventario.spec.ts:46:3 › Catalogo, ordenamiento y detalle › CP-56 | la opcion All Items del menu vuelve al catalogo @positiva (3.0s)
+  ✓   97 [firefox] › tests\login.spec.ts:31:3 › Login y sesion › CP-08 | acceso a /inventory.html sin sesion redirige al login @negativa (1.3s)
+  ✓   94 [firefox] › tests\inventario.spec.ts:58:3 › Catalogo, ordenamiento y detalle › CP-57 | Dynamic Catalog muestra productos en Lazy Load, Spinner y Slider @positiva (4.7s)
+  ✓   96 [firefox] › tests\login.spec.ts:19:3 › Login y sesion › CP-06 | logout desde el menu cierra la sesion @positiva (2.7s)
+  ✓   98 [firefox] › tests\login.spec.ts:39:3 › Login y sesion › CP-12 | usuario con mayusculas no es aceptado @negativa (1.5s)
+  ✓   99 [firefox] › tests\login.spec.ts:47:3 › Login y sesion › CP-13 | contrasena en mayusculas no es aceptada @negativa (1.7s)
+  ✓  100 [firefox] › tests\login.spec.ts:57:5 › Login y sesion › CP-22 | tabla de decision login R1: Usuario vacio, contrasena cualquiera @tabla-decision (1.6s)
+  ✓  101 [firefox] › tests\login.spec.ts:57:5 › Login y sesion › CP-23 | tabla de decision login R2: Usuario no vacio (valido, invalido o bloqueado), contrasena vacia @tabla-decision (1.7s)
+  ✓  102 [firefox] › tests\login.spec.ts:57:5 › Login y sesion › CP-24 | tabla de decision login R3: Usuario valido, contrasena correcta @tabla-decision (1.8s)
+  ✓  103 [firefox] › tests\login.spec.ts:57:5 › Login y sesion › CP-25 | tabla de decision login R4: Usuario bloqueado, contrasena correcta @tabla-decision (1.7s)
+  ✓  104 [firefox] › tests\login.spec.ts:57:5 › Login y sesion › CP-26 | tabla de decision login R5: Usuario valido o bloqueado, contrasena incorrecta @tabla-decision (1.7s)
+  ✓  105 [firefox] › tests\login.spec.ts:57:5 › Login y sesion › CP-27 | tabla de decision login R6: Usuario invalido, contrasena correcta o incorrecta @tabla-decision (1.7s)
+  ✓  107 [firefox] › tests\regresion.spec.ts:21:3 › CP-38 | regresion del flujo de compra con standard_user @regresion @smoke (2.9s)
+  ✓  106 [firefox] › tests\login.spec.ts:71:3 › Login y sesion › CP-36 | Back despues de logout no debe mostrar el catalogo @transicion (3.5s)
+  ✘  108 [firefox] › tests\regresion.spec.ts:21:3 › CP-39 | BUG-01 | regresion del flujo de compra con problem_user @regresion @defecto (2.0s)
+  ✘   87 [firefox] › tests\defectos.spec.ts:122:1 › CP-50 | BUG-11 | el login de performance_glitch_user tarda menos de 2000 ms @defecto @rendimiento (45.4s)
+  ✘  110 [firefox] › tests\regresion.spec.ts:21:3 › CP-41 | BUG-12 | regresion del flujo de compra con visual_user @regresion @defecto (2.3s)
+  ✘  109 [firefox] › tests\regresion.spec.ts:21:3 › CP-40 | BUG-07 | regresion del flujo de compra con error_user @regresion @defecto (2.4s)
+
+
+  1) [chromium] › tests\carrito.spec.ts:37:3 › Carrito › CP-37 | BUG-15 | Reset App State debe vaciar el carrito y restaurar los botones @transicion @defecto 
+
+    Error: expect(locator).toHaveText(expected) failed
+
+    Locator:  getByTestId('inventory-item').filter({ hasText: 'Sauce Labs Backpack' }).getByRole('button', { name: /^(Add to cart|Remove)$/ })
+    Expected: "Add to cart"
+    Received: "Remove"
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveText" getByTestId('inventory-item').filter({ hasText: 'Sauce Labs Backpack' }).getByRole('button', { name: /^(Add to cart|Remove)$/ }) with timeout 5000ms
+      - waiting for getByTestId('inventory-item').filter({ hasText: 'Sauce Labs Backpack' }).getByRole('button', { name: /^(Add to cart|Remove)$/ })
+        14 × locator resolved to <button id="remove-sauce-labs-backpack" name="remove-sauce-labs-backpack" data-test="remove-sauce-labs-backpack" class="btn btn_secondary btn_small btn_inventory ">Remove</button>
+           - unexpected value "Remove"
+
+
+      43 |     await evidencia(page, 'BUG-15', inv.boton('Sauce Labs Backpack'));
+      44 |     // Esperado: con el carrito vacio el boton vuelve a "Add to cart"
+    > 45 |     await expect(inv.boton('Sauce Labs Backpack')).toHaveText('Add to cart');
+         |                                                    ^
+      46 |   });
+      47 |
+      48 |   test('CP-52 | BUG-16 | el carrito de un usuario no debe aparecer al iniciar sesion con otro', { tag: '@defecto' }, async ({ page }) => {
+        at .\tests\carrito.spec.ts:45:52
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    evidencias\test-results\carrito-Carrito-CP-37-BUG--b4c20-ito-y-restaurar-los-botones-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: errores-consola-y-red.txt (text/plain) ──────────────────────────────────────────
+    [consola] Permissions policy violation: unload is not allowed in this document.
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    evidencias\test-results\carrito-Carrito-CP-37-BUG--b4c20-ito-y-restaurar-los-botones-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: evidencias\test-results\carrito-Carrito-CP-37-BUG--b4c20-ito-y-restaurar-los-botones-chromium\error-context.md
+
+    attachment #5: trace (application/zip) ─────────────────────────────────────────────────────────
+    evidencias\test-results\carrito-Carrito-CP-37-BUG--b4c20-ito-y-restaurar-los-botones-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace evidencias\test-results\carrito-Carrito-CP-37-BUG--b4c20-ito-y-restaurar-los-botones-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [chromium] › tests\carrito.spec.ts:48:3 › Carrito › CP-52 | BUG-16 | el carrito de un usuario no debe aparecer al iniciar sesion con otro @defecto 
+
+    Error: expect(locator).toHaveCount(expected) failed
+
+    Locator:  getByTestId('shopping-cart-badge')
+    Expected: 0
+    Received: 1
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveCount" getByTestId('shopping-cart-badge') with timeout 5000ms
+      - waiting for getByTestId('shopping-cart-badge')
+        14 × locator resolved to 1 element
+           - unexpected value "1"
+
+
+      56 |     await evidencia(page, 'BUG-16', inv.badge);
+      57 |     // Esperado: visual_user empieza con el carrito vacio
+    > 58 |     await expect(inv.badge).toHaveCount(0);
+         |                             ^
+      59 |   });
+      60 | });
+      61 |
+        at .\tests\carrito.spec.ts:58:29
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    evidencias\test-results\carrito-Carrito-CP-52-BUG--c1fcb--al-iniciar-sesion-con-otro-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: errores-consola-y-red.txt (text/plain) ──────────────────────────────────────────
+    [consola] Permissions policy violation: unload is not allowed in this document.
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    evidencias\test-results\carrito-Carrito-CP-52-BUG--c1fcb--al-iniciar-sesion-con-otro-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: evidencias\test-results\carrito-Carrito-CP-52-BUG--c1fcb--al-iniciar-sesion-con-otro-chromium\error-context.md
+
+    attachment #5: trace (application/zip) ─────────────────────────────────────────────────────────
+    evidencias\test-results\carrito-Carrito-CP-52-BUG--c1fcb--al-iniciar-sesion-con-otro-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace evidencias\test-results\carrito-Carrito-CP-52-BUG--c1fcb--al-iniciar-sesion-con-otro-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) [chromium] › tests\checkout.spec.ts:47:3 › Checkout › CP-10 | BUG-14 | no se debe poder iniciar el checkout con el carrito vacio @negativa @defecto 
+
+    Error: expect(page).not.toHaveURL(expected) failed
+
+    Expected pattern: not /checkout-step-one\.html$/
+    Received string: "https://www.saucedemo.com/checkout-step-one.html"
+    Timeout: 5000ms
+
+    Call log:
+      - Expect "not toHaveURL" with timeout 5000ms
+        14 × locator resolved to <html lang="en">…</html>
+           - unexpected value "https://www.saucedemo.com/checkout-step-one.html"
+
+
+      53 |     await evidencia(page, 'BUG-14');
+      54 |     // Esperado: la aplicacion bloquea el checkout (permanece en el carrito o muestra un aviso)
+    > 55 |     await expect(page).not.toHaveURL(/checkout-step-one\.html$/);
+         |                            ^
+      56 |   });
+      57 |
+      58 |   test('CP-11 | BUG-17 | el codigo postal no debe aceptar letras ni simbolos', { tag: ['@negativa', '@defecto'] }, async ({ page }) => {
+        at .\tests\checkout.spec.ts:55:28
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    evidencias\test-results\checkout-Checkout-CP-10-BU-0e919-eckout-con-el-carrito-vacio-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: errores-consola-y-red.txt (text/plain) ──────────────────────────────────────────
+    [consola] Permissions policy violation: unload is not allowed in this document.
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    evidencias\test-results\checkout-Checkout-CP-10-BU-0e919-eckout-con-el-carrito-vacio-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: evidencias\test-results\checkout-Checkout-CP-10-BU-0e919-eckout-con-el-carrito-vacio-chromium\error-context.md
+
+    attachment #5: trace (application/zip) ─────────────────────────────────────────────────────────
+    evidencias\test-results\checkout-Checkout-CP-10-BU-0e919-eckout-con-el-carrito-vacio-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace evidencias\test-results\checkout-Checkout-CP-10-BU-0e919-eckout-con-el-carrito-vacio-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) [chromium] › tests\checkout.spec.ts:58:3 › Checkout › CP-11 | BUG-17 | el codigo postal no debe aceptar letras ni simbolos @negativa @defecto 
+
+    Error: expect(page).toHaveURL(expected) failed
+
+    Expected pattern: /checkout-step-one\.html$/
+    Received string:  "https://www.saucedemo.com/checkout-step-two.html"
+    Timeout: 5000ms
+
+    Call log:
+      - Expect "toHaveURL" with timeout 5000ms
+        14 × locator resolved to <html lang="en">…</html>
+           - unexpected value "https://www.saucedemo.com/checkout-step-two.html"
+
+
+      63 |     await evidencia(page, 'BUG-17', co.postal);
+      64 |     // Esperado: mensaje de validacion y no avanza al resumen
+    > 65 |     await expect(page).toHaveURL(/checkout-step-one\.html$/);
+         |                        ^
+      66 |     await expect(co.error).toBeVisible();
+      67 |   });
+      68 |
+        at .\tests\checkout.spec.ts:65:24
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    evidencias\test-results\checkout-Checkout-CP-11-BU-305c3--aceptar-letras-ni-simbolos-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: errores-consola-y-red.txt (text/plain) ──────────────────────────────────────────
+    [consola] Permissions policy violation: unload is not allowed in this document.
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    evidencias\test-results\checkout-Checkout-CP-11-BU-305c3--aceptar-letras-ni-simbolos-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: evidencias\test-results\checkout-Checkout-CP-11-BU-305c3--aceptar-letras-ni-simbolos-chromium\error-context.md
+
+    attachment #5: trace (application/zip) ─────────────────────────────────────────────────────────
+    evidencias\test-results\checkout-Checkout-CP-11-BU-305c3--aceptar-letras-ni-simbolos-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace evidencias\test-results\checkout-Checkout-CP-11-BU-305c3--aceptar-letras-ni-simbolos-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  5) [chromium] › tests\checkout.spec.ts:167:3 › Checkout › CP-35 | BUG-19 | no se debe mostrar la confirmacion de compra entrando directo a /checkout-complete.html @transicion @defecto 
+
+    Error: expect(locator).toHaveCount(expected) failed
+
+    Locator:  getByTestId('complete-header')
+    Expected: 0
+    Received: 1
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveCount" getByTestId('complete-header') with timeout 5000ms
+      - waiting for getByTestId('complete-header')
+        14 × locator resolved to 1 element
+           - unexpected value "1"
+
+
+      171 |     await evidencia(page, 'BUG-19', co.confirmacion);
+      172 |     // Esperado: transicion invalida, la app redirige y no confirma una orden inexistente
+    > 173 |     await expect(co.confirmacion).toHaveCount(0);
+          |                                   ^
+      174 |   });
+      175 | });
+      176 |
+        at .\tests\checkout.spec.ts:173:35
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    evidencias\test-results\checkout-Checkout-CP-35-BU-878c6-to-a-checkout-complete-html-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: errores-consola-y-red.txt (text/plain) ──────────────────────────────────────────
+    [consola] Permissions policy violation: unload is not allowed in this document.
+    [red 404] https://www.saucedemo.com/checkout-complete.html
+    [consola] Failed to load resource: the server responded with a status of 404 ()
+    [consola] Permissions policy violation: unload is not allowed in this document.
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    evidencias\test-results\checkout-Checkout-CP-35-BU-878c6-to-a-checkout-complete-html-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: evidencias\test-results\checkout-Checkout-CP-35-BU-878c6-to-a-checkout-complete-html-chromium\error-context.md
+
+    attachment #5: trace (application/zip) ─────────────────────────────────────────────────────────
+    evidencias\test-results\checkout-Checkout-CP-35-BU-878c6-to-a-checkout-complete-html-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace evidencias\test-results\checkout-Checkout-CP-35-BU-878c6-to-a-checkout-complete-html-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  6) [chromium] › tests\defectos.spec.ts:42:3 › problem_user › CP-42 | BUG-02 | ordenar Z-A con problem_user @defecto 
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 5
+    + Received  + 5
+
+      Array [
+    -   "Test.allTheThings() T-Shirt (Red)",
+    -   "Sauce Labs Onesie",
+    -   "Sauce Labs Fleece Jacket",
+    -   "Sauce Labs Bolt T-Shirt",
+    -   "Sauce Labs Bike Light",
+        "Sauce Labs Backpack",
+    +   "Sauce Labs Bike Light",
+    +   "Sauce Labs Bolt T-Shirt",
+    +   "Sauce Labs Fleece Jacket",
+    +   "Sauce Labs Onesie",
+    +   "Test.allTheThings() T-Shirt (Red)",
+      ]
+
+      44 |     await inv.ordenar('za');
+      45 |     await evidencia(page, 'BUG-02', inv.nombres);
+    > 46 |     expect(await inv.listaNombres()).toEqual([...porNombre].reverse());
+         |                                      ^
+      47 |   });
+      48 |
+      49 |   test('CP-43 | BUG-03 | Add to cart y Remove responden en todos los productos con problem_user', { tag: '@defecto' }, async ({ page }) => {
+        at .\tests\defectos.spec.ts:46:38
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    evidencias\test-results\defectos-problem-user-CP-4-7f46e-rdenar-Z-A-con-problem-user-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: errores-consola-y-red.txt (text/plain) ──────────────────────────────────────────
+    [consola] Permissions policy violation: unload is not allowed in this document.
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    evidencias\test-results\defectos-problem-user-CP-4-7f46e-rdenar-Z-A-con-problem-user-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: evidencias\test-results\defectos-problem-user-CP-4-7f46e-rdenar-Z-A-con-problem-user-chromium\error-context.md
+
+    attachment #5: trace (application/zip) ─────────────────────────────────────────────────────────
+    evidencias\test-results\defectos-problem-user-CP-4-7f46e-rdenar-Z-A-con-problem-user-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace evidencias\test-results\defectos-problem-user-CP-4-7f46e-rdenar-Z-A-con-problem-user-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  7) [chromium] › tests\defectos.spec.ts:49:3 › problem_user › CP-43 | BUG-03 | Add to cart y Remove responden en todos los productos con problem_user @defecto 
+
+    Error: botones que no respondieron
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 8
+
+    - Array []
+    + Array [
+    +   "Add to cart: Sauce Labs Bolt T-Shirt",
+    +   "Add to cart: Sauce Labs Fleece Jacket",
+    +   "Add to cart: Test.allTheThings() T-Shirt (Red)",
+    +   "Remove: Sauce Labs Backpack",
+    +   "Remove: Sauce Labs Bike Light",
+    +   "Remove: Sauce Labs Onesie",
+    + ]
+
+      50 |     const sinRespuesta = await probarBotones(page);
+      51 |     await evidencia(page, 'BUG-03', new InventoryPage(page).botones);
+    > 52 |     expect(sinRespuesta, 'botones que no respondieron').toEqual([]);
+         |                                                         ^
+      53 |   });
+      54 |
+      55 |   test('CP-44 | BUG-04 | escribir el apellido no debe cambiar el nombre con problem_user', { tag: '@defecto' }, async ({ page }) => {
+        at .\tests\defectos.spec.ts:52:57
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    evidencias\test-results\defectos-problem-user-CP-4-537c3--productos-con-problem-user-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: errores-consola-y-red.txt (text/plain) ──────────────────────────────────────────
+    [consola] Permissions policy violation: unload is not allowed in this document.
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    evidencias\test-results\defectos-problem-user-CP-4-537c3--productos-con-problem-user-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: evidencias\test-results\defectos-problem-user-CP-4-537c3--productos-con-problem-user-chromium\error-context.md
+
+    attachment #5: trace (application/zip) ─────────────────────────────────────────────────────────
+    evidencias\test-results\defectos-problem-user-CP-4-537c3--productos-con-problem-user-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace evidencias\test-results\defectos-problem-user-CP-4-537c3--productos-con-problem-user-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  8) [chromium] › tests\defectos.spec.ts:55:3 › problem_user › CP-44 | BUG-04 | escribir el apellido no debe cambiar el nombre con problem_user @defecto 
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 2
+    + Received  + 2
+
+      Object {
+    -   "apellido": "Perez",
+    -   "nombre": "Ana",
+    +   "apellido": "",
+    +   "nombre": "z",
+        "postal": "110111",
+      }
+
+      58 |     await co.llenar('Ana', 'Perez', '110111', true);
+      59 |     await evidencia(page, 'BUG-04', page.locator('[data-test="firstName"], [data-test="lastName"]'));
+    > 60 |     expect(await co.valores()).toEqual({ nombre: 'Ana', apellido: 'Perez', postal: '110111' });
+         |                                ^
+      61 |   });
+      62 |
+      63 |   test('CP-45 | BUG-05 | el detalle corresponde al producto seleccionado con problem_user', { tag: '@defecto' }, async ({ page }) => {
+        at .\tests\defectos.spec.ts:60:32
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    evidencias\test-results\defectos-problem-user-CP-4-aed7e--el-nombre-con-problem-user-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: errores-consola-y-red.txt (text/plain) ──────────────────────────────────────────
+    [consola] Permissions policy violation: unload is not allowed in this document.
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    evidencias\test-results\defectos-problem-user-CP-4-aed7e--el-nombre-con-problem-user-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: evidencias\test-results\defectos-problem-user-CP-4-aed7e--el-nombre-con-problem-user-chromium\error-context.md
+
+    attachment #5: trace (application/zip) ─────────────────────────────────────────────────────────
+    evidencias\test-results\defectos-problem-user-CP-4-aed7e--el-nombre-con-problem-user-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace evidencias\test-results\defectos-problem-user-CP-4-aed7e--el-nombre-con-problem-user-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  9) [chromium] › tests\defectos.spec.ts:63:3 › problem_user › CP-45 | BUG-05 | el detalle corresponde al producto seleccionado con problem_user @defecto 
+
+    Error: productos con detalle equivocado
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 8
+
+    - Array []
+    + Array [
+    +   "clic en \"Sauce Labs Backpack\" muestra \"Sauce Labs Fleece Jacket\"",
+    +   "clic en \"Sauce Labs Bike Light\" muestra \"Sauce Labs Bolt T-Shirt\"",
+    +   "clic en \"Sauce Labs Bolt T-Shirt\" muestra \"Sauce Labs Onesie\"",
+    +   "clic en \"Sauce Labs Fleece Jacket\" muestra \"ITEM NOT FOUND\"",
+    +   "clic en \"Sauce Labs Onesie\" muestra \"Test.allTheThings() T-Shirt (Red)\"",
+    +   "clic en \"Test.allTheThings() T-Shirt (Red)\" muestra \"Sauce Labs Backpack\"",
+    + ]
+
+      72 |     await inv.item(productos[0].nombre).getByTestId('inventory-item-name').click();
+      73 |     await evidencia(page, 'BUG-05', page.getByTestId('inventory-item-name'));
+    > 74 |     expect(errores, 'productos con detalle equivocado').toEqual([]);
+         |                                                         ^
+      75 |   });
+      76 |
+      77 |   test('CP-46 | BUG-06 | el enlace About lleva a una pagina valida con problem_user', { tag: '@defecto' }, async ({ page }) => {
+        at .\tests\defectos.spec.ts:74:57
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    evidencias\test-results\defectos-problem-user-CP-4-0d589-leccionado-con-problem-user-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: errores-consola-y-red.txt (text/plain) ──────────────────────────────────────────
+    [consola] Permissions policy violation: unload is not allowed in this document.
+    [red 404] https://www.saucedemo.com/inventory.html
+    [consola] Failed to load resource: the server responded with a status of 404 ()
+    [consola] Permissions policy violation: unload is not allowed in this document.
+    [red 404]...
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    evidencias\test-results\defectos-problem-user-CP-4-0d589-leccionado-con-problem-user-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: evidencias\test-results\defectos-problem-user-CP-4-0d589-leccionado-con-problem-user-chromium\error-context.md
+
+    attachment #5: trace (application/zip) ─────────────────────────────────────────────────────────
+    evidencias\test-results\defectos-problem-user-CP-4-0d589-leccionado-con-problem-user-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace evidencias\test-results\defectos-problem-user-CP-4-0d589-leccionado-con-problem-user-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  10) [chromium] › tests\defectos.spec.ts:77:3 › problem_user › CP-46 | BUG-06 | el enlace About lleva a una pagina valida con problem_user @defecto 
+
+    Error: estado HTTP de https://saucelabs.com/error/404
+
+    expect(received).toBeLessThan(expected)
+
+    Expected: < 400
+    Received:   404
+
+      83 |     await evidencia(page, 'BUG-06', about);
+      84 |     test.info().annotations.push({ type: 'enlace About', description: `${href} -> HTTP ${respuesta.status()}` });
+    > 85 |     expect(respuesta.status(), `estado HTTP de ${href}`).toBeLessThan(400);
+         |                                                          ^
+      86 |   });
+      87 | });
+      88 |
+        at .\tests\defectos.spec.ts:85:58
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    evidencias\test-results\defectos-problem-user-CP-4-25a80-ina-valida-con-problem-user-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: errores-consola-y-red.txt (text/plain) ──────────────────────────────────────────
+    [consola] Permissions policy violation: unload is not allowed in this document.
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    evidencias\test-results\defectos-problem-user-CP-4-25a80-ina-valida-con-problem-user-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: evidencias\test-results\defectos-problem-user-CP-4-25a80-ina-valida-con-problem-user-chromium\error-context.md
+
+    attachment #5: trace (application/zip) ─────────────────────────────────────────────────────────
+    evidencias\test-results\defectos-problem-user-CP-4-25a80-ina-valida-con-problem-user-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace evidencias\test-results\defectos-problem-user-CP-4-25a80-ina-valida-con-problem-user-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  11) [chromium] › tests\defectos.spec.ts:94:3 › error_user › CP-47 | BUG-08 | Add to cart y Remove responden en todos los productos con error_user @defecto 
+
+    Error: botones que no respondieron
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 8
+
+    - Array []
+    + Array [
+    +   "Add to cart: Sauce Labs Bolt T-Shirt",
+    +   "Add to cart: Sauce Labs Fleece Jacket",
+    +   "Add to cart: Test.allTheThings() T-Shirt (Red)",
+    +   "Remove: Sauce Labs Backpack",
+    +   "Remove: Sauce Labs Bike Light",
+    +   "Remove: Sauce Labs Onesie",
+    + ]
+
+       96 |     await evidencia(page, 'BUG-08', new InventoryPage(page).botones);
+       97 |     test.info().annotations.push({ type: 'excepciones', description: registro.filter((e) => e.startsWith('[excepcion]')).join(' | ') });
+    >  98 |     expect(sinRespuesta, 'botones que no respondieron').toEqual([]);
+          |                                                         ^
+       99 |   });
+      100 |
+      101 |   test('CP-48 | BUG-09 | el campo Last Name acepta texto con error_user', { tag: '@defecto' }, async ({ page }) => {
+        at .\tests\defectos.spec.ts:98:57
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    evidencias\test-results\defectos-error-user-CP-47--e7c32-os-productos-con-error-user-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: errores-consola-y-red.txt (text/plain) ──────────────────────────────────────────
+    [consola] Permissions policy violation: unload is not allowed in this document.
+    [excepcion] Failed to add item to the cart.
+    [excepcion] Failed to add item to the cart.
+    [excepcion] Failed to add item to the cart.
+    [excepcion] Failed to remove item from cart.
+    [excepcion] Failed to remove item from cart...
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    evidencias\test-results\defectos-error-user-CP-47--e7c32-os-productos-con-error-user-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: evidencias\test-results\defectos-error-user-CP-47--e7c32-os-productos-con-error-user-chromium\error-context.md
+
+    attachment #5: trace (application/zip) ─────────────────────────────────────────────────────────
+    evidencias\test-results\defectos-error-user-CP-47--e7c32-os-productos-con-error-user-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace evidencias\test-results\defectos-error-user-CP-47--e7c32-os-productos-con-error-user-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  12) [chromium] › tests\defectos.spec.ts:101:3 › error_user › CP-48 | BUG-09 | el campo Last Name acepta texto con error_user @defecto 
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: "Perez"
+    Received: ""
+
+      104 |     await co.llenar('Ana', 'Perez', '110111', true);
+      105 |     await evidencia(page, 'BUG-09', co.apellido);
+    > 106 |     expect((await co.valores()).apellido).toBe('Perez');
+          |                                           ^
+      107 |   });
+      108 |
+      109 |   test('CP-49 | BUG-10 | Finish completa la compra con error_user', { tag: '@defecto' }, async ({ page }) => {
+        at .\tests\defectos.spec.ts:106:43
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    evidencias\test-results\defectos-error-user-CP-48--a8bb0-acepta-texto-con-error-user-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: errores-consola-y-red.txt (text/plain) ──────────────────────────────────────────
+    [consola] Permissions policy violation: unload is not allowed in this document.
+    [excepcion] Cannot read properties of undefined (reading 'value')
+    [excepcion] Cannot read properties of undefined (reading 'value')
+    [excepcion] Cannot read properties of undefined (reading 'value')
+    [excepcion] Cannot rea...
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    evidencias\test-results\defectos-error-user-CP-48--a8bb0-acepta-texto-con-error-user-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: evidencias\test-results\defectos-error-user-CP-48--a8bb0-acepta-texto-con-error-user-chromium\error-context.md
+
+    attachment #5: trace (application/zip) ─────────────────────────────────────────────────────────
+    evidencias\test-results\defectos-error-user-CP-48--a8bb0-acepta-texto-con-error-user-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace evidencias\test-results\defectos-error-user-CP-48--a8bb0-acepta-texto-con-error-user-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  13) [chromium] › tests\defectos.spec.ts:109:3 › error_user › CP-49 | BUG-10 | Finish completa la compra con error_user @defecto 
+
+    Error: expect(page).toHaveURL(expected) failed
+
+    Expected pattern: /checkout-complete\.html$/
+    Received string:  "https://www.saucedemo.com/checkout-step-two.html"
+    Timeout: 5000ms
+
+    Call log:
+      - Expect "toHaveURL" with timeout 5000ms
+        14 × locator resolved to <html lang="en">…</html>
+           - unexpected value "https://www.saucedemo.com/checkout-step-two.html"
+
+
+      115 |     await co.finalizar.click();
+      116 |     await evidencia(page, 'BUG-10', co.finalizar);
+    > 117 |     await expect(page).toHaveURL(/checkout-complete\.html$/);
+          |                        ^
+      118 |     await expect(co.confirmacion).toHaveText('Thank you for your order!');
+      119 |   });
+      120 | });
+        at .\tests\defectos.spec.ts:117:24
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    evidencias\test-results\defectos-error-user-CP-49--03b05-ta-la-compra-con-error-user-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: errores-consola-y-red.txt (text/plain) ──────────────────────────────────────────
+    [consola] Permissions policy violation: unload is not allowed in this document.
+    [excepcion] Cannot read properties of undefined (reading 'value')
+    [excepcion] Cannot read properties of undefined (reading 'value')
+    [excepcion] Cannot read properties of undefined (reading 'value')
+    [excepcion] Cannot rea...
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    evidencias\test-results\defectos-error-user-CP-49--03b05-ta-la-compra-con-error-user-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: evidencias\test-results\defectos-error-user-CP-49--03b05-ta-la-compra-con-error-user-chromium\error-context.md
+
+    attachment #5: trace (application/zip) ─────────────────────────────────────────────────────────
+    evidencias\test-results\defectos-error-user-CP-49--03b05-ta-la-compra-con-error-user-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace evidencias\test-results\defectos-error-user-CP-49--03b05-ta-la-compra-con-error-user-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  14) [chromium] › tests\defectos.spec.ts:122:1 › CP-50 | BUG-11 | el login de performance_glitch_user tarda menos de 2000 ms @defecto @rendimiento 
+
+    Error: tiempos: 5079, 5068, 5090, 5089, 5086 ms
+
+    expect(received).toBeLessThan(expected)
+
+    Expected: < 2000
+    Received:   5082
+
+      144 |   // Umbral de 2000 ms: limite usual para que una accion se perciba como fluida (ver plan de pruebas)
+      145 |   expect(resumen.promedio_standard).toBeLessThan(2000);
+    > 146 |   expect(resumen.promedio_performance, `tiempos: ${tiempos.performance_glitch_user.join(', ')} ms`).toBeLessThan(2000);
+          |                                                                                                     ^
+      147 | });
+      148 |
+      149 | test('CP-51 | BUG-13 | los elementos de visual_user estan alineados igual que en standard_user', { tag: '@defecto' }, async ({ page }) => {
+        at .\tests\defectos.spec.ts:146:101
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    evidencias\test-results\defectos-CP-50-BUG-11-el-l-8792c-user-tarda-menos-de-2000-ms-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: errores-consola-y-red.txt (text/plain) ──────────────────────────────────────────
+    [consola] Permissions policy violation: unload is not allowed in this document.
+    [consola] Permissions policy violation: unload is not allowed in this document.
+    [consola] Permissions policy violation: unload is not allowed in this document.
+    [consola] Permissions policy violation: unload is not allowe...
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #4: video (video/webm) ──────────────────────────────────────────────────────────────
+    evidencias\test-results\defectos-CP-50-BUG-11-el-l-8792c-user-tarda-menos-de-2000-ms-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: evidencias\test-results\defectos-CP-50-BUG-11-el-l-8792c-user-tarda-menos-de-2000-ms-chromium\error-context.md
+
+    attachment #6: trace (application/zip) ─────────────────────────────────────────────────────────
+    evidencias\test-results\defectos-CP-50-BUG-11-el-l-8792c-user-tarda-menos-de-2000-ms-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace evidencias\test-results\defectos-CP-50-BUG-11-el-l-8792c-user-tarda-menos-de-2000-ms-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  15) [chromium] › tests\defectos.spec.ts:149:1 › CP-51 | BUG-13 | los elementos de visual_user estan alineados igual que en standard_user @defecto 
+
+    Error: diferencias visuales frente a standard_user
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 6
+
+    - Array []
+    + Array [
+    +   "icono del carrito en (1034, 39) y no en (1220, 10)",
+    +   "nombre 3 alineado \"right\"",
+    +   "nombre 4 alineado \"right\"",
+    +   "boton 6 desplazado 54 px",
+    + ]
+
+      167 |   visual.botonesX.forEach((x, i) => { if (Math.abs(x - base.botonesX[i]) > 5) diferencias.push(`boton ${i + 1} desplazado ${x - base.botonesX[i]} px`); });
+      168 |   await evidencia(page, 'BUG-13', page.locator('.shopping_cart_link, .align_right, .btn_inventory_misaligned'));
+    > 169 |   expect(diferencias, 'diferencias visuales frente a standard_user').toEqual([]);
+          |                                                                      ^
+      170 | });
+      171 |
+      172 | test('CP-53 | BUG-18 | las paginas internas responden HTTP 200 al abrirlas directamente', { tag: '@defecto' }, async ({ page }) => {
+        at .\tests\defectos.spec.ts:169:70
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    evidencias\test-results\defectos-CP-51-BUG-13-los--88245--igual-que-en-standard-user-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: errores-consola-y-red.txt (text/plain) ──────────────────────────────────────────
+    [consola] Permissions policy violation: unload is not allowed in this document.
+    [consola] Permissions policy violation: unload is not allowed in this document.
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    evidencias\test-results\defectos-CP-51-BUG-13-los--88245--igual-que-en-standard-user-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: evidencias\test-results\defectos-CP-51-BUG-13-los--88245--igual-que-en-standard-user-chromium\error-context.md
+
+    attachment #5: trace (application/zip) ─────────────────────────────────────────────────────────
+    evidencias\test-results\defectos-CP-51-BUG-13-los--88245--igual-que-en-standard-user-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace evidencias\test-results\defectos-CP-51-BUG-13-los--88245--igual-que-en-standard-user-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  16) [chromium] › tests\defectos.spec.ts:172:1 › CP-53 | BUG-18 | las paginas internas responden HTTP 200 al abrirlas directamente @defecto 
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 3
+    + Received  + 3
+
+      Array [
+    -   "/inventory.html -> 200",
+    -   "/cart.html -> 200",
+    -   "/checkout-step-one.html -> 200",
+    +   "/inventory.html -> 404",
+    +   "/cart.html -> 404",
+    +   "/checkout-step-one.html -> 404",
+      ]
+
+      179 |   test.info().annotations.push({ type: 'estados HTTP', description: estados.join(' | ') });
+      180 |   await evidencia(page, 'BUG-18');
+    > 181 |   expect(estados).toEqual(['/inventory.html -> 200', '/cart.html -> 200', '/checkout-step-one.html -> 200']);
+          |                   ^
+      182 | });
+      183 |
+        at .\tests\defectos.spec.ts:181:19
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    evidencias\test-results\defectos-CP-53-BUG-18-las--d5ec5-00-al-abrirlas-directamente-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: errores-consola-y-red.txt (text/plain) ──────────────────────────────────────────
+    [consola] Permissions policy violation: unload is not allowed in this document.
+    [red 404] https://www.saucedemo.com/inventory.html
+    [consola] Failed to load resource: the server responded with a status of 404 ()
+    [consola] Permissions policy violation: unload is not allowed in this document.
+    [red 404]...
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    evidencias\test-results\defectos-CP-53-BUG-18-las--d5ec5-00-al-abrirlas-directamente-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: evidencias\test-results\defectos-CP-53-BUG-18-las--d5ec5-00-al-abrirlas-directamente-chromium\error-context.md
+
+    attachment #5: trace (application/zip) ─────────────────────────────────────────────────────────
+    evidencias\test-results\defectos-CP-53-BUG-18-las--d5ec5-00-al-abrirlas-directamente-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace evidencias\test-results\defectos-CP-53-BUG-18-las--d5ec5-00-al-abrirlas-directamente-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  17) [chromium] › tests\regresion.spec.ts:21:3 › CP-39 | BUG-01 | regresion del flujo de compra con problem_user @regresion @defecto › 2. cada producto muestra su propia imagen 
+
+    Error: Sauce Labs Backpack
+
+    expect(received).toContain(expected) // indexOf
+
+    Expected substring: "sauce-backpack"
+    Received string:    "/assets/sl-404-Cq1a9k9X.jpg"
+
+      34 |       const imgs = await inv.imagenes();
+      35 |       if (c.bug === 'BUG-01') await evidencia(page, captura, inv.items.locator('img'));
+    > 36 |       imgs.forEach((src, i) => expect(src, porNombre[i].nombre).toContain(porNombre[i].imagen));
+         |                                                                 ^
+      37 |     });
+      38 |
+      39 |     await test.step('3. el ordenamiento Z-A funciona', async () => {
+        at forEach (.\tests\regresion.spec.ts:36:65)
+        at .\tests\regresion.spec.ts:36:12
+        at .\tests\regresion.spec.ts:33:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    evidencias\test-results\regresion-CP-39-BUG-01-reg-72c70--de-compra-con-problem-user-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: errores-consola-y-red.txt (text/plain) ──────────────────────────────────────────
+    [consola] Permissions policy violation: unload is not allowed in this document.
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    evidencias\test-results\regresion-CP-39-BUG-01-reg-72c70--de-compra-con-problem-user-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: evidencias\test-results\regresion-CP-39-BUG-01-reg-72c70--de-compra-con-problem-user-chromium\error-context.md
+
+    attachment #5: trace (application/zip) ─────────────────────────────────────────────────────────
+    evidencias\test-results\regresion-CP-39-BUG-01-reg-72c70--de-compra-con-problem-user-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace evidencias\test-results\regresion-CP-39-BUG-01-reg-72c70--de-compra-con-problem-user-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  18) [chromium] › tests\regresion.spec.ts:21:3 › CP-40 | BUG-07 | regresion del flujo de compra con error_user @regresion @defecto › 3. el ordenamiento Z-A funciona 
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 5
+    + Received  + 5
+
+      Array [
+    -   "Test.allTheThings() T-Shirt (Red)",
+    -   "Sauce Labs Onesie",
+    -   "Sauce Labs Fleece Jacket",
+    -   "Sauce Labs Bolt T-Shirt",
+    -   "Sauce Labs Bike Light",
+        "Sauce Labs Backpack",
+    +   "Sauce Labs Bike Light",
+    +   "Sauce Labs Bolt T-Shirt",
+    +   "Sauce Labs Fleece Jacket",
+    +   "Sauce Labs Onesie",
+    +   "Test.allTheThings() T-Shirt (Red)",
+      ]
+
+      41 |       const nombres = await inv.listaNombres();
+      42 |       if (c.bug === 'BUG-07') await evidencia(page, captura, inv.orden);
+    > 43 |       expect(nombres).toEqual(porNombre.map((p) => p.nombre).reverse());
+         |                       ^
+      44 |       await inv.ordenar('az');
+      45 |     });
+      46 |
+        at .\tests\regresion.spec.ts:43:23
+        at .\tests\regresion.spec.ts:39:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    evidencias\test-results\regresion-CP-40-BUG-07-reg-721f4-jo-de-compra-con-error-user-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: errores-consola-y-red.txt (text/plain) ──────────────────────────────────────────
+    [consola] Permissions policy violation: unload is not allowed in this document.
+    [alerta] Sorting is broken! This error has been reported to Backtrace.
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    evidencias\test-results\regresion-CP-40-BUG-07-reg-721f4-jo-de-compra-con-error-user-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: evidencias\test-results\regresion-CP-40-BUG-07-reg-721f4-jo-de-compra-con-error-user-chromium\error-context.md
+
+    attachment #5: trace (application/zip) ─────────────────────────────────────────────────────────
+    evidencias\test-results\regresion-CP-40-BUG-07-reg-721f4-jo-de-compra-con-error-user-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace evidencias\test-results\regresion-CP-40-BUG-07-reg-721f4-jo-de-compra-con-error-user-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  19) [chromium] › tests\regresion.spec.ts:21:3 › CP-41 | BUG-12 | regresion del flujo de compra con visual_user @regresion @defecto › 1. los precios del catalogo son los oficiales 
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 6
+    + Received  + 6
+
+      Array [
+    -   29.99,
+    -   9.99,
+    -   15.99,
+    -   49.99,
+    -   7.99,
+    -   15.99,
+    +   11.62,
+    +   30.7,
+    +   14.69,
+    +   8.5,
+    +   12.34,
+    +   36.55,
+      ]
+
+      28 |       const precios = await inv.listaPrecios();
+      29 |       if (c.bug === 'BUG-12') await evidencia(page, captura, inv.precios);
+    > 30 |       expect(precios).toEqual(porNombre.map((p) => p.precio));
+         |                       ^
+      31 |     });
+      32 |
+      33 |     await test.step('2. cada producto muestra su propia imagen', async () => {
+        at .\tests\regresion.spec.ts:30:23
+        at .\tests\regresion.spec.ts:27:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    evidencias\test-results\regresion-CP-41-BUG-12-reg-549d5-o-de-compra-con-visual-user-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: errores-consola-y-red.txt (text/plain) ──────────────────────────────────────────
+    [consola] Permissions policy violation: unload is not allowed in this document.
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    evidencias\test-results\regresion-CP-41-BUG-12-reg-549d5-o-de-compra-con-visual-user-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: evidencias\test-results\regresion-CP-41-BUG-12-reg-549d5-o-de-compra-con-visual-user-chromium\error-context.md
+
+    attachment #5: trace (application/zip) ─────────────────────────────────────────────────────────
+    evidencias\test-results\regresion-CP-41-BUG-12-reg-549d5-o-de-compra-con-visual-user-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace evidencias\test-results\regresion-CP-41-BUG-12-reg-549d5-o-de-compra-con-visual-user-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  20) [firefox] › tests\carrito.spec.ts:37:3 › Carrito › CP-37 | BUG-15 | Reset App State debe vaciar el carrito y restaurar los botones @transicion @defecto 
+
+    Error: expect(locator).toHaveText(expected) failed
+
+    Locator:  getByTestId('inventory-item').filter({ hasText: 'Sauce Labs Backpack' }).getByRole('button', { name: /^(Add to cart|Remove)$/ })
+    Expected: "Add to cart"
+    Received: "Remove"
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveText" getByTestId('inventory-item').filter({ hasText: 'Sauce Labs Backpack' }).getByRole('button', { name: /^(Add to cart|Remove)$/ }) with timeout 5000ms
+      - waiting for getByTestId('inventory-item').filter({ hasText: 'Sauce Labs Backpack' }).getByRole('button', { name: /^(Add to cart|Remove)$/ })
+        14 × locator resolved to <button id="remove-sauce-labs-backpack" name="remove-sauce-labs-backpack" data-test="remove-sauce-labs-backpack" class="btn btn_secondary btn_small btn_inventory ">Remove</button>
+           - unexpected value "Remove"
+
+
+      43 |     await evidencia(page, 'BUG-15', inv.boton('Sauce Labs Backpack'));
+      44 |     // Esperado: con el carrito vacio el boton vuelve a "Add to cart"
+    > 45 |     await expect(inv.boton('Sauce Labs Backpack')).toHaveText('Add to cart');
+         |                                                    ^
+      46 |   });
+      47 |
+      48 |   test('CP-52 | BUG-16 | el carrito de un usuario no debe aparecer al iniciar sesion con otro', { tag: '@defecto' }, async ({ page }) => {
+        at .\tests\carrito.spec.ts:45:52
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    evidencias\test-results\carrito-Carrito-CP-37-BUG--b4c20-ito-y-restaurar-los-botones-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    evidencias\test-results\carrito-Carrito-CP-37-BUG--b4c20-ito-y-restaurar-los-botones-firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: evidencias\test-results\carrito-Carrito-CP-37-BUG--b4c20-ito-y-restaurar-los-botones-firefox\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    evidencias\test-results\carrito-Carrito-CP-37-BUG--b4c20-ito-y-restaurar-los-botones-firefox\trace.zip
+    Usage:
+
+        npx playwright show-trace evidencias\test-results\carrito-Carrito-CP-37-BUG--b4c20-ito-y-restaurar-los-botones-firefox\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  21) [firefox] › tests\carrito.spec.ts:48:3 › Carrito › CP-52 | BUG-16 | el carrito de un usuario no debe aparecer al iniciar sesion con otro @defecto 
+
+    Error: expect(locator).toHaveCount(expected) failed
+
+    Locator:  getByTestId('shopping-cart-badge')
+    Expected: 0
+    Received: 1
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveCount" getByTestId('shopping-cart-badge') with timeout 5000ms
+      - waiting for getByTestId('shopping-cart-badge')
+        14 × locator resolved to 1 element
+           - unexpected value "1"
+
+
+      56 |     await evidencia(page, 'BUG-16', inv.badge);
+      57 |     // Esperado: visual_user empieza con el carrito vacio
+    > 58 |     await expect(inv.badge).toHaveCount(0);
+         |                             ^
+      59 |   });
+      60 | });
+      61 |
+        at .\tests\carrito.spec.ts:58:29
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    evidencias\test-results\carrito-Carrito-CP-52-BUG--c1fcb--al-iniciar-sesion-con-otro-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    evidencias\test-results\carrito-Carrito-CP-52-BUG--c1fcb--al-iniciar-sesion-con-otro-firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: evidencias\test-results\carrito-Carrito-CP-52-BUG--c1fcb--al-iniciar-sesion-con-otro-firefox\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    evidencias\test-results\carrito-Carrito-CP-52-BUG--c1fcb--al-iniciar-sesion-con-otro-firefox\trace.zip
+    Usage:
+
+        npx playwright show-trace evidencias\test-results\carrito-Carrito-CP-52-BUG--c1fcb--al-iniciar-sesion-con-otro-firefox\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  22) [firefox] › tests\checkout.spec.ts:47:3 › Checkout › CP-10 | BUG-14 | no se debe poder iniciar el checkout con el carrito vacio @negativa @defecto 
+
+    Error: expect(page).not.toHaveURL(expected) failed
+
+    Expected pattern: not /checkout-step-one\.html$/
+    Received string: "https://www.saucedemo.com/checkout-step-one.html"
+    Timeout: 5000ms
+
+    Call log:
+      - Expect "not toHaveURL" with timeout 5000ms
+        13 × locator resolved to <html lang="en">…</html>
+           - unexpected value "https://www.saucedemo.com/checkout-step-one.html"
+
+
+      53 |     await evidencia(page, 'BUG-14');
+      54 |     // Esperado: la aplicacion bloquea el checkout (permanece en el carrito o muestra un aviso)
+    > 55 |     await expect(page).not.toHaveURL(/checkout-step-one\.html$/);
+         |                            ^
+      56 |   });
+      57 |
+      58 |   test('CP-11 | BUG-17 | el codigo postal no debe aceptar letras ni simbolos', { tag: ['@negativa', '@defecto'] }, async ({ page }) => {
+        at .\tests\checkout.spec.ts:55:28
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    evidencias\test-results\checkout-Checkout-CP-10-BU-0e919-eckout-con-el-carrito-vacio-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    evidencias\test-results\checkout-Checkout-CP-10-BU-0e919-eckout-con-el-carrito-vacio-firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: evidencias\test-results\checkout-Checkout-CP-10-BU-0e919-eckout-con-el-carrito-vacio-firefox\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    evidencias\test-results\checkout-Checkout-CP-10-BU-0e919-eckout-con-el-carrito-vacio-firefox\trace.zip
+    Usage:
+
+        npx playwright show-trace evidencias\test-results\checkout-Checkout-CP-10-BU-0e919-eckout-con-el-carrito-vacio-firefox\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  23) [firefox] › tests\checkout.spec.ts:58:3 › Checkout › CP-11 | BUG-17 | el codigo postal no debe aceptar letras ni simbolos @negativa @defecto 
+
+    Error: expect(page).toHaveURL(expected) failed
+
+    Expected pattern: /checkout-step-one\.html$/
+    Received string:  "https://www.saucedemo.com/checkout-step-two.html"
+    Timeout: 5000ms
+
+    Call log:
+      - Expect "toHaveURL" with timeout 5000ms
+        13 × locator resolved to <html lang="en">…</html>
+           - unexpected value "https://www.saucedemo.com/checkout-step-two.html"
+
+
+      63 |     await evidencia(page, 'BUG-17', co.postal);
+      64 |     // Esperado: mensaje de validacion y no avanza al resumen
+    > 65 |     await expect(page).toHaveURL(/checkout-step-one\.html$/);
+         |                        ^
+      66 |     await expect(co.error).toBeVisible();
+      67 |   });
+      68 |
+        at .\tests\checkout.spec.ts:65:24
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    evidencias\test-results\checkout-Checkout-CP-11-BU-305c3--aceptar-letras-ni-simbolos-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    evidencias\test-results\checkout-Checkout-CP-11-BU-305c3--aceptar-letras-ni-simbolos-firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: evidencias\test-results\checkout-Checkout-CP-11-BU-305c3--aceptar-letras-ni-simbolos-firefox\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    evidencias\test-results\checkout-Checkout-CP-11-BU-305c3--aceptar-letras-ni-simbolos-firefox\trace.zip
+    Usage:
+
+        npx playwright show-trace evidencias\test-results\checkout-Checkout-CP-11-BU-305c3--aceptar-letras-ni-simbolos-firefox\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  24) [firefox] › tests\checkout.spec.ts:167:3 › Checkout › CP-35 | BUG-19 | no se debe mostrar la confirmacion de compra entrando directo a /checkout-complete.html @transicion @defecto 
+
+    Error: expect(locator).toHaveCount(expected) failed
+
+    Locator:  getByTestId('complete-header')
+    Expected: 0
+    Received: 1
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveCount" getByTestId('complete-header') with timeout 5000ms
+      - waiting for getByTestId('complete-header')
+        14 × locator resolved to 1 element
+           - unexpected value "1"
+
+
+      171 |     await evidencia(page, 'BUG-19', co.confirmacion);
+      172 |     // Esperado: transicion invalida, la app redirige y no confirma una orden inexistente
+    > 173 |     await expect(co.confirmacion).toHaveCount(0);
+          |                                   ^
+      174 |   });
+      175 | });
+      176 |
+        at .\tests\checkout.spec.ts:173:35
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    evidencias\test-results\checkout-Checkout-CP-35-BU-878c6-to-a-checkout-complete-html-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: errores-consola-y-red.txt (text/plain) ──────────────────────────────────────────
+    [red 404] https://www.saucedemo.com/checkout-complete.html
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    evidencias\test-results\checkout-Checkout-CP-35-BU-878c6-to-a-checkout-complete-html-firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: evidencias\test-results\checkout-Checkout-CP-35-BU-878c6-to-a-checkout-complete-html-firefox\error-context.md
+
+    attachment #5: trace (application/zip) ─────────────────────────────────────────────────────────
+    evidencias\test-results\checkout-Checkout-CP-35-BU-878c6-to-a-checkout-complete-html-firefox\trace.zip
+    Usage:
+
+        npx playwright show-trace evidencias\test-results\checkout-Checkout-CP-35-BU-878c6-to-a-checkout-complete-html-firefox\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  25) [firefox] › tests\defectos.spec.ts:42:3 › problem_user › CP-42 | BUG-02 | ordenar Z-A con problem_user @defecto 
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 5
+    + Received  + 5
+
+      Array [
+    -   "Test.allTheThings() T-Shirt (Red)",
+    -   "Sauce Labs Onesie",
+    -   "Sauce Labs Fleece Jacket",
+    -   "Sauce Labs Bolt T-Shirt",
+    -   "Sauce Labs Bike Light",
+        "Sauce Labs Backpack",
+    +   "Sauce Labs Bike Light",
+    +   "Sauce Labs Bolt T-Shirt",
+    +   "Sauce Labs Fleece Jacket",
+    +   "Sauce Labs Onesie",
+    +   "Test.allTheThings() T-Shirt (Red)",
+      ]
+
+      44 |     await inv.ordenar('za');
+      45 |     await evidencia(page, 'BUG-02', inv.nombres);
+    > 46 |     expect(await inv.listaNombres()).toEqual([...porNombre].reverse());
+         |                                      ^
+      47 |   });
+      48 |
+      49 |   test('CP-43 | BUG-03 | Add to cart y Remove responden en todos los productos con problem_user', { tag: '@defecto' }, async ({ page }) => {
+        at .\tests\defectos.spec.ts:46:38
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    evidencias\test-results\defectos-problem-user-CP-4-7f46e-rdenar-Z-A-con-problem-user-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    evidencias\test-results\defectos-problem-user-CP-4-7f46e-rdenar-Z-A-con-problem-user-firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: evidencias\test-results\defectos-problem-user-CP-4-7f46e-rdenar-Z-A-con-problem-user-firefox\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    evidencias\test-results\defectos-problem-user-CP-4-7f46e-rdenar-Z-A-con-problem-user-firefox\trace.zip
+    Usage:
+
+        npx playwright show-trace evidencias\test-results\defectos-problem-user-CP-4-7f46e-rdenar-Z-A-con-problem-user-firefox\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  26) [firefox] › tests\defectos.spec.ts:49:3 › problem_user › CP-43 | BUG-03 | Add to cart y Remove responden en todos los productos con problem_user @defecto 
+
+    Error: botones que no respondieron
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 8
+
+    - Array []
+    + Array [
+    +   "Add to cart: Sauce Labs Bolt T-Shirt",
+    +   "Add to cart: Sauce Labs Fleece Jacket",
+    +   "Add to cart: Test.allTheThings() T-Shirt (Red)",
+    +   "Remove: Sauce Labs Backpack",
+    +   "Remove: Sauce Labs Bike Light",
+    +   "Remove: Sauce Labs Onesie",
+    + ]
+
+      50 |     const sinRespuesta = await probarBotones(page);
+      51 |     await evidencia(page, 'BUG-03', new InventoryPage(page).botones);
+    > 52 |     expect(sinRespuesta, 'botones que no respondieron').toEqual([]);
+         |                                                         ^
+      53 |   });
+      54 |
+      55 |   test('CP-44 | BUG-04 | escribir el apellido no debe cambiar el nombre con problem_user', { tag: '@defecto' }, async ({ page }) => {
+        at .\tests\defectos.spec.ts:52:57
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    evidencias\test-results\defectos-problem-user-CP-4-537c3--productos-con-problem-user-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    evidencias\test-results\defectos-problem-user-CP-4-537c3--productos-con-problem-user-firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: evidencias\test-results\defectos-problem-user-CP-4-537c3--productos-con-problem-user-firefox\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    evidencias\test-results\defectos-problem-user-CP-4-537c3--productos-con-problem-user-firefox\trace.zip
+    Usage:
+
+        npx playwright show-trace evidencias\test-results\defectos-problem-user-CP-4-537c3--productos-con-problem-user-firefox\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  27) [firefox] › tests\defectos.spec.ts:55:3 › problem_user › CP-44 | BUG-04 | escribir el apellido no debe cambiar el nombre con problem_user @defecto 
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 2
+    + Received  + 2
+
+      Object {
+    -   "apellido": "Perez",
+    -   "nombre": "Ana",
+    +   "apellido": "",
+    +   "nombre": "z",
+        "postal": "110111",
+      }
+
+      58 |     await co.llenar('Ana', 'Perez', '110111', true);
+      59 |     await evidencia(page, 'BUG-04', page.locator('[data-test="firstName"], [data-test="lastName"]'));
+    > 60 |     expect(await co.valores()).toEqual({ nombre: 'Ana', apellido: 'Perez', postal: '110111' });
+         |                                ^
+      61 |   });
+      62 |
+      63 |   test('CP-45 | BUG-05 | el detalle corresponde al producto seleccionado con problem_user', { tag: '@defecto' }, async ({ page }) => {
+        at .\tests\defectos.spec.ts:60:32
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    evidencias\test-results\defectos-problem-user-CP-4-aed7e--el-nombre-con-problem-user-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    evidencias\test-results\defectos-problem-user-CP-4-aed7e--el-nombre-con-problem-user-firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: evidencias\test-results\defectos-problem-user-CP-4-aed7e--el-nombre-con-problem-user-firefox\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    evidencias\test-results\defectos-problem-user-CP-4-aed7e--el-nombre-con-problem-user-firefox\trace.zip
+    Usage:
+
+        npx playwright show-trace evidencias\test-results\defectos-problem-user-CP-4-aed7e--el-nombre-con-problem-user-firefox\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  28) [firefox] › tests\defectos.spec.ts:63:3 › problem_user › CP-45 | BUG-05 | el detalle corresponde al producto seleccionado con problem_user @defecto 
+
+    Error: productos con detalle equivocado
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 8
+
+    - Array []
+    + Array [
+    +   "clic en \"Sauce Labs Backpack\" muestra \"Sauce Labs Fleece Jacket\"",
+    +   "clic en \"Sauce Labs Bike Light\" muestra \"Sauce Labs Bolt T-Shirt\"",
+    +   "clic en \"Sauce Labs Bolt T-Shirt\" muestra \"Sauce Labs Onesie\"",
+    +   "clic en \"Sauce Labs Fleece Jacket\" muestra \"ITEM NOT FOUND\"",
+    +   "clic en \"Sauce Labs Onesie\" muestra \"Test.allTheThings() T-Shirt (Red)\"",
+    +   "clic en \"Test.allTheThings() T-Shirt (Red)\" muestra \"Sauce Labs Backpack\"",
+    + ]
+
+      72 |     await inv.item(productos[0].nombre).getByTestId('inventory-item-name').click();
+      73 |     await evidencia(page, 'BUG-05', page.getByTestId('inventory-item-name'));
+    > 74 |     expect(errores, 'productos con detalle equivocado').toEqual([]);
+         |                                                         ^
+      75 |   });
+      76 |
+      77 |   test('CP-46 | BUG-06 | el enlace About lleva a una pagina valida con problem_user', { tag: '@defecto' }, async ({ page }) => {
+        at .\tests\defectos.spec.ts:74:57
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    evidencias\test-results\defectos-problem-user-CP-4-0d589-leccionado-con-problem-user-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: errores-consola-y-red.txt (text/plain) ──────────────────────────────────────────
+    [red 404] https://www.saucedemo.com/inventory.html
+    [red 404] https://www.saucedemo.com/inventory.html
+    [red 404] https://www.saucedemo.com/inventory.html
+    [red 404] https://www.saucedemo.com/inventory.html
+    [red 404] https://www.saucedemo.com/inventory.html
+    [consola] [JavaScript Error: "Image corrupt o...
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    evidencias\test-results\defectos-problem-user-CP-4-0d589-leccionado-con-problem-user-firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: evidencias\test-results\defectos-problem-user-CP-4-0d589-leccionado-con-problem-user-firefox\error-context.md
+
+    attachment #5: trace (application/zip) ─────────────────────────────────────────────────────────
+    evidencias\test-results\defectos-problem-user-CP-4-0d589-leccionado-con-problem-user-firefox\trace.zip
+    Usage:
+
+        npx playwright show-trace evidencias\test-results\defectos-problem-user-CP-4-0d589-leccionado-con-problem-user-firefox\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  29) [firefox] › tests\defectos.spec.ts:77:3 › problem_user › CP-46 | BUG-06 | el enlace About lleva a una pagina valida con problem_user @defecto 
+
+    Error: estado HTTP de https://saucelabs.com/error/404
+
+    expect(received).toBeLessThan(expected)
+
+    Expected: < 400
+    Received:   404
+
+      83 |     await evidencia(page, 'BUG-06', about);
+      84 |     test.info().annotations.push({ type: 'enlace About', description: `${href} -> HTTP ${respuesta.status()}` });
+    > 85 |     expect(respuesta.status(), `estado HTTP de ${href}`).toBeLessThan(400);
+         |                                                          ^
+      86 |   });
+      87 | });
+      88 |
+        at .\tests\defectos.spec.ts:85:58
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    evidencias\test-results\defectos-problem-user-CP-4-25a80-ina-valida-con-problem-user-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    evidencias\test-results\defectos-problem-user-CP-4-25a80-ina-valida-con-problem-user-firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: evidencias\test-results\defectos-problem-user-CP-4-25a80-ina-valida-con-problem-user-firefox\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    evidencias\test-results\defectos-problem-user-CP-4-25a80-ina-valida-con-problem-user-firefox\trace.zip
+    Usage:
+
+        npx playwright show-trace evidencias\test-results\defectos-problem-user-CP-4-25a80-ina-valida-con-problem-user-firefox\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  30) [firefox] › tests\defectos.spec.ts:94:3 › error_user › CP-47 | BUG-08 | Add to cart y Remove responden en todos los productos con error_user @defecto 
+
+    Error: botones que no respondieron
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 8
+
+    - Array []
+    + Array [
+    +   "Add to cart: Sauce Labs Bolt T-Shirt",
+    +   "Add to cart: Sauce Labs Fleece Jacket",
+    +   "Add to cart: Test.allTheThings() T-Shirt (Red)",
+    +   "Remove: Sauce Labs Backpack",
+    +   "Remove: Sauce Labs Bike Light",
+    +   "Remove: Sauce Labs Onesie",
+    + ]
+
+       96 |     await evidencia(page, 'BUG-08', new InventoryPage(page).botones);
+       97 |     test.info().annotations.push({ type: 'excepciones', description: registro.filter((e) => e.startsWith('[excepcion]')).join(' | ') });
+    >  98 |     expect(sinRespuesta, 'botones que no respondieron').toEqual([]);
+          |                                                         ^
+       99 |   });
+      100 |
+      101 |   test('CP-48 | BUG-09 | el campo Last Name acepta texto con error_user', { tag: '@defecto' }, async ({ page }) => {
+        at .\tests\defectos.spec.ts:98:57
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    evidencias\test-results\defectos-error-user-CP-47--e7c32-os-productos-con-error-user-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: errores-consola-y-red.txt (text/plain) ──────────────────────────────────────────
+    [excepcion] Failed to add item to the cart.
+    [excepcion] Failed to add item to the cart.
+    [excepcion] Failed to add item to the cart.
+    [excepcion] Failed to remove item from cart.
+    [excepcion] Failed to remove item from cart.
+    [excepcion] Failed to remove item from cart.
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    evidencias\test-results\defectos-error-user-CP-47--e7c32-os-productos-con-error-user-firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: evidencias\test-results\defectos-error-user-CP-47--e7c32-os-productos-con-error-user-firefox\error-context.md
+
+    attachment #5: trace (application/zip) ─────────────────────────────────────────────────────────
+    evidencias\test-results\defectos-error-user-CP-47--e7c32-os-productos-con-error-user-firefox\trace.zip
+    Usage:
+
+        npx playwright show-trace evidencias\test-results\defectos-error-user-CP-47--e7c32-os-productos-con-error-user-firefox\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  31) [firefox] › tests\defectos.spec.ts:101:3 › error_user › CP-48 | BUG-09 | el campo Last Name acepta texto con error_user @defecto 
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: "Perez"
+    Received: ""
+
+      104 |     await co.llenar('Ana', 'Perez', '110111', true);
+      105 |     await evidencia(page, 'BUG-09', co.apellido);
+    > 106 |     expect((await co.valores()).apellido).toBe('Perez');
+          |                                           ^
+      107 |   });
+      108 |
+      109 |   test('CP-49 | BUG-10 | Finish completa la compra con error_user', { tag: '@defecto' }, async ({ page }) => {
+        at .\tests\defectos.spec.ts:106:43
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    evidencias\test-results\defectos-error-user-CP-48--a8bb0-acepta-texto-con-error-user-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: errores-consola-y-red.txt (text/plain) ──────────────────────────────────────────
+    [excepcion] can't access property "value", e.totallyUndefined is undefined
+    [excepcion] can't access property "value", e.totallyUndefined is undefined
+    [excepcion] can't access property "value", e.totallyUndefined is undefined
+    [excepcion] can't access property "value", e.totallyUndefined is undefined
+    ...
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    evidencias\test-results\defectos-error-user-CP-48--a8bb0-acepta-texto-con-error-user-firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: evidencias\test-results\defectos-error-user-CP-48--a8bb0-acepta-texto-con-error-user-firefox\error-context.md
+
+    attachment #5: trace (application/zip) ─────────────────────────────────────────────────────────
+    evidencias\test-results\defectos-error-user-CP-48--a8bb0-acepta-texto-con-error-user-firefox\trace.zip
+    Usage:
+
+        npx playwright show-trace evidencias\test-results\defectos-error-user-CP-48--a8bb0-acepta-texto-con-error-user-firefox\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  32) [firefox] › tests\defectos.spec.ts:109:3 › error_user › CP-49 | BUG-10 | Finish completa la compra con error_user @defecto 
+
+    Error: expect(page).toHaveURL(expected) failed
+
+    Expected pattern: /checkout-complete\.html$/
+    Received string:  "https://www.saucedemo.com/checkout-step-two.html"
+    Timeout: 5000ms
+
+    Call log:
+      - Expect "toHaveURL" with timeout 5000ms
+        13 × locator resolved to <html lang="en">…</html>
+           - unexpected value "https://www.saucedemo.com/checkout-step-two.html"
+
+
+      115 |     await co.finalizar.click();
+      116 |     await evidencia(page, 'BUG-10', co.finalizar);
+    > 117 |     await expect(page).toHaveURL(/checkout-complete\.html$/);
+          |                        ^
+      118 |     await expect(co.confirmacion).toHaveText('Thank you for your order!');
+      119 |   });
+      120 | });
+        at .\tests\defectos.spec.ts:117:24
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    evidencias\test-results\defectos-error-user-CP-49--03b05-ta-la-compra-con-error-user-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: errores-consola-y-red.txt (text/plain) ──────────────────────────────────────────
+    [excepcion] can't access property "value", e.totallyUndefined is undefined
+    [excepcion] can't access property "value", e.totallyUndefined is undefined
+    [excepcion] can't access property "value", e.totallyUndefined is undefined
+    [excepcion] can't access property "value", e.totallyUndefined is undefined
+    ...
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    evidencias\test-results\defectos-error-user-CP-49--03b05-ta-la-compra-con-error-user-firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: evidencias\test-results\defectos-error-user-CP-49--03b05-ta-la-compra-con-error-user-firefox\error-context.md
+
+    attachment #5: trace (application/zip) ─────────────────────────────────────────────────────────
+    evidencias\test-results\defectos-error-user-CP-49--03b05-ta-la-compra-con-error-user-firefox\trace.zip
+    Usage:
+
+        npx playwright show-trace evidencias\test-results\defectos-error-user-CP-49--03b05-ta-la-compra-con-error-user-firefox\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  33) [firefox] › tests\defectos.spec.ts:122:1 › CP-50 | BUG-11 | el login de performance_glitch_user tarda menos de 2000 ms @defecto @rendimiento 
+
+    Error: tiempos: 5108, 5103, 5128, 5190, 5136 ms
+
+    expect(received).toBeLessThan(expected)
+
+    Expected: < 2000
+    Received:   5133
+
+      144 |   // Umbral de 2000 ms: limite usual para que una accion se perciba como fluida (ver plan de pruebas)
+      145 |   expect(resumen.promedio_standard).toBeLessThan(2000);
+    > 146 |   expect(resumen.promedio_performance, `tiempos: ${tiempos.performance_glitch_user.join(', ')} ms`).toBeLessThan(2000);
+          |                                                                                                     ^
+      147 | });
+      148 |
+      149 | test('CP-51 | BUG-13 | los elementos de visual_user estan alineados igual que en standard_user', { tag: '@defecto' }, async ({ page }) => {
+        at .\tests\defectos.spec.ts:146:101
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    evidencias\test-results\defectos-CP-50-BUG-11-el-l-8792c-user-tarda-menos-de-2000-ms-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    evidencias\test-results\defectos-CP-50-BUG-11-el-l-8792c-user-tarda-menos-de-2000-ms-firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: evidencias\test-results\defectos-CP-50-BUG-11-el-l-8792c-user-tarda-menos-de-2000-ms-firefox\error-context.md
+
+    attachment #5: trace (application/zip) ─────────────────────────────────────────────────────────
+    evidencias\test-results\defectos-CP-50-BUG-11-el-l-8792c-user-tarda-menos-de-2000-ms-firefox\trace.zip
+    Usage:
+
+        npx playwright show-trace evidencias\test-results\defectos-CP-50-BUG-11-el-l-8792c-user-tarda-menos-de-2000-ms-firefox\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  34) [firefox] › tests\defectos.spec.ts:149:1 › CP-51 | BUG-13 | los elementos de visual_user estan alineados igual que en standard_user @defecto 
+
+    Error: diferencias visuales frente a standard_user
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 6
+
+    - Array []
+    + Array [
+    +   "icono del carrito en (1034, 39) y no en (1220, 10)",
+    +   "nombre 3 alineado \"right\"",
+    +   "nombre 4 alineado \"right\"",
+    +   "boton 6 desplazado 54 px",
+    + ]
+
+      167 |   visual.botonesX.forEach((x, i) => { if (Math.abs(x - base.botonesX[i]) > 5) diferencias.push(`boton ${i + 1} desplazado ${x - base.botonesX[i]} px`); });
+      168 |   await evidencia(page, 'BUG-13', page.locator('.shopping_cart_link, .align_right, .btn_inventory_misaligned'));
+    > 169 |   expect(diferencias, 'diferencias visuales frente a standard_user').toEqual([]);
+          |                                                                      ^
+      170 | });
+      171 |
+      172 | test('CP-53 | BUG-18 | las paginas internas responden HTTP 200 al abrirlas directamente', { tag: '@defecto' }, async ({ page }) => {
+        at .\tests\defectos.spec.ts:169:70
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    evidencias\test-results\defectos-CP-51-BUG-13-los--88245--igual-que-en-standard-user-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    evidencias\test-results\defectos-CP-51-BUG-13-los--88245--igual-que-en-standard-user-firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: evidencias\test-results\defectos-CP-51-BUG-13-los--88245--igual-que-en-standard-user-firefox\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    evidencias\test-results\defectos-CP-51-BUG-13-los--88245--igual-que-en-standard-user-firefox\trace.zip
+    Usage:
+
+        npx playwright show-trace evidencias\test-results\defectos-CP-51-BUG-13-los--88245--igual-que-en-standard-user-firefox\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  35) [firefox] › tests\defectos.spec.ts:172:1 › CP-53 | BUG-18 | las paginas internas responden HTTP 200 al abrirlas directamente @defecto 
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 3
+    + Received  + 3
+
+      Array [
+    -   "/inventory.html -> 200",
+    -   "/cart.html -> 200",
+    -   "/checkout-step-one.html -> 200",
+    +   "/inventory.html -> 404",
+    +   "/cart.html -> 404",
+    +   "/checkout-step-one.html -> 404",
+      ]
+
+      179 |   test.info().annotations.push({ type: 'estados HTTP', description: estados.join(' | ') });
+      180 |   await evidencia(page, 'BUG-18');
+    > 181 |   expect(estados).toEqual(['/inventory.html -> 200', '/cart.html -> 200', '/checkout-step-one.html -> 200']);
+          |                   ^
+      182 | });
+      183 |
+        at .\tests\defectos.spec.ts:181:19
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    evidencias\test-results\defectos-CP-53-BUG-18-las--d5ec5-00-al-abrirlas-directamente-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: errores-consola-y-red.txt (text/plain) ──────────────────────────────────────────
+    [red 404] https://www.saucedemo.com/inventory.html
+    [red 404] https://www.saucedemo.com/cart.html
+    [red 404] https://www.saucedemo.com/checkout-step-one.html
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    evidencias\test-results\defectos-CP-53-BUG-18-las--d5ec5-00-al-abrirlas-directamente-firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: evidencias\test-results\defectos-CP-53-BUG-18-las--d5ec5-00-al-abrirlas-directamente-firefox\error-context.md
+
+    attachment #5: trace (application/zip) ─────────────────────────────────────────────────────────
+    evidencias\test-results\defectos-CP-53-BUG-18-las--d5ec5-00-al-abrirlas-directamente-firefox\trace.zip
+    Usage:
+
+        npx playwright show-trace evidencias\test-results\defectos-CP-53-BUG-18-las--d5ec5-00-al-abrirlas-directamente-firefox\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  36) [firefox] › tests\regresion.spec.ts:21:3 › CP-39 | BUG-01 | regresion del flujo de compra con problem_user @regresion @defecto › 2. cada producto muestra su propia imagen 
+
+    Error: Sauce Labs Backpack
+
+    expect(received).toContain(expected) // indexOf
+
+    Expected substring: "sauce-backpack"
+    Received string:    "/assets/sl-404-Cq1a9k9X.jpg"
+
+      34 |       const imgs = await inv.imagenes();
+      35 |       if (c.bug === 'BUG-01') await evidencia(page, captura, inv.items.locator('img'));
+    > 36 |       imgs.forEach((src, i) => expect(src, porNombre[i].nombre).toContain(porNombre[i].imagen));
+         |                                                                 ^
+      37 |     });
+      38 |
+      39 |     await test.step('3. el ordenamiento Z-A funciona', async () => {
+        at forEach (.\tests\regresion.spec.ts:36:65)
+        at .\tests\regresion.spec.ts:36:12
+        at .\tests\regresion.spec.ts:33:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    evidencias\test-results\regresion-CP-39-BUG-01-reg-72c70--de-compra-con-problem-user-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    evidencias\test-results\regresion-CP-39-BUG-01-reg-72c70--de-compra-con-problem-user-firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: evidencias\test-results\regresion-CP-39-BUG-01-reg-72c70--de-compra-con-problem-user-firefox\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    evidencias\test-results\regresion-CP-39-BUG-01-reg-72c70--de-compra-con-problem-user-firefox\trace.zip
+    Usage:
+
+        npx playwright show-trace evidencias\test-results\regresion-CP-39-BUG-01-reg-72c70--de-compra-con-problem-user-firefox\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  37) [firefox] › tests\regresion.spec.ts:21:3 › CP-40 | BUG-07 | regresion del flujo de compra con error_user @regresion @defecto › 3. el ordenamiento Z-A funciona 
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 5
+    + Received  + 5
+
+      Array [
+    -   "Test.allTheThings() T-Shirt (Red)",
+    -   "Sauce Labs Onesie",
+    -   "Sauce Labs Fleece Jacket",
+    -   "Sauce Labs Bolt T-Shirt",
+    -   "Sauce Labs Bike Light",
+        "Sauce Labs Backpack",
+    +   "Sauce Labs Bike Light",
+    +   "Sauce Labs Bolt T-Shirt",
+    +   "Sauce Labs Fleece Jacket",
+    +   "Sauce Labs Onesie",
+    +   "Test.allTheThings() T-Shirt (Red)",
+      ]
+
+      41 |       const nombres = await inv.listaNombres();
+      42 |       if (c.bug === 'BUG-07') await evidencia(page, captura, inv.orden);
+    > 43 |       expect(nombres).toEqual(porNombre.map((p) => p.nombre).reverse());
+         |                       ^
+      44 |       await inv.ordenar('az');
+      45 |     });
+      46 |
+        at .\tests\regresion.spec.ts:43:23
+        at .\tests\regresion.spec.ts:39:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    evidencias\test-results\regresion-CP-40-BUG-07-reg-721f4-jo-de-compra-con-error-user-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: errores-consola-y-red.txt (text/plain) ──────────────────────────────────────────
+    [alerta] Sorting is broken! This error has been reported to Backtrace.
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    evidencias\test-results\regresion-CP-40-BUG-07-reg-721f4-jo-de-compra-con-error-user-firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: evidencias\test-results\regresion-CP-40-BUG-07-reg-721f4-jo-de-compra-con-error-user-firefox\error-context.md
+
+    attachment #5: trace (application/zip) ─────────────────────────────────────────────────────────
+    evidencias\test-results\regresion-CP-40-BUG-07-reg-721f4-jo-de-compra-con-error-user-firefox\trace.zip
+    Usage:
+
+        npx playwright show-trace evidencias\test-results\regresion-CP-40-BUG-07-reg-721f4-jo-de-compra-con-error-user-firefox\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  38) [firefox] › tests\regresion.spec.ts:21:3 › CP-41 | BUG-12 | regresion del flujo de compra con visual_user @regresion @defecto › 1. los precios del catalogo son los oficiales 
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 6
+    + Received  + 6
+
+      Array [
+    -   29.99,
+    -   9.99,
+    -   15.99,
+    -   49.99,
+    -   7.99,
+    -   15.99,
+    +   22.97,
+    +   60.59,
+    +   71.26,
+    +   87.34,
+    +   53.15,
+    +   89.13,
+      ]
+
+      28 |       const precios = await inv.listaPrecios();
+      29 |       if (c.bug === 'BUG-12') await evidencia(page, captura, inv.precios);
+    > 30 |       expect(precios).toEqual(porNombre.map((p) => p.precio));
+         |                       ^
+      31 |     });
+      32 |
+      33 |     await test.step('2. cada producto muestra su propia imagen', async () => {
+        at .\tests\regresion.spec.ts:30:23
+        at .\tests\regresion.spec.ts:27:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    evidencias\test-results\regresion-CP-41-BUG-12-reg-549d5-o-de-compra-con-visual-user-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    evidencias\test-results\regresion-CP-41-BUG-12-reg-549d5-o-de-compra-con-visual-user-firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: evidencias\test-results\regresion-CP-41-BUG-12-reg-549d5-o-de-compra-con-visual-user-firefox\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    evidencias\test-results\regresion-CP-41-BUG-12-reg-549d5-o-de-compra-con-visual-user-firefox\trace.zip
+    Usage:
+
+        npx playwright show-trace evidencias\test-results\regresion-CP-41-BUG-12-reg-549d5-o-de-compra-con-visual-user-firefox\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  38 failed
+    [chromium] › tests\carrito.spec.ts:37:3 › Carrito › CP-37 | BUG-15 | Reset App State debe vaciar el carrito y restaurar los botones @transicion @defecto 
+    [chromium] › tests\carrito.spec.ts:48:3 › Carrito › CP-52 | BUG-16 | el carrito de un usuario no debe aparecer al iniciar sesion con otro @defecto 
+    [chromium] › tests\checkout.spec.ts:47:3 › Checkout › CP-10 | BUG-14 | no se debe poder iniciar el checkout con el carrito vacio @negativa @defecto 
+    [chromium] › tests\checkout.spec.ts:58:3 › Checkout › CP-11 | BUG-17 | el codigo postal no debe aceptar letras ni simbolos @negativa @defecto 
+    [chromium] › tests\checkout.spec.ts:167:3 › Checkout › CP-35 | BUG-19 | no se debe mostrar la confirmacion de compra entrando directo a /checkout-complete.html @transicion @defecto 
+    [chromium] › tests\defectos.spec.ts:42:3 › problem_user › CP-42 | BUG-02 | ordenar Z-A con problem_user @defecto 
+    [chromium] › tests\defectos.spec.ts:49:3 › problem_user › CP-43 | BUG-03 | Add to cart y Remove responden en todos los productos con problem_user @defecto 
+    [chromium] › tests\defectos.spec.ts:55:3 › problem_user › CP-44 | BUG-04 | escribir el apellido no debe cambiar el nombre con problem_user @defecto 
+    [chromium] › tests\defectos.spec.ts:63:3 › problem_user › CP-45 | BUG-05 | el detalle corresponde al producto seleccionado con problem_user @defecto 
+    [chromium] › tests\defectos.spec.ts:77:3 › problem_user › CP-46 | BUG-06 | el enlace About lleva a una pagina valida con problem_user @defecto 
+    [chromium] › tests\defectos.spec.ts:94:3 › error_user › CP-47 | BUG-08 | Add to cart y Remove responden en todos los productos con error_user @defecto 
+    [chromium] › tests\defectos.spec.ts:101:3 › error_user › CP-48 | BUG-09 | el campo Last Name acepta texto con error_user @defecto 
+    [chromium] › tests\defectos.spec.ts:109:3 › error_user › CP-49 | BUG-10 | Finish completa la compra con error_user @defecto 
+    [chromium] › tests\defectos.spec.ts:122:1 › CP-50 | BUG-11 | el login de performance_glitch_user tarda menos de 2000 ms @defecto @rendimiento 
+    [chromium] › tests\defectos.spec.ts:149:1 › CP-51 | BUG-13 | los elementos de visual_user estan alineados igual que en standard_user @defecto 
+    [chromium] › tests\defectos.spec.ts:172:1 › CP-53 | BUG-18 | las paginas internas responden HTTP 200 al abrirlas directamente @defecto 
+    [chromium] › tests\regresion.spec.ts:21:3 › CP-39 | BUG-01 | regresion del flujo de compra con problem_user @regresion @defecto 
+    [chromium] › tests\regresion.spec.ts:21:3 › CP-40 | BUG-07 | regresion del flujo de compra con error_user @regresion @defecto 
+    [chromium] › tests\regresion.spec.ts:21:3 › CP-41 | BUG-12 | regresion del flujo de compra con visual_user @regresion @defecto 
+    [firefox] › tests\carrito.spec.ts:37:3 › Carrito › CP-37 | BUG-15 | Reset App State debe vaciar el carrito y restaurar los botones @transicion @defecto 
+    [firefox] › tests\carrito.spec.ts:48:3 › Carrito › CP-52 | BUG-16 | el carrito de un usuario no debe aparecer al iniciar sesion con otro @defecto 
+    [firefox] › tests\checkout.spec.ts:47:3 › Checkout › CP-10 | BUG-14 | no se debe poder iniciar el checkout con el carrito vacio @negativa @defecto 
+    [firefox] › tests\checkout.spec.ts:58:3 › Checkout › CP-11 | BUG-17 | el codigo postal no debe aceptar letras ni simbolos @negativa @defecto 
+    [firefox] › tests\checkout.spec.ts:167:3 › Checkout › CP-35 | BUG-19 | no se debe mostrar la confirmacion de compra entrando directo a /checkout-complete.html @transicion @defecto 
+    [firefox] › tests\defectos.spec.ts:42:3 › problem_user › CP-42 | BUG-02 | ordenar Z-A con problem_user @defecto 
+    [firefox] › tests\defectos.spec.ts:49:3 › problem_user › CP-43 | BUG-03 | Add to cart y Remove responden en todos los productos con problem_user @defecto 
+    [firefox] › tests\defectos.spec.ts:55:3 › problem_user › CP-44 | BUG-04 | escribir el apellido no debe cambiar el nombre con problem_user @defecto 
+    [firefox] › tests\defectos.spec.ts:63:3 › problem_user › CP-45 | BUG-05 | el detalle corresponde al producto seleccionado con problem_user @defecto 
+    [firefox] › tests\defectos.spec.ts:77:3 › problem_user › CP-46 | BUG-06 | el enlace About lleva a una pagina valida con problem_user @defecto 
+    [firefox] › tests\defectos.spec.ts:94:3 › error_user › CP-47 | BUG-08 | Add to cart y Remove responden en todos los productos con error_user @defecto 
+    [firefox] › tests\defectos.spec.ts:101:3 › error_user › CP-48 | BUG-09 | el campo Last Name acepta texto con error_user @defecto 
+    [firefox] › tests\defectos.spec.ts:109:3 › error_user › CP-49 | BUG-10 | Finish completa la compra con error_user @defecto 
+    [firefox] › tests\defectos.spec.ts:122:1 › CP-50 | BUG-11 | el login de performance_glitch_user tarda menos de 2000 ms @defecto @rendimiento 
+    [firefox] › tests\defectos.spec.ts:149:1 › CP-51 | BUG-13 | los elementos de visual_user estan alineados igual que en standard_user @defecto 
+    [firefox] › tests\defectos.spec.ts:172:1 › CP-53 | BUG-18 | las paginas internas responden HTTP 200 al abrirlas directamente @defecto 
+    [firefox] › tests\regresion.spec.ts:21:3 › CP-39 | BUG-01 | regresion del flujo de compra con problem_user @regresion @defecto 
+    [firefox] › tests\regresion.spec.ts:21:3 › CP-40 | BUG-07 | regresion del flujo de compra con error_user @regresion @defecto 
+    [firefox] › tests\regresion.spec.ts:21:3 › CP-41 | BUG-12 | regresion del flujo de compra con visual_user @regresion @defecto 
+  72 passed (3.2m)

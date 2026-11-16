@@ -1,0 +1,139 @@
+{
+ "navegador": "Brave 157.0 (Chromium 157.0), Windows 11",
+ "fecha": "16/11/2026",
+ "bugs": {
+  "BUG-01": {
+   "hora": "16/11/2026 03:18 PM",
+   "veces": "2/2",
+   "consola": "Sin errores",
+   "observacion": "Se observa exactamente lo descrito en la ficha.",
+   "captura": "evidencias/capturas/manual/BUG-01_chrome.png"
+  },
+  "BUG-02": {
+   "hora": "16/11/2026 03:18 PM",
+   "veces": "2/2",
+   "consola": "Sin errores",
+   "observacion": "Se probó eligiendo la opción con el control y con el teclado en el desplegable; en ambos casos el selector vuelve a Name (A to Z).",
+   "captura": "evidencias/capturas/manual/BUG-02_chrome.png"
+  },
+  "BUG-03": {
+   "hora": "16/11/2026 03:19 PM",
+   "veces": "2/2",
+   "consola": "Sin errores",
+   "observacion": "Fallan exactamente los mismos productos de la ficha en las dos repeticiones.",
+   "captura": "evidencias/capturas/manual/BUG-03_chrome.png"
+  },
+  "BUG-04": {
+   "hora": "16/11/2026 03:21 PM",
+   "veces": "2/2",
+   "consola": "Sin errores",
+   "observacion": "Se observa exactamente lo descrito en la ficha.",
+   "captura": "evidencias/capturas/manual/BUG-04_chrome.png"
+  },
+  "BUG-05": {
+   "hora": "16/11/2026 03:21 PM",
+   "veces": "2/2",
+   "consola": "Sin errores",
+   "observacion": "Backpack abre Fleece Jacket (id=5) y Bike Light abre Bolt T-Shirt (id=1), igual que en la ficha.",
+   "captura": "evidencias/capturas/manual/BUG-05_chrome.png"
+  },
+  "BUG-06": {
+   "hora": "16/11/2026 03:21 PM",
+   "veces": "2/2",
+   "consola": "Sin errores",
+   "observacion": "La página de destino responde HTTP 404 (responseStatus de la navegación).",
+   "captura": "evidencias/capturas/manual/BUG-06_chrome.png"
+  },
+  "BUG-07": {
+   "hora": "16/11/2026 03:25 PM",
+   "veces": "2/2",
+   "consola": "Ninguna excepción; la alerta nativa \"Sorting is broken! This error has been reported to Backtrace.\"",
+   "observacion": "La persona del equipo aceptó la alerta; después el orden sigue en A-Z.",
+   "captura": "evidencias/capturas/manual/BUG-07_chrome.png"
+  },
+  "BUG-08": {
+   "hora": "16/11/2026 03:30 PM",
+   "veces": "2/2",
+   "consola": "3x \"Error: Failed to add item to the cart.\" y 3x \"Error: Failed to remove item from cart.\" por repetición",
+   "observacion": "Se observa exactamente lo descrito en la ficha.",
+   "captura": "evidencias/capturas/manual/BUG-08_chrome.png"
+  },
+  "BUG-09": {
+   "hora": "16/11/2026 03:31 PM",
+   "veces": "2/2",
+   "consola": "5x \"TypeError: Cannot read properties of undefined (reading 'value')\" (una por letra)",
+   "observacion": "Al pulsar Continue la compra pasa al resumen sin apellido.",
+   "captura": "evidencias/capturas/manual/BUG-09_chrome.png"
+  },
+  "BUG-10": {
+   "hora": "16/11/2026 03:31 PM",
+   "veces": "2/2",
+   "consola": "\"TypeError: wa.cesetRart is not a function\" por cada clic en Finish",
+   "observacion": "La página se queda en checkout-step-two.html y el carrito conserva el producto. GIF: evidencias/gifs/BUG-10.gif.",
+   "captura": "evidencias/capturas/manual/BUG-10_chrome.png"
+  },
+  "BUG-11": {
+   "hora": "16/11/2026 03:43 PM",
+   "veces": "2/2",
+   "consola": "Sin errores",
+   "observacion": "Medido desde el clic en Login hasta el primer producto: 5022 ms y 10 039 ms; standard_user 18 ms. Sin GIF: el clic en Login lo hizo la persona.",
+   "captura": "evidencias/capturas/manual/BUG-11_chrome.png"
+  },
+  "BUG-12": {
+   "hora": "16/11/2026 03:50 PM",
+   "veces": "2/2",
+   "consola": "Sin errores",
+   "observacion": "Los precios cambian en cada carga del catálogo (por ejemplo, la mochila a $92.98, $87.08, $48.05 y $87.09); el carrito y el resumen cobran siempre $29.99.",
+   "captura": "evidencias/capturas/manual/BUG-12_chrome.png"
+  },
+  "BUG-13": {
+   "hora": "16/11/2026 03:50 PM",
+   "veces": "2/2",
+   "consola": "Sin errores",
+   "observacion": "Medido en Brave: carrito en (1261, 39) contra (1447, 10) de standard_user; nombres 3 y 4 alineados a la derecha; sexto botón corrido 54 px; imagen sl-404 en la mochila.",
+   "captura": "evidencias/capturas/manual/BUG-13_chrome.png"
+  },
+  "BUG-14": {
+   "hora": "16/11/2026 03:44 PM",
+   "veces": "2/2",
+   "consola": "Sin errores",
+   "observacion": "Resumen con 0 productos y Total: $0.00; Finish muestra \"Thank you for your order!\".",
+   "captura": "evidencias/capturas/manual/BUG-14_chrome.png"
+  },
+  "BUG-15": {
+   "hora": "16/11/2026 03:45 PM",
+   "veces": "2/2",
+   "consola": "Sin errores",
+   "observacion": "Tras el Reset el contador desaparece y cart-contents queda vacío, pero el botón sigue en Remove hasta recargar.",
+   "captura": "evidencias/capturas/manual/BUG-15_chrome.png"
+  },
+  "BUG-16": {
+   "hora": "16/11/2026 03:53 PM",
+   "veces": "2/2",
+   "consola": "Sin errores",
+   "observacion": "visual_user entra con el contador en 1 y Bike Light en Remove (cart-contents [0]).",
+   "captura": "evidencias/capturas/manual/BUG-16_chrome.png"
+  },
+  "BUG-17": {
+   "hora": "16/11/2026 03:45 PM",
+   "veces": "2/2",
+   "consola": "Sin errores",
+   "observacion": "Se observa exactamente lo descrito en la ficha.",
+   "captura": "evidencias/capturas/manual/BUG-17_chrome.png"
+  },
+  "BUG-18": {
+   "hora": "16/11/2026 03:46 PM",
+   "veces": "2/2",
+   "consola": "Pestaña Red: 404 en el documento pedido y 200 en la redirección /?/...",
+   "observacion": "El servidor responde 404 a la URL interna y luego redirige a /?/ruta con 200, por eso la página se ve normal; el defecto solo se ve en la pestaña Red.",
+   "captura": "evidencias/capturas/manual/BUG-18_chrome.png"
+  },
+  "BUG-19": {
+   "hora": "16/11/2026 03:47 PM",
+   "veces": "2/2",
+   "consola": "Sin errores",
+   "observacion": "Se abre la confirmación con el carrito vacío y sin haber pasado por el checkout.",
+   "captura": "evidencias/capturas/manual/BUG-19_chrome.png"
+  }
+ }
+}

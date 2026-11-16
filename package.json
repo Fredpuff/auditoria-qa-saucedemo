@@ -1,0 +1,31 @@
+{
+  "name": "auditoria-qa-saucedemo",
+  "version": "1.0.0",
+  "description": "Auditoria de calidad de SauceDemo con Playwright + TypeScript (Testing y QA, UNIMINUTO)",
+  "scripts": {
+    "test": "playwright test",
+    "test:chromium": "playwright test --project=chromium",
+    "test:smoke": "playwright test --grep @smoke",
+    "test:defectos": "playwright test --grep @defecto",
+    "test:headed": "playwright test --project=chromium --headed --workers=1",
+    "test:lento": "cross-env SLOWMO=500 playwright test --project=chromium --headed --workers=1",
+    "report": "playwright show-report evidencias/reportes/html",
+    "app:prepare": "node tools/preparar-app-local.mjs",
+    "app:serve": "cd app-local/sample-app-web && npx vite preview --config vite.config.coverage.mjs",
+    "coverage": "node tools/cobertura.mjs",
+    "evidencias": "node tools/recolectar-evidencias.mjs"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.65.1",
+    "@types/node": "^26.6.6",
+    "cross-env": "^10.1.0",
+    "nyc": "^18.0.0",
+    "typescript": "^7.0.2"
+  },
+  "private": true,
+  "engines": {
+    "node": ">=20"
+  }
+}

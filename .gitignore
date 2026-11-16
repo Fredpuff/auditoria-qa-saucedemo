@@ -1,0 +1,21 @@
+node_modules/
+app-local/
+.nyc_output/
+evidencias/test-results/
+coverage/ejecucion-local/
+
+# --- Pesado o regenerable: no se sube a GitHub (las capturas ya estan dentro de los documentos de docs/) ---
+# Reporte HTML de Playwright con trazas y videos (90 MB). Se regenera con: npm test
+evidencias/reportes/html/
+# Capturas, videos y exploracion: aparecen en docs/03_Reporte_de_defectos.docx y en el informe final
+evidencias/capturas/
+evidencias/exploracion/
+evidencias/videos/
+# Se conserva solo el video de BUG-10 para el plan B de la demo
+!evidencias/videos/
+evidencias/videos/*
+!evidencias/videos/BUG-10.webm
+# Archivos temporales
+__pycache__/
+*.zip
+*.zip.tmp

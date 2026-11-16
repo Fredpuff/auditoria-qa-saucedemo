@@ -1,0 +1,20 @@
+{
+  "tiempos": {
+    "standard_user": [
+      182,
+      105,
+      76,
+      82,
+      80
+    ],
+    "performance_glitch_user": [
+      5112,
+      5091,
+      5105,
+      5103,
+      5084
+    ]
+  },
+  "promedio_standard": 105,
+  "promedio_performance": 5099
+}

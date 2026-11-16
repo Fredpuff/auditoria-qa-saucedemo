@@ -1,0 +1,517 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guía de verificación</title>
+<style>
+:root{
+  --bg:#f7f7f4; --panel:#ffffff; --ink:#1d2321; --ink2:#4a5350; --muted:#6d7673; --line:#e2e4df;
+  --accent:#1f6f54; --accent-soft:#e3f1ea; --code:#f0f1ed; --shadow:0 1px 2px rgba(0,0,0,.06);
+  --crit:#b3261e; --crit-bg:#fbe9e7; --alta:#a34d00; --alta-bg:#fdeedd; --media:#7a6100; --media-bg:#fbf4d4;
+  --baja:#3d5a73; --baja-bg:#e6eef5; --ok:#1f6f54;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#141816; --panel:#1c2120; --ink:#e7ebe9; --ink2:#c0c7c4; --muted:#929b97; --line:#2e3532;
+    --accent:#6fcfa5; --accent-soft:#1f3a2f; --code:#252b29; --shadow:none;
+    --crit:#ff8a80; --crit-bg:#3a1d1b; --alta:#ffb36b; --alta-bg:#3a2a18; --media:#e8cf6a; --media-bg:#35301a;
+    --baja:#9cc2e0; --baja-bg:#1d2a35; --ok:#6fcfa5;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#141816; --panel:#1c2120; --ink:#e7ebe9; --ink2:#c0c7c4; --muted:#929b97; --line:#2e3532;
+  --accent:#6fcfa5; --accent-soft:#1f3a2f; --code:#252b29; --shadow:none;
+  --crit:#ff8a80; --crit-bg:#3a1d1b; --alta:#ffb36b; --alta-bg:#3a2a18; --media:#e8cf6a; --media-bg:#35301a;
+  --baja:#9cc2e0; --baja-bg:#1d2a35; --ok:#6fcfa5;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:16px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+a{color:var(--accent)}
+code,kbd,pre{font-family:ui-monospace,"Cascadia Code",Consolas,monospace;font-size:.88em}
+code{background:var(--code);padding:.1em .35em;border-radius:4px}
+.layout{display:grid;grid-template-columns:250px minmax(0,1fr);min-height:100vh}
+nav.lado{position:sticky;top:0;height:100vh;overflow:auto;border-right:1px solid var(--line);padding:20px 16px;background:var(--panel)}
+nav.lado h1{font-size:1.05rem;margin:0 0 4px}
+nav.lado p{margin:0 0 14px;color:var(--muted);font-size:.85rem}
+nav.lado a{display:block;padding:6px 10px;border-radius:6px;text-decoration:none;color:var(--ink2);font-size:.93rem}
+nav.lado a:hover,nav.lado a.activo{background:var(--accent-soft);color:var(--ink)}
+.mini-prog{margin:14px 0 4px;font-size:.85rem;color:var(--muted)}
+.barra{height:8px;background:var(--line);border-radius:99px;overflow:hidden}
+.barra>i{display:block;height:100%;width:0;background:var(--accent);transition:width .25s}
+.tema{margin-top:16px;font-size:.85rem}
+main{padding:28px 32px 80px;max-width:1000px}
+section{margin-bottom:56px}
+h2{font-size:1.5rem;margin:0 0 6px}
+h3{font-size:1.12rem;margin:28px 0 8px}
+.intro{color:var(--ink2);margin:0 0 18px}
+.caja{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px 18px;box-shadow:var(--shadow);margin:12px 0}
+.nota{border-left:4px solid var(--accent);background:var(--accent-soft);padding:10px 14px;border-radius:0 8px 8px 0;margin:12px 0}
+.cmd{display:flex;gap:8px;align-items:stretch;margin:6px 0}
+.cmd pre{flex:1;margin:0;background:var(--code);padding:9px 12px;border-radius:7px;overflow:auto;white-space:pre}
+button{font:inherit;cursor:pointer;border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:7px;padding:6px 12px}
+button:hover{border-color:var(--accent)}
+button.copiar{font-size:.82rem;white-space:nowrap}
+button.copiar.hecho{background:var(--accent);color:#fff;border-color:var(--accent)}
+.paso-n{display:inline-block;width:1.6em;height:1.6em;border-radius:50%;background:var(--accent);color:#fff;text-align:center;font-size:.85em;line-height:1.6em;margin-right:6px}
+table{border-collapse:collapse;width:100%;font-size:.92rem;background:var(--panel)}
+th,td{border:1px solid var(--line);padding:7px 9px;text-align:left;vertical-align:top}
+th{background:var(--code)}
+.tabla-scroll{overflow-x:auto}
+.filtros{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:8px 0 16px}
+.filtros input{font:inherit;padding:6px 10px;border:1px solid var(--line);border-radius:7px;background:var(--panel);color:var(--ink);min-width:200px;flex:1}
+.filtros select{font:inherit;padding:6px;border:1px solid var(--line);border-radius:7px;background:var(--panel);color:var(--ink)}
+.bug{background:var(--panel);border:1px solid var(--line);border-radius:12px;margin:16px 0;box-shadow:var(--shadow);overflow:hidden}
+.bug.hecho{border-color:var(--accent)}
+.bug-cab{display:flex;gap:12px;align-items:flex-start;padding:14px 16px;border-bottom:1px solid var(--line)}
+.bug-cab h3{margin:0;font-size:1.05rem;flex:1}
+.bug-id{font-weight:700;color:var(--accent);margin-right:6px}
+.etq{display:inline-block;font-size:.78rem;font-weight:600;padding:2px 8px;border-radius:99px;margin:2px 4px 2px 0;border:1px solid transparent}
+.s-Crítica{color:var(--crit);background:var(--crit-bg);border-color:var(--crit)}
+.s-Alta{color:var(--alta);background:var(--alta-bg);border-color:var(--alta)}
+.s-Media{color:var(--media);background:var(--media-bg);border-color:var(--media)}
+.s-Baja{color:var(--baja);background:var(--baja-bg);border-color:var(--baja)}
+.bug-cuerpo{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:18px;padding:14px 16px}
+.bug-cuerpo h4{margin:12px 0 4px;font-size:.9rem;text-transform:uppercase;letter-spacing:.03em;color:var(--muted)}
+.bug-cuerpo h4:first-child{margin-top:0}
+.bug-cuerpo ol{margin:0;padding-left:1.3em}
+.cred{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.cred code{font-size:.92em}
+.reconocer{border-left:4px solid var(--crit);background:var(--crit-bg);padding:8px 12px;border-radius:0 8px 8px 0;color:var(--ink)}
+figure{margin:0}
+figure img{width:100%;border:1px solid var(--line);border-radius:8px;cursor:zoom-in;display:block}
+figcaption{font-size:.8rem;color:var(--muted);margin-top:4px}
+.marcar{display:flex;flex-direction:column;gap:6px;padding:12px 16px;border-top:1px solid var(--line);background:var(--code)}
+.marcar label{font-weight:600;display:flex;gap:8px;align-items:center;cursor:pointer}
+.marcar input[type=checkbox]{width:20px;height:20px;accent-color:var(--accent)}
+.marcar textarea{font:inherit;font-size:.92rem;width:100%;min-height:56px;padding:8px;border:1px solid var(--line);border-radius:7px;background:var(--panel);color:var(--ink);resize:vertical}
+.guardado{font-size:.78rem;color:var(--muted);min-height:1em}
+.progreso-grande{position:sticky;top:0;z-index:5;background:var(--bg);padding:10px 0;border-bottom:1px solid var(--line);margin-bottom:8px}
+.progreso-grande strong{font-size:1.05rem}
+.metricas{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.metrica{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px}
+.metrica b{display:block;font-size:1.6rem}
+.metrica span{color:var(--muted);font-size:.85rem}
+.tres{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.tres .metrica b{font-size:1.3rem}
+details{background:var(--panel);border:1px solid var(--line);border-radius:10px;margin:8px 0;padding:0 14px}
+details summary{cursor:pointer;padding:12px 0;font-weight:600}
+details[open] summary{border-bottom:1px solid var(--line);margin-bottom:8px}
+details>div{padding-bottom:12px}
+.leyenda{display:flex;flex-wrap:wrap;gap:10px;margin:8px 0}
+.leyenda span{display:inline-flex;align-items:center;gap:6px;font-size:.9rem}
+.cuadro{display:inline-block;width:22px;height:16px;border-radius:3px;border:1px solid var(--line)}
+.guion{counter-reset:g}
+.guion li{margin:6px 0}
+.tiempo{font-weight:700;color:var(--accent);margin-right:4px}
+#visor{position:fixed;inset:0;background:rgba(0,0,0,.85);display:none;align-items:center;justify-content:center;z-index:50;padding:16px;cursor:zoom-out}
+#visor img{max-width:100%;max-height:100%;border-radius:6px}
+#arriba{display:none}
+@media (max-width:860px){
+  .layout{grid-template-columns:minmax(0,1fr)}
+  main code{overflow-wrap:anywhere}
+  nav.lado{position:static;height:auto;border-right:0;border-bottom:1px solid var(--line);padding:14px 16px}
+  nav.lado .enlaces{display:flex;flex-wrap:wrap;gap:4px}
+  nav.lado a{padding:5px 8px;font-size:.85rem;background:var(--code)}
+  main{padding:18px 16px 60px}
+  .bug-cuerpo{grid-template-columns:1fr}
+  .metricas{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .tres{grid-template-columns:1fr}
+  .cmd{flex-direction:column}
+  #arriba{display:block;position:fixed;right:16px;bottom:16px;z-index:10}
+}
+@media print{nav.lado,.filtros,button.copiar,#arriba{display:none}.layout{display:block}.bug{break-inside:avoid}}
+</style>
+</head>
+<body>
+<div class="layout">
+<nav class="lado" aria-label="Índice">
+  <h1>Guía de verificación</h1>
+  <p>Auditoría QA de SauceDemo · UNIMINUTO</p>
+  <div class="enlaces">
+    <a href="#a">A · Preparar y ejecutar</a>
+    <a href="#b">B · Los 19 bugs</a>
+    <a href="#c">C · Técnicas de prueba</a>
+    <a href="#d">D · Reporte y Trace Viewer</a>
+    <a href="#e">E · Cobertura de código</a>
+    <a href="#f">F · Guion de la demo</a>
+    <a href="#g">G · Preguntas probables</a>
+  </div>
+  <div class="mini-prog"><span id="prog-txt-lado">0 de 19 reproducidos</span></div>
+  <div class="barra" aria-hidden="true"><i id="prog-barra-lado"></i></div>
+  <div class="tema"><button id="btn-tema" type="button">Cambiar tema claro / oscuro</button></div>
+</nav>
+
+<main>
+<p class="intro">Esta guía es para que cada integrante del equipo repita a mano los 19 defectos antes de la sustentación, entienda las
+evidencias y sepa responder. Funciona sin internet; lo que marques se guarda en este navegador.</p>
+<div class="nota"><strong>Cómo se hizo la verificación previa:</strong> el <span id="fecha-ver"></span> una IA (Claude) repitió cada defecto
+2 veces en <span id="nav-ver"></span>, manejando el navegador con la extensión Claude in Chrome; una persona del equipo
+escribió la contraseña y aceptó las alertas. Esa verificación <strong>no reemplaza</strong> la del equipo: en el Reporte de defectos
+el campo «Verificación por el equipo» sigue PENDIENTE hasta que ustedes marquen aquí cada bug.</div>
+
+<!-- ============================================================ A -->
+<section id="a">
+<h2>A · Preparar el computador y ejecutar las pruebas</h2>
+<p class="intro">Abre una terminal (PowerShell o Git Bash) en la carpeta del proyecto <code>auditoria-qa-saucedemo</code>. Copia cada comando con su botón.</p>
+<h3><span class="paso-n">1</span>Instalar (solo la primera vez)</h3>
+<div class="cmd"><pre>node --version</pre><button class="copiar" type="button">Copiar</button></div>
+<p>Debe decir v20 o superior. Si no, instala Node.js LTS desde nodejs.org.</p>
+<div class="cmd"><pre>npm install</pre><button class="copiar" type="button">Copiar</button></div>
+<div class="cmd"><pre>npx playwright install chromium firefox</pre><button class="copiar" type="button">Copiar</button></div>
+<h3><span class="paso-n">2</span>Ejecutar</h3>
+<div class="tabla-scroll"><table>
+<tr><th>Qué quiero</th><th>Comando</th><th></th></tr>
+<tr><td>Toda la suite (Chromium y Firefox)</td><td><code>npm test</code></td><td><button class="copiar" type="button" data-texto="npm test">Copiar</button></td></tr>
+<tr><td>Solo Chromium</td><td><code>npm run test:chromium</code></td><td><button class="copiar" type="button" data-texto="npm run test:chromium">Copiar</button></td></tr>
+<tr><td>Solo las pruebas que reproducen bugs</td><td><code>npm run test:defectos</code></td><td><button class="copiar" type="button" data-texto="npm run test:defectos">Copiar</button></td></tr>
+<tr><td>Un caso por su ID (ejemplo CP-05)</td><td><code>npx playwright test -g "CP-05"</code></td><td><button class="copiar" type="button" data-texto='npx playwright test -g "CP-05"'>Copiar</button></td></tr>
+<tr><td>Ver el navegador mientras prueba</td><td><code>npx playwright test --headed --project=chromium</code></td><td><button class="copiar" type="button" data-texto="npx playwright test --headed --project=chromium">Copiar</button></td></tr>
+<tr><td>Visible y en cámara lenta</td><td><code>npm run test:lento</code></td><td><button class="copiar" type="button" data-texto="npm run test:lento">Copiar</button></td></tr>
+<tr><td>Abrir el reporte HTML</td><td><code>npm run report</code></td><td><button class="copiar" type="button" data-texto="npm run report">Copiar</button></td></tr>
+<tr><td>Abrir una traza (ejemplo BUG-10; la carpeta se crea al correr las pruebas, desde el ZIP usa el botón Trace del reporte)</td><td><code>npx playwright show-trace evidencias/test-results/defectos-error-user-CP-49--03b05-ta-la-compra-con-error-user-chromium/trace.zip</code></td><td><button class="copiar" type="button" data-texto="npx playwright show-trace evidencias/test-results/defectos-error-user-CP-49--03b05-ta-la-compra-con-error-user-chromium/trace.zip">Copiar</button></td></tr>
+</table></div>
+<div class="nota"><strong>Es normal que termine en rojo.</strong> La suite tiene 110 pruebas (55 casos × 2 navegadores): 72 pasan y 38 fallan.
+Las 38 que fallan son los 19 bugs en los dos navegadores. Si de pronto falla una prueba que no tiene «BUG-» en el título, eso sí hay que revisarlo.</div>
+<h3><span class="paso-n">3</span>Cobertura de código (opcional, tarda varios minutos)</h3>
+<div class="cmd"><pre>npm run app:prepare</pre><button class="copiar" type="button">Copiar</button></div>
+<div class="cmd"><pre>npm run app:serve</pre><button class="copiar" type="button">Copiar</button></div>
+<p>Con el servidor abierto, en otra terminal:</p>
+<div class="cmd"><pre>npm run coverage</pre><button class="copiar" type="button">Copiar</button></div>
+<p>El resultado queda en <code>coverage/codigo/index.html</code>.</p>
+<h3><span class="paso-n">4</span>Antes de cada bug a mano</h3>
+<ol>
+<li>Si hay sesión abierta: menú ☰ → <strong>Reset App State</strong> → menú ☰ → <strong>Logout</strong>.</li>
+<li>Abre <a href="https://www.saucedemo.com" target="_blank" rel="noopener">https://www.saucedemo.com</a> y pulsa F12 → pestaña <strong>Console</strong> para ver errores.</li>
+<li>Entra con el usuario de la tarjeta y la contraseña <code>secret_sauce</code>.</li>
+</ol>
+</section>
+
+<!-- ============================================================ B -->
+<section id="b">
+<h2>B · Los 19 bugs, uno por uno</h2>
+<p class="intro">Sigue los pasos, compara con «Cómo reconocer el defecto» y marca «Lo reproduje». Escribe en las notas lo que veas distinto.</p>
+<div class="progreso-grande">
+  <strong id="prog-txt">0 de 19 reproducidos</strong>
+  <div class="barra" style="margin-top:6px"><i id="prog-barra"></i></div>
+</div>
+<div class="filtros">
+  <input id="buscar" type="search" placeholder="Buscar por texto, usuario o ID (ej. error_user, BUG-07)" aria-label="Buscar bug">
+  <select id="f-sev" aria-label="Filtrar por severidad"><option value="">Toda severidad</option><option>Crítica</option><option>Alta</option><option>Media</option><option>Baja</option></select>
+  <select id="f-est" aria-label="Filtrar por estado"><option value="">Todos</option><option value="no">Pendientes</option><option value="si">Reproducidos</option></select>
+  <button id="reiniciar" type="button">Borrar mis marcas</button>
+</div>
+<div id="lista-bugs"></div>
+</section>
+
+<!-- ============================================================ C -->
+<section id="c">
+<h2>C · Técnicas de prueba con nuestros ejemplos</h2>
+<p class="intro">Diseñamos 57 casos con siete técnicas. Para cada una: qué es, en palabras simples, y dónde la usamos.</p>
+<div class="tabla-scroll"><table>
+<tr><th>Técnica</th><th>Qué es</th><th>Nuestro ejemplo</th><th>Casos</th></tr>
+<tr><td>Positiva</td><td>Probar el camino feliz con datos correctos.</td><td>Compra completa con standard_user (CP-05).</td><td>9</td></tr>
+<tr><td>Negativa</td><td>Meter datos que deberían rechazarse.</td><td>Código postal <code>ABC!@#</code> (CP-11) → lo acepta: BUG-17.</td><td>6</td></tr>
+<tr><td>Valores límite</td><td>Probar en los bordes: 0, 1, el máximo y alrededor.</td><td>Carrito con 0, 1, 5 y 6 productos (CP-14 a CP-17); con 0 deja comprar: BUG-14.</td><td>8</td></tr>
+<tr><td>Tabla de decisión</td><td>Combinar condiciones y ver qué hace el sistema en cada regla.</td><td>Login (6 reglas) y formulario de checkout (4 reglas).</td><td>10</td></tr>
+<tr><td>Transición de estados</td><td>Recorrer los estados de un flujo, incluidos saltos que no deberían poder hacerse.</td><td>URL directa a la confirmación (CP-35) → se abre sin comprar: BUG-19.</td><td>6</td></tr>
+<tr><td>Predicción de errores</td><td>Usar la experiencia para adivinar dónde hay fallas (usuarios «raros» de SauceDemo).</td><td>Finish con error_user (CP-49) → no termina: BUG-10.</td><td>16</td></tr>
+<tr><td>Exploratoria (manual)</td><td>Navegar libremente con un objetivo y anotar todo.</td><td>Sesión con mapa mental; de aquí salió la lista inicial de bugs.</td><td>2</td></tr>
+</table></div>
+
+<h3>Tabla de decisión del login</h3>
+<p>Dos condiciones: cómo es el usuario (vacío, válido, bloqueado, inexistente) y cómo es la contraseña (vacía, correcta, incorrecta).
+Son 12 combinaciones, pero varias dan el mismo resultado, así que las reducimos a 6 reglas. Las 6 pasaron.</p>
+<div class="tabla-scroll"><table>
+<tr><th>Regla</th><th>Usuario</th><th>Contraseña</th><th>Resultado esperado</th><th>Caso</th></tr>
+<tr><td>R1</td><td>Vacío</td><td>Cualquiera</td><td>«Username is required»</td><td>CP-22</td></tr>
+<tr><td>R2</td><td>No vacío</td><td>Vacía</td><td>«Password is required»</td><td>CP-23</td></tr>
+<tr><td>R3</td><td>Válido</td><td>Correcta</td><td>Entra al catálogo</td><td>CP-24</td></tr>
+<tr><td>R4</td><td>Bloqueado (locked_out_user)</td><td>Correcta</td><td>«Sorry, this user has been locked out.»</td><td>CP-25</td></tr>
+<tr><td>R5</td><td>Válido o bloqueado</td><td>Incorrecta</td><td>«Username and password do not match…»</td><td>CP-26</td></tr>
+<tr><td>R6</td><td>Inexistente</td><td>Cualquiera</td><td>«Username and password do not match…»</td><td>CP-27</td></tr>
+</table></div>
+<p>El formulario de checkout se hizo igual: 3 campos, 8 combinaciones, 4 reglas (CP-28 a CP-31). La validación revisa en orden First Name → Last Name → Postal Code y muestra solo el primer error.</p>
+
+<h3>Diagrama de estados del checkout</h3>
+<figure><img src="{{IMG_estados}}" alt="Diagrama de estados del checkout: Inventario, Carrito, Información, Resumen y Completado, con transiciones válidas e inválidas"><figcaption>Toca la imagen para verla grande.</figcaption></figure>
+<div class="tabla-scroll" style="margin-top:10px"><table>
+<tr><th>Estado</th><th>Página</th><th>Sale con</th></tr>
+<tr><td>S1 Inventario</td><td>inventory.html</td><td>Icono del carrito → S2</td></tr>
+<tr><td>S2 Carrito</td><td>cart.html</td><td>Checkout → S3 · Continue Shopping → S1</td></tr>
+<tr><td>S3 Información</td><td>checkout-step-one.html</td><td>Continue con datos válidos → S4 · Cancel → S2</td></tr>
+<tr><td>S4 Resumen</td><td>checkout-step-two.html</td><td>Finish → S5 · Cancel → S1</td></tr>
+<tr><td>S5 Completado</td><td>checkout-complete.html</td><td>Back Home → S1 (carrito vacío)</td></tr>
+</table></div>
+<p><strong>Transiciones inválidas que encontramos:</strong> S2 → S3 con el carrito vacío (BUG-14), escribir la URL de S5 sin pasar por S4 (BUG-19), y S4 → S5 que no ocurre con error_user (BUG-10).</p>
+</section>
+
+<!-- ============================================================ D -->
+<section id="d">
+<h2>D · Cómo leer el reporte de Playwright y el Trace Viewer</h2>
+<h3>El reporte HTML (<code>npm run report</code>)</h3>
+<figure><img src="{{IMG_reporte}}" alt="Reporte HTML de Playwright con el resumen de pruebas que pasan y fallan"></figure>
+<ol>
+<li><strong>Arriba</strong> están los contadores: Passed, Failed, Flaky y Skipped. Con un clic filtras la lista.</li>
+<li>Cada fila es una prueba. El título dice el caso y el bug: <code>CP-49 | BUG-10 | Finish completa la compra con error_user</code>. Al lado aparece el navegador (chromium o firefox).</li>
+<li>Al abrir una prueba fallida ves el <strong>error</strong> (qué se esperaba y qué llegó), la <strong>captura</strong>, el <strong>video</strong> y la <strong>traza</strong>.</li>
+</ol>
+<figure><img src="{{IMG_detalle}}" alt="Detalle de la prueba CP-49 fallida en el reporte HTML"></figure>
+<h3>El Trace Viewer</h3>
+<p>Es como una «grabación con rayos X» de la prueba. Se abre con el botón <em>Trace</em> del reporte o con el comando de la sección A.</p>
+<ul>
+<li><strong>Lista de acciones (izquierda):</strong> cada clic, escritura y verificación, con su tiempo. La que falló sale en rojo.</li>
+<li><strong>Línea de tiempo (arriba):</strong> miniaturas de la pantalla; pasa el ratón para ver qué había en cada momento.</li>
+<li><strong>Before / After:</strong> la página justo antes y justo después de la acción. En BUG-10, después de Finish la URL sigue en checkout-step-two.</li>
+<li><strong>Pestañas de abajo:</strong> <em>Console</em> (ahí está <code>TypeError: wa.cesetRart is not a function</code>), <em>Network</em> (peticiones; en BUG-18 se ve el 404) y <em>Errors</em>.</li>
+</ul>
+<h3>¿Por qué está bien que una prueba falle?</h3>
+<div class="nota">Cada prueba de defecto afirma lo que la aplicación <strong>debería</strong> hacer. Si falla, prueba que el bug existe, con evidencia
+repetible (3 de 3 corridas en Chromium y en Firefox). Cuando el equipo de desarrollo corrija el bug, la misma prueba pasará sola y servirá de prueba de
+regresión. Una prueba que se «arregla» para que pase escondería el defecto.</div>
+</section>
+
+<!-- ============================================================ E -->
+<section id="e">
+<h2>E · Cómo leer la cobertura de código (nyc / Istanbul)</h2>
+<p class="intro">Abre <code>coverage/codigo/index.html</code>. Medimos qué parte del código fuente de SauceDemo se ejecutó mientras corrían nuestras pruebas.</p>
+<div class="metricas">
+  <div class="metrica"><b>{{ST}} %</b><span>Statements (sentencias) · {{ST_N}}</span></div>
+  <div class="metrica"><b>{{BR}} %</b><span>Branches (ramas) · {{BR_N}}</span></div>
+  <div class="metrica"><b>{{FN}} %</b><span>Functions (funciones) · {{FN_N}}</span></div>
+  <div class="metrica"><b>{{LN}} %</b><span>Lines (líneas) · {{LN_N}}</span></div>
+</div>
+<div class="tabla-scroll" style="margin-top:12px"><table>
+<tr><th>Métrica</th><th>Qué cuenta</th><th>Ejemplo simple</th></tr>
+<tr><td>Statements</td><td>Cada instrucción que se ejecutó al menos una vez.</td><td><code>a = 1; b = 2;</code> en una línea son 2 sentencias.</td></tr>
+<tr><td>Branches</td><td>Cada camino de un <code>if</code>, <code>? :</code>, <code>&&</code> o <code>switch</code>. Ambos lados cuentan por separado.</td><td>Si solo probamos con datos válidos, el lado «error» del <code>if</code> queda sin cubrir.</td></tr>
+<tr><td>Functions</td><td>Cada función que se llamó al menos una vez.</td><td>La función que genera el PDF nunca se llamó.</td></tr>
+<tr><td>Lines</td><td>Cada línea con código que se ejecutó.</td><td>Parecida a statements, pero por línea.</td></tr>
+</table></div>
+<p>Las ramas tienen el número más bajo ({{BR}} %) porque son las más difíciles: hay que probar el caso «sí» y el caso «no» de cada condición.</p>
+<figure style="margin-top:10px"><img src="{{IMG_cobertura}}" alt="Resumen de cobertura por carpeta en el reporte de nyc"></figure>
+<h3>Los colores y marcas dentro de un archivo</h3>
+<div class="leyenda">
+  <span><i class="cuadro" style="background:#c8f0c8"></i>Verde: se ejecutó</span>
+  <span><i class="cuadro" style="background:#f6c6ce"></i>Rojo / rosado: nunca se ejecutó</span>
+  <span><i class="cuadro" style="background:#fff4c2"></i>Amarillo: rama a medias</span>
+</div>
+<ul>
+<li><strong>«1x», «12x»</strong> en el margen izquierdo: cuántas veces se ejecutó esa línea.</li>
+<li><strong>«I»</strong> (en una cajita amarilla): el camino del <em>if</em> nunca se tomó. <strong>«E»</strong>: el camino del <em>else</em> nunca se tomó.</li>
+<li>En la tabla del resumen, la barra verde/roja muestra el porcentaje de cada archivo.</li>
+</ul>
+<figure><img src="{{IMG_finish}}" alt="Detalle de Finish.jsx con líneas en rojo de la función de PDF"><figcaption>Finish.jsx: la función del recibo en PDF sale en rojo porque ninguna prueba pulsa ese botón.</figcaption></figure>
+<h3>Las 3 métricas de cobertura que reportamos</h3>
+<div class="tres">
+  <div class="metrica"><b>24 / 24 = 100 %</b><span>Requisitos: requisitos con al menos un caso ejecutado ÷ requisitos identificados × 100</span></div>
+  <div class="metrica"><b>55 / 57 = 96,5 %</b><span>Casos automatizados ÷ casos diseñados × 100 (los 2 restantes son exploratorios)</span></div>
+  <div class="metrica"><b>{{ST}} % · {{BR}} % · {{FN}} % · {{LN}} %</b><span>Código (sentencias · ramas · funciones · líneas), medido con nyc</span></div>
+</div>
+<h3>¿Por qué BUG-18 pasa en local?</h3>
+<div class="nota">BUG-18 es un problema del <strong>servidor</strong> del sitio público: al recargar <code>/inventory.html</code> responde 404 y luego redirige a
+<code>/?/inventory.html</code> con 200. La cobertura se mide contra una copia local servida por Vite, que responde 200 en todas las rutas. Por eso, en local,
+esa prueba pasa: el defecto no está en el código de la aplicación sino en cómo se publica. En la verificación en Brave se vio el 404 en la pestaña Red, aunque la página se veía normal.</div>
+</section>
+
+<!-- ============================================================ F -->
+<section id="f">
+<h2>F · Guion de la demo (diapositiva 8, unos 2 minutos)</h2>
+<div class="caja">
+<p><strong>Antes de empezar (5 minutos antes):</strong> terminal abierta en la carpeta del proyecto, letra grande (Ctrl + rueda), Wi-Fi probado, y el reporte ya generado por si acaso.</p>
+<div class="cmd"><pre>npx playwright test -g "CP-05|CP-49" --headed --project=chromium --workers=1</pre><button class="copiar" type="button">Copiar</button></div>
+<ol class="guion">
+<li><span class="tiempo">0:00</span>«Ahora corremos dos pruebas reales: una compra normal y la misma compra con error_user.»</li>
+<li><span class="tiempo">0:10</span>Ejecutar el comando. Se abre Chromium.</li>
+<li><span class="tiempo">0:15</span><strong>CP-05 pasa:</strong> «Agrega la mochila, llena Ana / Perez / 110111, Continue, Finish y aparece <em>Thank you for your order!</em>»</li>
+<li><span class="tiempo">0:40</span><strong>CP-49 falla:</strong> «Mismo flujo con error_user. Pulsa Finish… y se queda en el resumen. La prueba esperaba la confirmación y no llegó: eso es BUG-10.»</li>
+<li><span class="tiempo">1:00</span>En la terminal: «1 passed, 1 failed». «Que falle es lo correcto: demuestra el defecto.»</li>
+<li><span class="tiempo">1:10</span>Ejecutar <code>npm run report</code>, abrir CP-49 → mostrar el error, la captura y el botón Trace.</li>
+<li><span class="tiempo">1:30</span>En el Trace: la acción Finish, el After (sigue en checkout-step-two) y la pestaña Console con <code>wa.cesetRart is not a function</code>.</li>
+<li><span class="tiempo">1:50</span>Cerrar: «En las 3 corridas: 72 pasan y 38 fallan, y cada fallo es uno de los 19 bugs en dos navegadores.»</li>
+</ol>
+</div>
+<h3>Plan B (si no hay internet o algo falla)</h3>
+<ol>
+<li>No improvisar: decir «para no perder tiempo, mostramos la grabación de la misma prueba».</li>
+<li>Abrir el video <code>evidencias/videos/BUG-10.webm</code> (es la ejecución de CP-49) en el navegador, o el GIF <code>evidencias/gifs/BUG-10.gif</code> grabado en Brave.</li>
+<li>Abrir el reporte que ya existe (no necesita internet): <div class="cmd"><pre>npm run report</pre><button class="copiar" type="button">Copiar</button></div></li>
+<li><strong>Recomendado:</strong> grabar hoy la demo completa con <kbd>Win</kbd> + <kbd>Alt</kbd> + <kbd>R</kbd> (Xbox Game Bar) mientras corren CP-05 y CP-49, y tenerla en el escritorio. Así el plan B muestra también la prueba que pasa.</li>
+</ol>
+</section>
+
+<!-- ============================================================ G -->
+<section id="g">
+<h2>G · 10 preguntas probables y cómo responderlas</h2>
+<details><summary>1. ¿Por qué hay pruebas que fallan? ¿No deberían pasar todas?</summary><div>Las 38 pruebas que fallan son los 19 bugs en Chromium y Firefox. Cada una afirma el comportamiento correcto; si pasara, estaríamos ocultando el defecto. Cuando se corrijan, pasarán y quedarán como pruebas de regresión. Las 72 restantes pasan.</div></details>
+<details><summary>2. ¿Cómo saben que no son pruebas inestables (flaky)?</summary><div>Corrimos la suite 3 veces: los resultados fueron idénticos (72 pasan, 38 fallan) y Playwright no marcó ninguna como flaky. Además cada bug se repitió 2 veces a mano en Brave.</div></details>
+<details><summary>3. ¿Qué diferencia hay entre severidad y prioridad?</summary><div>Severidad = cuánto daño hace (técnico). Prioridad = qué tan pronto hay que corregirlo (negocio). BUG-11 es severidad Media (la app funciona) pero prioridad Alta (todos los clientes esperan 5 segundos al entrar).</div></details>
+<details><summary>4. ¿Por qué BUG-04 y BUG-10 son críticos?</summary><div>Los dos bloquean la compra sin alternativa. En BUG-04 (problem_user) lo que se escribe en Last Name va a First Name (queda «z») y el apellido sigue vacío, así que el formulario nunca se puede completar. En BUG-10 (error_user) Finish no hace nada y la orden no se cierra. BUG-14 (comprar con el carrito vacío) es grave pero quedó en severidad Media porque el usuario sí puede comprar normalmente.</div></details>
+<details><summary>5. ¿Por qué Playwright y no Selenium?</summary><div>Espera solo a los elementos (menos pruebas inestables), corre Chromium, Firefox y WebKit con la misma API, y guarda capturas, video y traza sin configurar nada extra. Además trae el reporte HTML y el Trace Viewer.</div></details>
+<details><summary>6. ¿Qué es Page Object Model y por qué lo usaron?</summary><div>Cada página (LoginPage, InventoryPage, CartPage, CheckoutPage) es una clase con sus selectores y acciones. Si cambia un botón, se corrige en un solo lugar. Los datos (usuarios, precios, tablas de decisión) están en JSON: enfoque híbrido data-driven.</div></details>
+<details><summary>7. ¿Cómo midieron la cobertura de código si SauceDemo no es suyo?</summary><div>Clonamos el código público (saucelabs/sample-app-web), lo instrumentamos con Istanbul, lo servimos en localhost:3000 y corrimos la suite contra esa copia. nyc dio {{ST}} % de sentencias, {{BR}} % de ramas, {{FN}} % de funciones y {{LN}} % de líneas.</div></details>
+<details><summary>8. ¿100 % de requisitos significa que no hay más bugs?</summary><div>No. Significa que los 24 requisitos identificados tienen al menos un caso ejecutado. La cobertura de código ({{ST}} %) muestra que hay partes sin ejecutar, por ejemplo el recibo en PDF. Las pruebas muestran la presencia de defectos, no su ausencia.</div></details>
+<details><summary>9. ¿Por qué la cobertura de ramas es la más baja?</summary><div>Porque cada condición tiene dos caminos y hay que probar ambos. Muchas ramas son de usuarios especiales o errores que no se provocan desde la interfaz (service worker, PDF). Es normal que sea la métrica más baja.</div></details>
+<details><summary>10. ¿Quién verificó los bugs a mano?</summary><div>Con honestidad: una IA (Claude) repitió los 19 en Brave con navegación asistida, 2 de 2 veces, y una persona escribió las contraseñas. La verificación propia del equipo es esta guía; el campo «Verificación por el equipo» queda en PENDIENTE hasta completarla.</div></details>
+</section>
+</main>
+</div>
+<div id="visor" role="dialog" aria-label="Imagen ampliada"><img alt=""></div>
+<button id="arriba" type="button" aria-label="Volver arriba">↑ Arriba</button>
+
+<script>
+const D = /*DATOS*/null;
+const CLAVE = 'guia-verificacion-saucedemo-v1';
+const PASS = 'secret_sauce';
+
+function leer(){ try { return JSON.parse(localStorage.getItem(CLAVE)) || {}; } catch(e){ return {}; } }
+function escribir(o){ try { localStorage.setItem(CLAVE, JSON.stringify(o)); return true; } catch(e){ return false; } }
+let estado = leer();
+
+function esc(s){ return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+
+async function copiar(texto, boton){
+  let ok = false;
+  try { await navigator.clipboard.writeText(texto); ok = true; } catch(e){
+    const t = document.createElement('textarea'); t.value = texto; t.style.position='fixed'; t.style.opacity='0';
+    document.body.appendChild(t); t.select();
+    try { ok = document.execCommand('copy'); } catch(e2){ ok = false; }
+    t.remove();
+  }
+  const antes = boton.dataset.etiqueta || boton.textContent;
+  boton.dataset.etiqueta = antes;
+  boton.textContent = ok ? 'Copiado ✓' : 'No se pudo';
+  boton.classList.toggle('hecho', ok);
+  setTimeout(() => { boton.textContent = antes; boton.classList.remove('hecho'); }, 1400);
+}
+
+document.getElementById('fecha-ver').textContent = D.fecha;
+document.getElementById('nav-ver').textContent = D.navegador;
+
+const lista = document.getElementById('lista-bugs');
+lista.innerHTML = D.bugs.map(b => `
+<article class="bug" id="${b.id}" data-sev="${esc(b.severidad)}" data-texto="${esc((b.id+' '+b.titulo+' '+b.usuario_txt+' '+b.modulo).toLowerCase())}">
+  <div class="bug-cab">
+    <h3><span class="bug-id">${b.id}</span>${esc(b.titulo)}</h3>
+    <div>
+      <span class="etq s-${esc(b.severidad)}">Severidad: ${esc(b.severidad)}</span>
+      <span class="etq s-${esc(b.prioridad)==='Alta'?'Alta':(b.prioridad==='Media'?'Media':'Baja')}">Prioridad: ${esc(b.prioridad)}</span>
+    </div>
+  </div>
+  <div class="bug-cuerpo">
+    <div>
+      <h4>Entrar con</h4>
+      <div class="cred">
+        ${b.usuarios.map(u => `<code>${esc(u)}</code><button class="copiar" type="button" data-texto="${esc(u)}">Copiar usuario</button>`).join('')}
+        <code>${PASS}</code><button class="copiar" type="button" data-texto="${PASS}">Copiar contraseña</button>
+      </div>
+      <h4>Antes de empezar</h4>
+      <p style="margin:0">${esc(b.pre)}</p>
+      <h4>Pasos</h4>
+      <ol>${b.pasos.map(p => `<li>${esc(p)}</li>`).join('')}</ol>
+      <h4>Resultado esperado</h4>
+      <p style="margin:0">${esc(b.esperado)}</p>
+      <h4>Cómo reconocer el defecto</h4>
+      <div class="reconocer">${esc(b.obtenido)}<br><small>En Brave: ${esc(b.reconocer)}</small></div>
+      <h4>Consola (F12)</h4>
+      <p style="margin:0">${esc(b.consola)}</p>
+      <h4>Por qué esa severidad y prioridad</h4>
+      <p style="margin:0">${esc(b.justificacion)}</p>
+      <p style="margin:8px 0 0;color:var(--muted);font-size:.85rem">Caso ${esc(b.caso)} · Módulo ${esc(b.modulo)} · Verificado por la IA el ${esc(b.hora)}, 2/2</p>
+    </div>
+    <figure>
+      <img src="${b.img}" alt="Captura de ${b.id} en Brave mostrando el defecto" loading="lazy">
+      <figcaption>Captura en Brave (toca para ampliar). La captura de Playwright está en el Reporte de defectos.</figcaption>
+    </figure>
+  </div>
+  <div class="marcar">
+    <label><input type="checkbox" data-bug="${b.id}"> Lo reproduje</label>
+    <textarea data-notas="${b.id}" placeholder="Notas: fecha, navegador, qué viste distinto…" aria-label="Notas de ${b.id}"></textarea>
+    <span class="guardado" data-guardado="${b.id}"></span>
+  </div>
+</article>`).join('');
+
+function pintarProgreso(){
+  const n = D.bugs.filter(b => estado[b.id] && estado[b.id].hecho).length;
+  const pct = Math.round(n / D.bugs.length * 100) + '%';
+  const txt = `${n} de ${D.bugs.length} reproducidos`;
+  document.getElementById('prog-txt').textContent = txt;
+  document.getElementById('prog-txt-lado').textContent = txt;
+  document.getElementById('prog-barra').style.width = pct;
+  document.getElementById('prog-barra-lado').style.width = pct;
+  D.bugs.forEach(b => document.getElementById(b.id).classList.toggle('hecho', !!(estado[b.id] && estado[b.id].hecho)));
+}
+
+document.querySelectorAll('input[data-bug]').forEach(cb => {
+  const id = cb.dataset.bug;
+  cb.checked = !!(estado[id] && estado[id].hecho);
+  cb.addEventListener('change', () => {
+    estado[id] = Object.assign({}, estado[id], {hecho: cb.checked, cuando: new Date().toLocaleString('es-CO')});
+    const ok = escribir(estado);
+    document.querySelector(`[data-guardado="${id}"]`).textContent = ok ? (cb.checked ? 'Marcado el ' + estado[id].cuando : 'Desmarcado') : 'No se pudo guardar en este navegador';
+    pintarProgreso(); filtrar();
+  });
+});
+document.querySelectorAll('textarea[data-notas]').forEach(t => {
+  const id = t.dataset.notas;
+  t.value = (estado[id] && estado[id].notas) || '';
+  let reloj;
+  t.addEventListener('input', () => {
+    clearTimeout(reloj);
+    reloj = setTimeout(() => {
+      estado[id] = Object.assign({}, estado[id], {notas: t.value});
+      document.querySelector(`[data-guardado="${id}"]`).textContent = escribir(estado) ? 'Notas guardadas' : 'No se pudo guardar en este navegador';
+    }, 350);
+  });
+});
+
+function filtrar(){
+  const q = document.getElementById('buscar').value.trim().toLowerCase();
+  const s = document.getElementById('f-sev').value;
+  const e = document.getElementById('f-est').value;
+  document.querySelectorAll('.bug').forEach(a => {
+    const hecho = !!(estado[a.id] && estado[a.id].hecho);
+    const ver = (!q || a.dataset.texto.includes(q)) && (!s || a.dataset.sev === s) && (!e || (e === 'si') === hecho);
+    a.style.display = ver ? '' : 'none';
+  });
+}
+['buscar','f-sev','f-est'].forEach(id => document.getElementById(id).addEventListener('input', filtrar));
+document.getElementById('reiniciar').addEventListener('click', () => {
+  const b = document.getElementById('reiniciar');
+  if (b.dataset.confirmar !== '1'){ b.dataset.confirmar = '1'; b.textContent = '¿Seguro? Pulsa otra vez'; setTimeout(()=>{b.dataset.confirmar='';b.textContent='Borrar mis marcas';}, 3000); return; }
+  estado = {}; escribir(estado);
+  document.querySelectorAll('input[data-bug]').forEach(c => c.checked = false);
+  document.querySelectorAll('textarea[data-notas]').forEach(t => t.value = '');
+  document.querySelectorAll('[data-guardado]').forEach(g => g.textContent = '');
+  b.dataset.confirmar = ''; b.textContent = 'Borrar mis marcas';
+  pintarProgreso(); filtrar();
+});
+
+document.querySelectorAll('button.copiar').forEach(b => b.addEventListener('click', () => {
+  const texto = b.dataset.texto || b.parentElement.querySelector('pre').textContent;
+  copiar(texto, b);
+}));
+
+const visor = document.getElementById('visor');
+document.querySelectorAll('figure img').forEach(i => i.addEventListener('click', () => { visor.querySelector('img').src = i.src; visor.style.display = 'flex'; }));
+visor.addEventListener('click', () => visor.style.display = 'none');
+document.addEventListener('keydown', e => { if (e.key === 'Escape') visor.style.display = 'none'; });
+
+const raiz = document.documentElement;
+try { const t = localStorage.getItem(CLAVE + '-tema'); if (t) raiz.dataset.theme = t; } catch(e){}
+document.getElementById('btn-tema').addEventListener('click', () => {
+  const oscuro = raiz.dataset.theme ? raiz.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+  raiz.dataset.theme = oscuro ? 'light' : 'dark';
+  try { localStorage.setItem(CLAVE + '-tema', raiz.dataset.theme); } catch(e){}
+});
+document.getElementById('arriba').addEventListener('click', () => scrollTo({top:0}));
+
+const enlaces = [...document.querySelectorAll('nav.lado a')];
+const obs = new IntersectionObserver(es => es.forEach(x => { if (x.isIntersecting) enlaces.forEach(a => a.classList.toggle('activo', a.getAttribute('href') === '#' + x.target.id)); }), {rootMargin:'-20% 0px -70% 0px'});
+document.querySelectorAll('main section').forEach(s => obs.observe(s));
+
+pintarProgreso();
+</script>
+</body>
+</html>

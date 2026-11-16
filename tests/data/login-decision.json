@@ -1,0 +1,8 @@
+[
+  { "id": "CP-22", "regla": "R1", "condicion": "Usuario vacio, contrasena cualquiera", "usuario": "", "password": "secret_sauce", "esperado": "error", "mensaje": "Epic sadface: Username is required" },
+  { "id": "CP-23", "regla": "R2", "condicion": "Usuario no vacio (valido, invalido o bloqueado), contrasena vacia", "usuario": "locked_out_user", "password": "", "esperado": "error", "mensaje": "Epic sadface: Password is required" },
+  { "id": "CP-24", "regla": "R3", "condicion": "Usuario valido, contrasena correcta", "usuario": "standard_user", "password": "secret_sauce", "esperado": "acceso", "mensaje": "" },
+  { "id": "CP-25", "regla": "R4", "condicion": "Usuario bloqueado, contrasena correcta", "usuario": "locked_out_user", "password": "secret_sauce", "esperado": "error", "mensaje": "Epic sadface: Sorry, this user has been locked out." },
+  { "id": "CP-26", "regla": "R5", "condicion": "Usuario valido o bloqueado, contrasena incorrecta", "usuario": "standard_user", "password": "clave_mala", "esperado": "error", "mensaje": "Epic sadface: Username and password do not match any user in this service" },
+  { "id": "CP-27", "regla": "R6", "condicion": "Usuario invalido, contrasena correcta o incorrecta", "usuario": "usuario_inexistente", "password": "secret_sauce", "esperado": "error", "mensaje": "Epic sadface: Username and password do not match any user in this service" }
+]

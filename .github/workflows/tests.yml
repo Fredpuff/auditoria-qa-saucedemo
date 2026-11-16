@@ -1,0 +1,59 @@
+name: Pruebas E2E SauceDemo
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  e2e:
+    name: Suite Playwright (Chromium y Firefox)
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Instalar dependencias
+        run: npm ci
+      - name: Instalar navegadores
+        run: npx playwright install --with-deps chromium firefox
+      - name: Ejecutar pruebas
+        # La suite incluye pruebas que fallan a proposito por defectos reales de la aplicacion,
+        # por eso el job queda en rojo. El reporte se publica siempre.
+        run: npm test
+      - name: Publicar reporte HTML y resultados
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: reporte-playwright
+          path: |
+            evidencias/reportes/
+            evidencias/test-results/
+          retention-days: 30
+
+  cobertura:
+    name: Cobertura de codigo (Istanbul + nyc)
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - name: Preparar SauceDemo local instrumentado
+        run: npm run app:prepare
+      - name: Medir cobertura
+        run: npm run coverage
+      - name: Publicar reporte de cobertura
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: reporte-cobertura
+          path: coverage/codigo/
+          retention-days: 30
