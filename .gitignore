@@ -19,3 +19,6 @@ evidencias/videos/*
 __pycache__/
 *.zip
 *.zip.tmp
+
+# Archivos temporales de Word y PowerPoint abiertos
+~$*
