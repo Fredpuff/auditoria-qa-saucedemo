@@ -1,6 +1,41 @@
-<testsuites id="" name="" tests="38" failures="38" skipped="0" errors="0" time="88.727007">
-<testsuite name="carrito.spec.ts" timestamp="2026-11-16T23:39:17.287Z" hostname="chromium" tests="2" failures="2" skipped="0" time="20.147" errors="0">
-<testcase name="Carrito › CP-37 | BUG-15 | Reset App State debe vaciar el carrito y restaurar los botones" classname="carrito.spec.ts" time="10.1">
+<testsuites id="" name="" tests="110" failures="38" skipped="0" errors="0" time="182.64384700000002">
+<testsuite name="carrito.spec.ts" timestamp="2026-11-16T19:18:45.895Z" hostname="chromium" tests="7" failures="2" skipped="0" time="31.16" errors="0">
+<testcase name="Carrito › CP-02 | agregar un producto al carrito" classname="carrito.spec.ts" time="3.394">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\carrito-Carrito-CP-02-agregar-un-producto-al-carrito-chromium\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Carrito › CP-14 | valor limite: carrito con 0 productos y contador del badge" classname="carrito.spec.ts" time="3.338">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\carrito-Carrito-CP-14-valo-e72f4-ductos-y-contador-del-badge-chromium\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Carrito › CP-15 | valor limite: carrito con 1 productos y contador del badge" classname="carrito.spec.ts" time="3.349">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\carrito-Carrito-CP-15-valo-db2fc-ductos-y-contador-del-badge-chromium\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Carrito › CP-16 | valor limite: carrito con 5 productos y contador del badge" classname="carrito.spec.ts" time="3.734">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\carrito-Carrito-CP-16-valo-8b85b-ductos-y-contador-del-badge-chromium\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Carrito › CP-17 | valor limite: carrito con 6 productos y contador del badge" classname="carrito.spec.ts" time="1.902">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\carrito-Carrito-CP-17-valo-53a32-ductos-y-contador-del-badge-chromium\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Carrito › CP-37 | BUG-15 | Reset App State debe vaciar el carrito y restaurar los botones" classname="carrito.spec.ts" time="7.66">
 <system-out>
 <![CDATA[
 [[ATTACHMENT|..\test-results\carrito-Carrito-CP-37-BUG--b4c20-ito-y-restaurar-los-botones-chromium\test-failed-1.png]]
@@ -36,7 +71,7 @@
       46 |   });
       47 |
       48 |   test('CP-52 | BUG-16 | el carrito de un usuario no debe aparecer al iniciar sesion con otro', { tag: '@defecto' }, async ({ page }) => {
-        at C:\Users\ingsu\mi_app\lib\playwright\proyecto\auditoria-qa-saucedemo\tests\carrito.spec.ts:45:52
+        at .\tests\carrito.spec.ts:45:52
 
     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
     ..\evidencias\test-results\carrito-Carrito-CP-37-BUG--b4c20-ito-y-restaurar-los-botones-chromium\test-failed-1.png
@@ -62,7 +97,7 @@
 ]]>
 </failure>
 </testcase>
-<testcase name="Carrito › CP-52 | BUG-16 | el carrito de un usuario no debe aparecer al iniciar sesion con otro" classname="carrito.spec.ts" time="10.047">
+<testcase name="Carrito › CP-52 | BUG-16 | el carrito de un usuario no debe aparecer al iniciar sesion con otro" classname="carrito.spec.ts" time="7.783">
 <system-out>
 <![CDATA[
 [[ATTACHMENT|..\test-results\carrito-Carrito-CP-52-BUG--c1fcb--al-iniciar-sesion-con-otro-chromium\test-failed-1.png]]
@@ -98,7 +133,7 @@
       59 |   });
       60 | });
       61 |
-        at C:\Users\ingsu\mi_app\lib\playwright\proyecto\auditoria-qa-saucedemo\tests\carrito.spec.ts:58:29
+        at .\tests\carrito.spec.ts:58:29
 
     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
     ..\evidencias\test-results\carrito-Carrito-CP-52-BUG--c1fcb--al-iniciar-sesion-con-otro-chromium\test-failed-1.png
@@ -125,8 +160,22 @@
 </failure>
 </testcase>
 </testsuite>
-<testsuite name="checkout.spec.ts" timestamp="2026-11-16T23:39:17.287Z" hostname="chromium" tests="3" failures="3" skipped="0" time="23.805" errors="0">
-<testcase name="Checkout › CP-10 | BUG-14 | no se debe poder iniciar el checkout con el carrito vacio" classname="checkout.spec.ts" time="8.785">
+<testsuite name="checkout.spec.ts" timestamp="2026-11-16T19:18:45.895Z" hostname="chromium" tests="16" failures="3" skipped="0" time="58.08" errors="0">
+<testcase name="Checkout › CP-05 | compra completa con standard_user (smoke)" classname="checkout.spec.ts" time="1.648">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\checkout-Checkout-CP-05-co-50e5d-ta-con-standard-user-smoke--chromium\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Checkout › CP-09 | continuar el checkout sin datos muestra error" classname="checkout.spec.ts" time="1.186">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\checkout-Checkout-CP-09-co-5ca5a-out-sin-datos-muestra-error-chromium\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Checkout › CP-10 | BUG-14 | no se debe poder iniciar el checkout con el carrito vacio" classname="checkout.spec.ts" time="6.235">
 <system-out>
 <![CDATA[
 [[ATTACHMENT|..\test-results\checkout-Checkout-CP-10-BU-0e919-eckout-con-el-carrito-vacio-chromium\test-failed-1.png]]
@@ -160,7 +209,7 @@
       56 |   });
       57 |
       58 |   test('CP-11 | BUG-17 | el codigo postal no debe aceptar letras ni simbolos', { tag: ['@negativa', '@defecto'] }, async ({ page }) => {
-        at C:\Users\ingsu\mi_app\lib\playwright\proyecto\auditoria-qa-saucedemo\tests\checkout.spec.ts:55:28
+        at .\tests\checkout.spec.ts:55:28
 
     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
     ..\evidencias\test-results\checkout-Checkout-CP-10-BU-0e919-eckout-con-el-carrito-vacio-chromium\test-failed-1.png
@@ -186,7 +235,7 @@
 ]]>
 </failure>
 </testcase>
-<testcase name="Checkout › CP-11 | BUG-17 | el codigo postal no debe aceptar letras ni simbolos" classname="checkout.spec.ts" time="8.769">
+<testcase name="Checkout › CP-11 | BUG-17 | el codigo postal no debe aceptar letras ni simbolos" classname="checkout.spec.ts" time="6.383">
 <system-out>
 <![CDATA[
 [[ATTACHMENT|..\test-results\checkout-Checkout-CP-11-BU-305c3--aceptar-letras-ni-simbolos-chromium\test-failed-1.png]]
@@ -220,7 +269,7 @@
       66 |     await expect(co.error).toBeVisible();
       67 |   });
       68 |
-        at C:\Users\ingsu\mi_app\lib\playwright\proyecto\auditoria-qa-saucedemo\tests\checkout.spec.ts:65:24
+        at .\tests\checkout.spec.ts:65:24
 
     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
     ..\evidencias\test-results\checkout-Checkout-CP-11-BU-305c3--aceptar-letras-ni-simbolos-chromium\test-failed-1.png
@@ -246,7 +295,77 @@
 ]]>
 </failure>
 </testcase>
-<testcase name="Checkout › CP-35 | BUG-19 | no se debe mostrar la confirmacion de compra entrando directo a /checkout-complete.html" classname="checkout.spec.ts" time="6.251">
+<testcase name="Checkout › CP-18 | valor limite: calculo de impuesto y total con 1 producto" classname="checkout.spec.ts" time="3.765">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\checkout-Checkout-CP-18-va-dffb2-esto-y-total-con-1-producto-chromium\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Checkout › CP-19 | valor limite: calculo de impuesto y total con los 6 productos" classname="checkout.spec.ts" time="4.001">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\checkout-Checkout-CP-19-va-5bed8-y-total-con-los-6-productos-chromium\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Checkout › CP-20 | valor limite: First Name con 1 y 50 caracteres" classname="checkout.spec.ts" time="3.964">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\checkout-Checkout-CP-20-va-46286--Name-con-1-y-50-caracteres-chromium\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Checkout › CP-21 | valor limite: First Name con 255 caracteres" classname="checkout.spec.ts" time="2.086">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\checkout-Checkout-CP-21-va-e3dbd-rst-Name-con-255-caracteres-chromium\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Checkout › CP-28 | tabla de decision checkout C1: First Name vacio (Last Name y Postal Code cualquiera)" classname="checkout.spec.ts" time="1.077">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\checkout-Checkout-CP-28-ta-3b580-e-y-Postal-Code-cualquiera--chromium\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Checkout › CP-29 | tabla de decision checkout C2: First Name lleno, Last Name vacio (Postal Code cualquiera)" classname="checkout.spec.ts" time="2.115">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\checkout-Checkout-CP-29-ta-14311-cio-Postal-Code-cualquiera--chromium\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Checkout › CP-30 | tabla de decision checkout C3: First Name y Last Name llenos, Postal Code vacio" classname="checkout.spec.ts" time="3.519">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\checkout-Checkout-CP-30-ta-1bf8b-me-llenos-Postal-Code-vacio-chromium\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Checkout › CP-31 | tabla de decision checkout C4: Los tres campos llenos" classname="checkout.spec.ts" time="6.244">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\checkout-Checkout-CP-31-ta-88815-t-C4-Los-tres-campos-llenos-chromium\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Checkout › CP-32 | transicion valida Inventario &gt; Carrito &gt; Informacion &gt; Resumen &gt; Completado &gt; Inventario" classname="checkout.spec.ts" time="7.088">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\checkout-Checkout-CP-32-tr-f8cfe-sumen-Completado-Inventario-chromium\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Checkout › CP-33 | transicion Cancel en Informacion vuelve al carrito y en Resumen al inventario" classname="checkout.spec.ts" time="1.612">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\checkout-Checkout-CP-33-tr-5bf2f--y-en-Resumen-al-inventario-chromium\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Checkout › CP-35 | BUG-19 | no se debe mostrar la confirmacion de compra entrando directo a /checkout-complete.html" classname="checkout.spec.ts" time="6.317">
 <system-out>
 <![CDATA[
 [[ATTACHMENT|..\test-results\checkout-Checkout-CP-35-BU-878c6-to-a-checkout-complete-html-chromium\test-failed-1.png]]
@@ -282,7 +401,7 @@
       174 |   });
       175 | });
       176 |
-        at C:\Users\ingsu\mi_app\lib\playwright\proyecto\auditoria-qa-saucedemo\tests\checkout.spec.ts:173:35
+        at .\tests\checkout.spec.ts:173:35
 
     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
     ..\evidencias\test-results\checkout-Checkout-CP-35-BU-878c6-to-a-checkout-complete-html-chromium\test-failed-1.png
@@ -311,9 +430,16 @@
 ]]>
 </failure>
 </testcase>
+<testcase name="CP-34 | transicion invalida: /checkout-step-two.html sin sesion redirige al login" classname="checkout.spec.ts" time="0.84">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\checkout-CP-34-transicion--2ab60-in-sesion-redirige-al-login-chromium\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
 </testsuite>
-<testsuite name="defectos.spec.ts" timestamp="2026-11-16T23:39:17.287Z" hostname="chromium" tests="11" failures="11" skipped="0" time="48.529" errors="0">
-<testcase name="problem_user › CP-42 | BUG-02 | ordenar Z-A con problem_user" classname="defectos.spec.ts" time="1.115">
+<testsuite name="defectos.spec.ts" timestamp="2026-11-16T19:18:45.895Z" hostname="chromium" tests="11" failures="11" skipped="0" time="66.074" errors="0">
+<testcase name="problem_user › CP-42 | BUG-02 | ordenar Z-A con problem_user" classname="defectos.spec.ts" time="1.053">
 <system-out>
 <![CDATA[
 [[ATTACHMENT|..\test-results\defectos-problem-user-CP-4-7f46e-rdenar-Z-A-con-problem-user-chromium\test-failed-1.png]]
@@ -354,7 +480,7 @@
       47 |   });
       48 |
       49 |   test('CP-43 | BUG-03 | Add to cart y Remove responden en todos los productos con problem_user', { tag: '@defecto' }, async ({ page }) => {
-        at C:\Users\ingsu\mi_app\lib\playwright\proyecto\auditoria-qa-saucedemo\tests\defectos.spec.ts:46:38
+        at .\tests\defectos.spec.ts:46:38
 
     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
     ..\evidencias\test-results\defectos-problem-user-CP-4-7f46e-rdenar-Z-A-con-problem-user-chromium\test-failed-1.png
@@ -380,7 +506,7 @@
 ]]>
 </failure>
 </testcase>
-<testcase name="problem_user › CP-43 | BUG-03 | Add to cart y Remove responden en todos los productos con problem_user" classname="defectos.spec.ts" time="1.74">
+<testcase name="problem_user › CP-43 | BUG-03 | Add to cart y Remove responden en todos los productos con problem_user" classname="defectos.spec.ts" time="1.735">
 <system-out>
 <![CDATA[
 [[ATTACHMENT|..\test-results\defectos-problem-user-CP-4-537c3--productos-con-problem-user-chromium\test-failed-1.png]]
@@ -419,7 +545,7 @@
       53 |   });
       54 |
       55 |   test('CP-44 | BUG-04 | escribir el apellido no debe cambiar el nombre con problem_user', { tag: '@defecto' }, async ({ page }) => {
-        at C:\Users\ingsu\mi_app\lib\playwright\proyecto\auditoria-qa-saucedemo\tests\defectos.spec.ts:52:57
+        at .\tests\defectos.spec.ts:52:57
 
     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
     ..\evidencias\test-results\defectos-problem-user-CP-4-537c3--productos-con-problem-user-chromium\test-failed-1.png
@@ -445,7 +571,7 @@
 ]]>
 </failure>
 </testcase>
-<testcase name="problem_user › CP-44 | BUG-04 | escribir el apellido no debe cambiar el nombre con problem_user" classname="defectos.spec.ts" time="1.335">
+<testcase name="problem_user › CP-44 | BUG-04 | escribir el apellido no debe cambiar el nombre con problem_user" classname="defectos.spec.ts" time="2.729">
 <system-out>
 <![CDATA[
 [[ATTACHMENT|..\test-results\defectos-problem-user-CP-4-aed7e--el-nombre-con-problem-user-chromium\test-failed-1.png]]
@@ -480,7 +606,7 @@
       61 |   });
       62 |
       63 |   test('CP-45 | BUG-05 | el detalle corresponde al producto seleccionado con problem_user', { tag: '@defecto' }, async ({ page }) => {
-        at C:\Users\ingsu\mi_app\lib\playwright\proyecto\auditoria-qa-saucedemo\tests\defectos.spec.ts:60:32
+        at .\tests\defectos.spec.ts:60:32
 
     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
     ..\evidencias\test-results\defectos-problem-user-CP-4-aed7e--el-nombre-con-problem-user-chromium\test-failed-1.png
@@ -506,7 +632,7 @@
 ]]>
 </failure>
 </testcase>
-<testcase name="problem_user › CP-45 | BUG-05 | el detalle corresponde al producto seleccionado con problem_user" classname="defectos.spec.ts" time="2.218">
+<testcase name="problem_user › CP-45 | BUG-05 | el detalle corresponde al producto seleccionado con problem_user" classname="defectos.spec.ts" time="2.36">
 <system-out>
 <![CDATA[
 [[ATTACHMENT|..\test-results\defectos-problem-user-CP-4-0d589-leccionado-con-problem-user-chromium\test-failed-1.png]]
@@ -533,9 +659,9 @@
     +   "clic en \"Sauce Labs Backpack\" muestra \"Sauce Labs Fleece Jacket\"",
     +   "clic en \"Sauce Labs Bike Light\" muestra \"null\"",
     +   "clic en \"Sauce Labs Bolt T-Shirt\" muestra \"Sauce Labs Onesie\"",
-    +   "clic en \"Sauce Labs Fleece Jacket\" muestra \"null\"",
-    +   "clic en \"Sauce Labs Onesie\" muestra \"null\"",
-    +   "clic en \"Test.allTheThings() T-Shirt (Red)\" muestra \"Sauce Labs Backpack\"",
+    +   "clic en \"Sauce Labs Fleece Jacket\" muestra \"ITEM NOT FOUND\"",
+    +   "clic en \"Sauce Labs Onesie\" muestra \"Test.allTheThings() T-Shirt (Red)\"",
+    +   "clic en \"Test.allTheThings() T-Shirt (Red)\" muestra \"null\"",
     + ]
 
       72 |     await inv.item(productos[0].nombre).getByTestId('inventory-item-name').click();
@@ -545,7 +671,7 @@
       75 |   });
       76 |
       77 |   test('CP-46 | BUG-06 | el enlace About lleva a una pagina valida con problem_user', { tag: '@defecto' }, async ({ page }) => {
-        at C:\Users\ingsu\mi_app\lib\playwright\proyecto\auditoria-qa-saucedemo\tests\defectos.spec.ts:74:57
+        at .\tests\defectos.spec.ts:74:57
 
     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
     ..\evidencias\test-results\defectos-problem-user-CP-4-0d589-leccionado-con-problem-user-chromium\test-failed-1.png
@@ -575,7 +701,7 @@
 ]]>
 </failure>
 </testcase>
-<testcase name="problem_user › CP-46 | BUG-06 | el enlace About lleva a una pagina valida con problem_user" classname="defectos.spec.ts" time="1.751">
+<testcase name="problem_user › CP-46 | BUG-06 | el enlace About lleva a una pagina valida con problem_user" classname="defectos.spec.ts" time="4.142">
 <properties>
 <property name="enlace About" value="https://saucelabs.com/error/404 -&gt; HTTP 404">
 </property>
@@ -608,7 +734,7 @@
       86 |   });
       87 | });
       88 |
-        at C:\Users\ingsu\mi_app\lib\playwright\proyecto\auditoria-qa-saucedemo\tests\defectos.spec.ts:85:58
+        at .\tests\defectos.spec.ts:85:58
 
     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
     ..\evidencias\test-results\defectos-problem-user-CP-4-25a80-ina-valida-con-problem-user-chromium\test-failed-1.png
@@ -634,7 +760,7 @@
 ]]>
 </failure>
 </testcase>
-<testcase name="error_user › CP-47 | BUG-08 | Add to cart y Remove responden en todos los productos con error_user" classname="defectos.spec.ts" time="1.699">
+<testcase name="error_user › CP-47 | BUG-08 | Add to cart y Remove responden en todos los productos con error_user" classname="defectos.spec.ts" time="4.671">
 <properties>
 <property name="excepciones" value="[excepcion] Failed to add item to the cart. | [excepcion] Failed to add item to the cart. | [excepcion] Failed to add item to the cart. | [excepcion] Failed to remove item from cart. | [excepcion] Failed to remove item from cart. | [excepcion] Failed to remove item from cart.">
 </property>
@@ -677,7 +803,7 @@
        99 |   });
       100 |
       101 |   test('CP-48 | BUG-09 | el campo Last Name acepta texto con error_user', { tag: '@defecto' }, async ({ page }) => {
-        at C:\Users\ingsu\mi_app\lib\playwright\proyecto\auditoria-qa-saucedemo\tests\defectos.spec.ts:98:57
+        at .\tests\defectos.spec.ts:98:57
 
     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
     ..\evidencias\test-results\defectos-error-user-CP-47--e7c32-os-productos-con-error-user-chromium\test-failed-1.png
@@ -708,7 +834,7 @@
 ]]>
 </failure>
 </testcase>
-<testcase name="error_user › CP-48 | BUG-09 | el campo Last Name acepta texto con error_user" classname="defectos.spec.ts" time="1.372">
+<testcase name="error_user › CP-48 | BUG-09 | el campo Last Name acepta texto con error_user" classname="defectos.spec.ts" time="1.999">
 <system-out>
 <![CDATA[
 [[ATTACHMENT|..\test-results\defectos-error-user-CP-48--a8bb0-acepta-texto-con-error-user-chromium\test-failed-1.png]]
@@ -735,7 +861,7 @@
       107 |   });
       108 |
       109 |   test('CP-49 | BUG-10 | Finish completa la compra con error_user', { tag: '@defecto' }, async ({ page }) => {
-        at C:\Users\ingsu\mi_app\lib\playwright\proyecto\auditoria-qa-saucedemo\tests\defectos.spec.ts:106:43
+        at .\tests\defectos.spec.ts:106:43
 
     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
     ..\evidencias\test-results\defectos-error-user-CP-48--a8bb0-acepta-texto-con-error-user-chromium\test-failed-1.png
@@ -765,7 +891,7 @@
 ]]>
 </failure>
 </testcase>
-<testcase name="error_user › CP-49 | BUG-10 | Finish completa la compra con error_user" classname="defectos.spec.ts" time="6.563">
+<testcase name="error_user › CP-49 | BUG-10 | Finish completa la compra con error_user" classname="defectos.spec.ts" time="9.479">
 <system-out>
 <![CDATA[
 [[ATTACHMENT|..\test-results\defectos-error-user-CP-49--03b05-ta-la-compra-con-error-user-chromium\test-failed-1.png]]
@@ -799,7 +925,7 @@
       118 |     await expect(co.confirmacion).toHaveText('Thank you for your order!');
       119 |   });
       120 | });
-        at C:\Users\ingsu\mi_app\lib\playwright\proyecto\auditoria-qa-saucedemo\tests\defectos.spec.ts:117:24
+        at .\tests\defectos.spec.ts:117:24
 
     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
     ..\evidencias\test-results\defectos-error-user-CP-49--03b05-ta-la-compra-con-error-user-chromium\test-failed-1.png
@@ -829,7 +955,7 @@
 ]]>
 </failure>
 </testcase>
-<testcase name="CP-50 | BUG-11 | el login de performance_glitch_user tarda menos de 2000 ms" classname="defectos.spec.ts" time="28.089">
+<testcase name="CP-50 | BUG-11 | el login de performance_glitch_user tarda menos de 2000 ms" classname="defectos.spec.ts" time="31.252">
 <system-out>
 <![CDATA[
 [[ATTACHMENT|..\test-results\defectos-CP-50-BUG-11-el-l-8792c-user-tarda-menos-de-2000-ms-chromium\test-failed-1.png]]
@@ -841,15 +967,15 @@
 [[ATTACHMENT|..\test-results\defectos-CP-50-BUG-11-el-l-8792c-user-tarda-menos-de-2000-ms-chromium\trace.zip]]
 ]]>
 </system-out>
-<failure message="tiempos: 5124, 5073, 5110, 5083, 5086 ms" type="expect.toBeLessThan">
+<failure message="tiempos: 5112, 5091, 5105, 5103, 5084 ms" type="expect.toBeLessThan">
 <![CDATA[  [chromium] › defectos.spec.ts:122:1 › CP-50 | BUG-11 | el login de performance_glitch_user tarda menos de 2000 ms @defecto @rendimiento 
 
-    Error: tiempos: 5124, 5073, 5110, 5083, 5086 ms
+    Error: tiempos: 5112, 5091, 5105, 5103, 5084 ms
 
     expect(received).toBeLessThan(expected)
 
     Expected: < 2000
-    Received:   5095
+    Received:   5099
 
       144 |   // Umbral de 2000 ms: limite usual para que una accion se perciba como fluida (ver plan de pruebas)
       145 |   expect(resumen.promedio_standard).toBeLessThan(2000);
@@ -858,7 +984,7 @@
       147 | });
       148 |
       149 | test('CP-51 | BUG-13 | los elementos de visual_user estan alineados igual que en standard_user', { tag: '@defecto' }, async ({ page }) => {
-        at C:\Users\ingsu\mi_app\lib\playwright\proyecto\auditoria-qa-saucedemo\tests\defectos.spec.ts:146:101
+        at .\tests\defectos.spec.ts:146:101
 
     attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
     ..\evidencias\test-results\defectos-CP-50-BUG-11-el-l-8792c-user-tarda-menos-de-2000-ms-chromium\test-failed-1.png
@@ -887,7 +1013,7 @@
 ]]>
 </failure>
 </testcase>
-<testcase name="CP-51 | BUG-13 | los elementos de visual_user estan alineados igual que en standard_user" classname="defectos.spec.ts" time="1.488">
+<testcase name="CP-51 | BUG-13 | los elementos de visual_user estan alineados igual que en standard_user" classname="defectos.spec.ts" time="3.594">
 <system-out>
 <![CDATA[
 [[ATTACHMENT|..\test-results\defectos-CP-51-BUG-13-los--88245--igual-que-en-standard-user-chromium\test-failed-1.png]]
@@ -924,7 +1050,7 @@
       170 | });
       171 |
       172 | test('CP-53 | BUG-18 | las paginas internas responden HTTP 200 al abrirlas directamente', { tag: '@defecto' }, async ({ page }) => {
-        at C:\Users\ingsu\mi_app\lib\playwright\proyecto\auditoria-qa-saucedemo\tests\defectos.spec.ts:169:70
+        at .\tests\defectos.spec.ts:169:70
 
     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
     ..\evidencias\test-results\defectos-CP-51-BUG-13-los--88245--igual-que-en-standard-user-chromium\test-failed-1.png
@@ -951,7 +1077,7 @@
 ]]>
 </failure>
 </testcase>
-<testcase name="CP-53 | BUG-18 | las paginas internas responden HTTP 200 al abrirlas directamente" classname="defectos.spec.ts" time="1.159">
+<testcase name="CP-53 | BUG-18 | las paginas internas responden HTTP 200 al abrirlas directamente" classname="defectos.spec.ts" time="3.06">
 <properties>
 <property name="estados HTTP" value="/inventory.html -&gt; 404 | /cart.html -&gt; 404 | /checkout-step-one.html -&gt; 404">
 </property>
@@ -990,7 +1116,7 @@
           |                   ^
       182 | });
       183 |
-        at C:\Users\ingsu\mi_app\lib\playwright\proyecto\auditoria-qa-saucedemo\tests\defectos.spec.ts:181:19
+        at .\tests\defectos.spec.ts:181:19
 
     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
     ..\evidencias\test-results\defectos-CP-53-BUG-18-las--d5ec5-00-al-abrirlas-directamente-chromium\test-failed-1.png
@@ -1021,8 +1147,138 @@
 </failure>
 </testcase>
 </testsuite>
-<testsuite name="regresion.spec.ts" timestamp="2026-11-16T23:39:17.287Z" hostname="chromium" tests="3" failures="3" skipped="0" time="3.329" errors="0">
-<testcase name="CP-39 | BUG-01 | regresion del flujo de compra con problem_user" classname="regresion.spec.ts" time="1.121">
+<testsuite name="inventario.spec.ts" timestamp="2026-11-16T19:18:45.895Z" hostname="chromium" tests="5" failures="0" skipped="0" time="24.828" errors="0">
+<testcase name="Catalogo, ordenamiento y detalle › CP-03 | ordenar por nombre A-Z y Z-A" classname="inventario.spec.ts" time="3.195">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\inventario-Catalogo-ordena-e06ff-rdenar-por-nombre-A-Z-y-Z-A-chromium\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Catalogo, ordenamiento y detalle › CP-04 | ordenar por precio menor a mayor y mayor a menor" classname="inventario.spec.ts" time="2.703">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\inventario-Catalogo-ordena-8341d-nor-a-mayor-y-mayor-a-menor-chromium\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Catalogo, ordenamiento y detalle › CP-07 | el detalle muestra el producto seleccionado" classname="inventario.spec.ts" time="3.237">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\inventario-Catalogo-ordena-abdd6-ra-el-producto-seleccionado-chromium\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Catalogo, ordenamiento y detalle › CP-56 | la opcion All Items del menu vuelve al catalogo" classname="inventario.spec.ts" time="7.198">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\inventario-Catalogo-ordena-ca4f8-del-menu-vuelve-al-catalogo-chromium\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Catalogo, ordenamiento y detalle › CP-57 | Dynamic Catalog muestra productos en Lazy Load, Spinner y Slider" classname="inventario.spec.ts" time="8.495">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\inventario-Catalogo-ordena-50ad6--Lazy-Load-Spinner-y-Slider-chromium\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="login.spec.ts" timestamp="2026-11-16T19:18:45.895Z" hostname="chromium" tests="12" failures="0" skipped="0" time="15.404" errors="0">
+<testcase name="Login y sesion › CP-01 | login valido con standard_user (smoke)" classname="login.spec.ts" time="1.159">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\login-Login-y-sesion-CP-01-51b5d-do-con-standard-user-smoke--chromium\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Login y sesion › CP-06 | logout desde el menu cierra la sesion" classname="login.spec.ts" time="2.038">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\login-Login-y-sesion-CP-06-b6170-de-el-menu-cierra-la-sesion-chromium\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Login y sesion › CP-08 | acceso a /inventory.html sin sesion redirige al login" classname="login.spec.ts" time="0.851">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\login-Login-y-sesion-CP-08-bf1a2-in-sesion-redirige-al-login-chromium\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Login y sesion › CP-12 | usuario con mayusculas no es aceptado" classname="login.spec.ts" time="1.18">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\login-Login-y-sesion-CP-12-32e9a-n-mayusculas-no-es-aceptado-chromium\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Login y sesion › CP-13 | contrasena en mayusculas no es aceptada" classname="login.spec.ts" time="0.962">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\login-Login-y-sesion-CP-13-f881c-n-mayusculas-no-es-aceptada-chromium\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Login y sesion › CP-22 | tabla de decision login R1: Usuario vacio, contrasena cualquiera" classname="login.spec.ts" time="0.953">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\login-Login-y-sesion-CP-22-7a45a-vacio-contrasena-cualquiera-chromium\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Login y sesion › CP-23 | tabla de decision login R2: Usuario no vacio (valido, invalido o bloqueado), contrasena vacia" classname="login.spec.ts" time="1.009">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\login-Login-y-sesion-CP-23-6dbf7--bloqueado-contrasena-vacia-chromium\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Login y sesion › CP-24 | tabla de decision login R3: Usuario valido, contrasena correcta" classname="login.spec.ts" time="1.267">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\login-Login-y-sesion-CP-24-b8e49--valido-contrasena-correcta-chromium\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Login y sesion › CP-25 | tabla de decision login R4: Usuario bloqueado, contrasena correcta" classname="login.spec.ts" time="0.981">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\login-Login-y-sesion-CP-25-a2b5a-oqueado-contrasena-correcta-chromium\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Login y sesion › CP-26 | tabla de decision login R5: Usuario valido o bloqueado, contrasena incorrecta" classname="login.spec.ts" time="0.945">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\login-Login-y-sesion-CP-26-2f578-ueado-contrasena-incorrecta-chromium\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Login y sesion › CP-27 | tabla de decision login R6: Usuario invalido, contrasena correcta o incorrecta" classname="login.spec.ts" time="0.876">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\login-Login-y-sesion-CP-27-d86dc-asena-correcta-o-incorrecta-chromium\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Login y sesion › CP-36 | Back despues de logout no debe mostrar el catalogo" classname="login.spec.ts" time="3.183">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\login-Login-y-sesion-CP-36-bdb26-no-debe-mostrar-el-catalogo-chromium\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="regresion.spec.ts" timestamp="2026-11-16T19:18:45.895Z" hostname="chromium" tests="4" failures="3" skipped="0" time="8.473" errors="0">
+<testcase name="CP-38 | regresion del flujo de compra con standard_user" classname="regresion.spec.ts" time="2.977">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\regresion-CP-38-regresion--f8635-de-compra-con-standard-user-chromium\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="CP-39 | BUG-01 | regresion del flujo de compra con problem_user" classname="regresion.spec.ts" time="2.804">
 <system-out>
 <![CDATA[
 [[ATTACHMENT|..\test-results\regresion-CP-39-BUG-01-reg-72c70--de-compra-con-problem-user-chromium\test-failed-1.png]]
@@ -1051,9 +1307,9 @@
       37 |     });
       38 |
       39 |     await test.step('3. el ordenamiento Z-A funciona', async () => {
-        at forEach (C:\Users\ingsu\mi_app\lib\playwright\proyecto\auditoria-qa-saucedemo\tests\regresion.spec.ts:36:65)
-        at C:\Users\ingsu\mi_app\lib\playwright\proyecto\auditoria-qa-saucedemo\tests\regresion.spec.ts:36:12
-        at C:\Users\ingsu\mi_app\lib\playwright\proyecto\auditoria-qa-saucedemo\tests\regresion.spec.ts:33:5
+        at forEach (.\tests\regresion.spec.ts:36:65)
+        at .\tests\regresion.spec.ts:36:12
+        at .\tests\regresion.spec.ts:33:5
 
     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
     ..\evidencias\test-results\regresion-CP-39-BUG-01-reg-72c70--de-compra-con-problem-user-chromium\test-failed-1.png
@@ -1079,7 +1335,7 @@
 ]]>
 </failure>
 </testcase>
-<testcase name="CP-40 | BUG-07 | regresion del flujo de compra con error_user" classname="regresion.spec.ts" time="1.14">
+<testcase name="CP-40 | BUG-07 | regresion del flujo de compra con error_user" classname="regresion.spec.ts" time="1.406">
 <system-out>
 <![CDATA[
 [[ATTACHMENT|..\test-results\regresion-CP-40-BUG-07-reg-721f4-jo-de-compra-con-error-user-chromium\test-failed-1.png]]
@@ -1120,8 +1376,8 @@
       44 |       await inv.ordenar('az');
       45 |     });
       46 |
-        at C:\Users\ingsu\mi_app\lib\playwright\proyecto\auditoria-qa-saucedemo\tests\regresion.spec.ts:43:23
-        at C:\Users\ingsu\mi_app\lib\playwright\proyecto\auditoria-qa-saucedemo\tests\regresion.spec.ts:39:5
+        at .\tests\regresion.spec.ts:43:23
+        at .\tests\regresion.spec.ts:39:5
 
     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
     ..\evidencias\test-results\regresion-CP-40-BUG-07-reg-721f4-jo-de-compra-con-error-user-chromium\test-failed-1.png
@@ -1148,7 +1404,7 @@
 ]]>
 </failure>
 </testcase>
-<testcase name="CP-41 | BUG-12 | regresion del flujo de compra con visual_user" classname="regresion.spec.ts" time="1.068">
+<testcase name="CP-41 | BUG-12 | regresion del flujo de compra con visual_user" classname="regresion.spec.ts" time="1.286">
 <system-out>
 <![CDATA[
 [[ATTACHMENT|..\test-results\regresion-CP-41-BUG-12-reg-549d5-o-de-compra-con-visual-user-chromium\test-failed-1.png]]
@@ -1175,12 +1431,12 @@
     -   49.99,
     -   7.99,
     -   15.99,
-    +   3.48,
-    +   27.29,
-    +   62.83,
-    +   4.76,
-    +   75.17,
-    +   76.15,
+    +   11.74,
+    +   2.35,
+    +   1.7,
+    +   75.32,
+    +   5.54,
+    +   68.96,
       ]
 
       28 |       const precios = await inv.listaPrecios();
@@ -1190,8 +1446,8 @@
       31 |     });
       32 |
       33 |     await test.step('2. cada producto muestra su propia imagen', async () => {
-        at C:\Users\ingsu\mi_app\lib\playwright\proyecto\auditoria-qa-saucedemo\tests\regresion.spec.ts:30:23
-        at C:\Users\ingsu\mi_app\lib\playwright\proyecto\auditoria-qa-saucedemo\tests\regresion.spec.ts:27:5
+        at .\tests\regresion.spec.ts:30:23
+        at .\tests\regresion.spec.ts:27:5
 
     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
     ..\evidencias\test-results\regresion-CP-41-BUG-12-reg-549d5-o-de-compra-con-visual-user-chromium\test-failed-1.png
@@ -1218,8 +1474,43 @@
 </failure>
 </testcase>
 </testsuite>
-<testsuite name="carrito.spec.ts" timestamp="2026-11-16T23:39:17.287Z" hostname="firefox" tests="2" failures="2" skipped="0" time="17.475" errors="0">
-<testcase name="Carrito › CP-37 | BUG-15 | Reset App State debe vaciar el carrito y restaurar los botones" classname="carrito.spec.ts" time="8.547">
+<testsuite name="carrito.spec.ts" timestamp="2026-11-16T19:18:45.895Z" hostname="firefox" tests="7" failures="2" skipped="0" time="46.116" errors="0">
+<testcase name="Carrito › CP-02 | agregar un producto al carrito" classname="carrito.spec.ts" time="9.359">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\carrito-Carrito-CP-02-agregar-un-producto-al-carrito-firefox\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Carrito › CP-14 | valor limite: carrito con 0 productos y contador del badge" classname="carrito.spec.ts" time="7.661">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\carrito-Carrito-CP-14-valo-e72f4-ductos-y-contador-del-badge-firefox\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Carrito › CP-15 | valor limite: carrito con 1 productos y contador del badge" classname="carrito.spec.ts" time="8.653">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\carrito-Carrito-CP-15-valo-db2fc-ductos-y-contador-del-badge-firefox\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Carrito › CP-16 | valor limite: carrito con 5 productos y contador del badge" classname="carrito.spec.ts" time="2.083">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\carrito-Carrito-CP-16-valo-8b85b-ductos-y-contador-del-badge-firefox\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Carrito › CP-17 | valor limite: carrito con 6 productos y contador del badge" classname="carrito.spec.ts" time="2.138">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\carrito-Carrito-CP-17-valo-53a32-ductos-y-contador-del-badge-firefox\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Carrito › CP-37 | BUG-15 | Reset App State debe vaciar el carrito y restaurar los botones" classname="carrito.spec.ts" time="8.148">
 <system-out>
 <![CDATA[
 [[ATTACHMENT|..\test-results\carrito-Carrito-CP-37-BUG--b4c20-ito-y-restaurar-los-botones-firefox\test-failed-1.png]]
@@ -1255,7 +1546,7 @@
       46 |   });
       47 |
       48 |   test('CP-52 | BUG-16 | el carrito de un usuario no debe aparecer al iniciar sesion con otro', { tag: '@defecto' }, async ({ page }) => {
-        at C:\Users\ingsu\mi_app\lib\playwright\proyecto\auditoria-qa-saucedemo\tests\carrito.spec.ts:45:52
+        at .\tests\carrito.spec.ts:45:52
 
     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
     ..\evidencias\test-results\carrito-Carrito-CP-37-BUG--b4c20-ito-y-restaurar-los-botones-firefox\test-failed-1.png
@@ -1277,7 +1568,7 @@
 ]]>
 </failure>
 </testcase>
-<testcase name="Carrito › CP-52 | BUG-16 | el carrito de un usuario no debe aparecer al iniciar sesion con otro" classname="carrito.spec.ts" time="8.928">
+<testcase name="Carrito › CP-52 | BUG-16 | el carrito de un usuario no debe aparecer al iniciar sesion con otro" classname="carrito.spec.ts" time="8.074">
 <system-out>
 <![CDATA[
 [[ATTACHMENT|..\test-results\carrito-Carrito-CP-52-BUG--c1fcb--al-iniciar-sesion-con-otro-firefox\test-failed-1.png]]
@@ -1313,7 +1604,7 @@
       59 |   });
       60 | });
       61 |
-        at C:\Users\ingsu\mi_app\lib\playwright\proyecto\auditoria-qa-saucedemo\tests\carrito.spec.ts:58:29
+        at .\tests\carrito.spec.ts:58:29
 
     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
     ..\evidencias\test-results\carrito-Carrito-CP-52-BUG--c1fcb--al-iniciar-sesion-con-otro-firefox\test-failed-1.png
@@ -1336,8 +1627,22 @@
 </failure>
 </testcase>
 </testsuite>
-<testsuite name="checkout.spec.ts" timestamp="2026-11-16T23:39:17.287Z" hostname="firefox" tests="3" failures="3" skipped="0" time="22.699" errors="0">
-<testcase name="Checkout › CP-10 | BUG-14 | no se debe poder iniciar el checkout con el carrito vacio" classname="checkout.spec.ts" time="7.354">
+<testsuite name="checkout.spec.ts" timestamp="2026-11-16T19:18:45.895Z" hostname="firefox" tests="16" failures="3" skipped="0" time="91.823" errors="0">
+<testcase name="Checkout › CP-05 | compra completa con standard_user (smoke)" classname="checkout.spec.ts" time="2.101">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\checkout-Checkout-CP-05-co-50e5d-ta-con-standard-user-smoke--firefox\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Checkout › CP-09 | continuar el checkout sin datos muestra error" classname="checkout.spec.ts" time="1.711">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\checkout-Checkout-CP-09-co-5ca5a-out-sin-datos-muestra-error-firefox\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Checkout › CP-10 | BUG-14 | no se debe poder iniciar el checkout con el carrito vacio" classname="checkout.spec.ts" time="17.341">
 <system-out>
 <![CDATA[
 [[ATTACHMENT|..\test-results\checkout-Checkout-CP-10-BU-0e919-eckout-con-el-carrito-vacio-firefox\test-failed-1.png]]
@@ -1360,7 +1665,7 @@
 
     Call log:
       - Expect "not toHaveURL" with timeout 5000ms
-        14 × locator resolved to <html lang="en">…</html>
+        13 × locator resolved to <html lang="en">…</html>
            - unexpected value "https://www.saucedemo.com/checkout-step-one.html"
 
 
@@ -1371,7 +1676,7 @@
       56 |   });
       57 |
       58 |   test('CP-11 | BUG-17 | el codigo postal no debe aceptar letras ni simbolos', { tag: ['@negativa', '@defecto'] }, async ({ page }) => {
-        at C:\Users\ingsu\mi_app\lib\playwright\proyecto\auditoria-qa-saucedemo\tests\checkout.spec.ts:55:28
+        at .\tests\checkout.spec.ts:55:28
 
     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
     ..\evidencias\test-results\checkout-Checkout-CP-10-BU-0e919-eckout-con-el-carrito-vacio-firefox\test-failed-1.png
@@ -1393,7 +1698,7 @@
 ]]>
 </failure>
 </testcase>
-<testcase name="Checkout › CP-11 | BUG-17 | el codigo postal no debe aceptar letras ni simbolos" classname="checkout.spec.ts" time="7.762">
+<testcase name="Checkout › CP-11 | BUG-17 | el codigo postal no debe aceptar letras ni simbolos" classname="checkout.spec.ts" time="7.272">
 <system-out>
 <![CDATA[
 [[ATTACHMENT|..\test-results\checkout-Checkout-CP-11-BU-305c3--aceptar-letras-ni-simbolos-firefox\test-failed-1.png]]
@@ -1427,7 +1732,7 @@
       66 |     await expect(co.error).toBeVisible();
       67 |   });
       68 |
-        at C:\Users\ingsu\mi_app\lib\playwright\proyecto\auditoria-qa-saucedemo\tests\checkout.spec.ts:65:24
+        at .\tests\checkout.spec.ts:65:24
 
     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
     ..\evidencias\test-results\checkout-Checkout-CP-11-BU-305c3--aceptar-letras-ni-simbolos-firefox\test-failed-1.png
@@ -1449,7 +1754,77 @@
 ]]>
 </failure>
 </testcase>
-<testcase name="Checkout › CP-35 | BUG-19 | no se debe mostrar la confirmacion de compra entrando directo a /checkout-complete.html" classname="checkout.spec.ts" time="7.583">
+<testcase name="Checkout › CP-18 | valor limite: calculo de impuesto y total con 1 producto" classname="checkout.spec.ts" time="7.816">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\checkout-Checkout-CP-18-va-dffb2-esto-y-total-con-1-producto-firefox\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Checkout › CP-19 | valor limite: calculo de impuesto y total con los 6 productos" classname="checkout.spec.ts" time="6.507">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\checkout-Checkout-CP-19-va-5bed8-y-total-con-los-6-productos-firefox\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Checkout › CP-20 | valor limite: First Name con 1 y 50 caracteres" classname="checkout.spec.ts" time="8.791">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\checkout-Checkout-CP-20-va-46286--Name-con-1-y-50-caracteres-firefox\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Checkout › CP-21 | valor limite: First Name con 255 caracteres" classname="checkout.spec.ts" time="2.297">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\checkout-Checkout-CP-21-va-e3dbd-rst-Name-con-255-caracteres-firefox\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Checkout › CP-28 | tabla de decision checkout C1: First Name vacio (Last Name y Postal Code cualquiera)" classname="checkout.spec.ts" time="2.11">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\checkout-Checkout-CP-28-ta-3b580-e-y-Postal-Code-cualquiera--firefox\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Checkout › CP-29 | tabla de decision checkout C2: First Name lleno, Last Name vacio (Postal Code cualquiera)" classname="checkout.spec.ts" time="2.056">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\checkout-Checkout-CP-29-ta-14311-cio-Postal-Code-cualquiera--firefox\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Checkout › CP-30 | tabla de decision checkout C3: First Name y Last Name llenos, Postal Code vacio" classname="checkout.spec.ts" time="2.392">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\checkout-Checkout-CP-30-ta-1bf8b-me-llenos-Postal-Code-vacio-firefox\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Checkout › CP-31 | tabla de decision checkout C4: Los tres campos llenos" classname="checkout.spec.ts" time="2.722">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\checkout-Checkout-CP-31-ta-88815-t-C4-Los-tres-campos-llenos-firefox\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Checkout › CP-32 | transicion valida Inventario &gt; Carrito &gt; Informacion &gt; Resumen &gt; Completado &gt; Inventario" classname="checkout.spec.ts" time="3.057">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\checkout-Checkout-CP-32-tr-f8cfe-sumen-Completado-Inventario-firefox\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Checkout › CP-33 | transicion Cancel en Informacion vuelve al carrito y en Resumen al inventario" classname="checkout.spec.ts" time="3.108">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\checkout-Checkout-CP-33-tr-5bf2f--y-en-Resumen-al-inventario-firefox\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Checkout › CP-35 | BUG-19 | no se debe mostrar la confirmacion de compra entrando directo a /checkout-complete.html" classname="checkout.spec.ts" time="21.02">
 <system-out>
 <![CDATA[
 [[ATTACHMENT|..\test-results\checkout-Checkout-CP-35-BU-878c6-to-a-checkout-complete-html-firefox\test-failed-1.png]]
@@ -1485,7 +1860,7 @@
       174 |   });
       175 | });
       176 |
-        at C:\Users\ingsu\mi_app\lib\playwright\proyecto\auditoria-qa-saucedemo\tests\checkout.spec.ts:173:35
+        at .\tests\checkout.spec.ts:173:35
 
     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
     ..\evidencias\test-results\checkout-Checkout-CP-35-BU-878c6-to-a-checkout-complete-html-firefox\test-failed-1.png
@@ -1511,9 +1886,16 @@
 ]]>
 </failure>
 </testcase>
+<testcase name="CP-34 | transicion invalida: /checkout-step-two.html sin sesion redirige al login" classname="checkout.spec.ts" time="1.522">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\checkout-CP-34-transicion--2ab60-in-sesion-redirige-al-login-firefox\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
 </testsuite>
-<testsuite name="defectos.spec.ts" timestamp="2026-11-16T23:39:17.287Z" hostname="firefox" tests="11" failures="11" skipped="0" time="66.182" errors="0">
-<testcase name="problem_user › CP-42 | BUG-02 | ordenar Z-A con problem_user" classname="defectos.spec.ts" time="2.442">
+<testsuite name="defectos.spec.ts" timestamp="2026-11-16T19:18:45.895Z" hostname="firefox" tests="11" failures="11" skipped="0" time="135.292" errors="0">
+<testcase name="problem_user › CP-42 | BUG-02 | ordenar Z-A con problem_user" classname="defectos.spec.ts" time="2.131">
 <system-out>
 <![CDATA[
 [[ATTACHMENT|..\test-results\defectos-problem-user-CP-4-7f46e-rdenar-Z-A-con-problem-user-firefox\test-failed-1.png]]
@@ -1554,7 +1936,7 @@
       47 |   });
       48 |
       49 |   test('CP-43 | BUG-03 | Add to cart y Remove responden en todos los productos con problem_user', { tag: '@defecto' }, async ({ page }) => {
-        at C:\Users\ingsu\mi_app\lib\playwright\proyecto\auditoria-qa-saucedemo\tests\defectos.spec.ts:46:38
+        at .\tests\defectos.spec.ts:46:38
 
     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
     ..\evidencias\test-results\defectos-problem-user-CP-4-7f46e-rdenar-Z-A-con-problem-user-firefox\test-failed-1.png
@@ -1576,7 +1958,7 @@
 ]]>
 </failure>
 </testcase>
-<testcase name="problem_user › CP-43 | BUG-03 | Add to cart y Remove responden en todos los productos con problem_user" classname="defectos.spec.ts" time="2.71">
+<testcase name="problem_user › CP-43 | BUG-03 | Add to cart y Remove responden en todos los productos con problem_user" classname="defectos.spec.ts" time="3.346">
 <system-out>
 <![CDATA[
 [[ATTACHMENT|..\test-results\defectos-problem-user-CP-4-537c3--productos-con-problem-user-firefox\test-failed-1.png]]
@@ -1615,7 +1997,7 @@
       53 |   });
       54 |
       55 |   test('CP-44 | BUG-04 | escribir el apellido no debe cambiar el nombre con problem_user', { tag: '@defecto' }, async ({ page }) => {
-        at C:\Users\ingsu\mi_app\lib\playwright\proyecto\auditoria-qa-saucedemo\tests\defectos.spec.ts:52:57
+        at .\tests\defectos.spec.ts:52:57
 
     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
     ..\evidencias\test-results\defectos-problem-user-CP-4-537c3--productos-con-problem-user-firefox\test-failed-1.png
@@ -1637,7 +2019,7 @@
 ]]>
 </failure>
 </testcase>
-<testcase name="problem_user › CP-44 | BUG-04 | escribir el apellido no debe cambiar el nombre con problem_user" classname="defectos.spec.ts" time="2.673">
+<testcase name="problem_user › CP-44 | BUG-04 | escribir el apellido no debe cambiar el nombre con problem_user" classname="defectos.spec.ts" time="2.691">
 <system-out>
 <![CDATA[
 [[ATTACHMENT|..\test-results\defectos-problem-user-CP-4-aed7e--el-nombre-con-problem-user-firefox\test-failed-1.png]]
@@ -1672,7 +2054,7 @@
       61 |   });
       62 |
       63 |   test('CP-45 | BUG-05 | el detalle corresponde al producto seleccionado con problem_user', { tag: '@defecto' }, async ({ page }) => {
-        at C:\Users\ingsu\mi_app\lib\playwright\proyecto\auditoria-qa-saucedemo\tests\defectos.spec.ts:60:32
+        at .\tests\defectos.spec.ts:60:32
 
     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
     ..\evidencias\test-results\defectos-problem-user-CP-4-aed7e--el-nombre-con-problem-user-firefox\test-failed-1.png
@@ -1694,7 +2076,7 @@
 ]]>
 </failure>
 </testcase>
-<testcase name="problem_user › CP-45 | BUG-05 | el detalle corresponde al producto seleccionado con problem_user" classname="defectos.spec.ts" time="4.325">
+<testcase name="problem_user › CP-45 | BUG-05 | el detalle corresponde al producto seleccionado con problem_user" classname="defectos.spec.ts" time="13.132">
 <system-out>
 <![CDATA[
 [[ATTACHMENT|..\test-results\defectos-problem-user-CP-4-0d589-leccionado-con-problem-user-firefox\test-failed-1.png]]
@@ -1733,7 +2115,7 @@
       75 |   });
       76 |
       77 |   test('CP-46 | BUG-06 | el enlace About lleva a una pagina valida con problem_user', { tag: '@defecto' }, async ({ page }) => {
-        at C:\Users\ingsu\mi_app\lib\playwright\proyecto\auditoria-qa-saucedemo\tests\defectos.spec.ts:74:57
+        at .\tests\defectos.spec.ts:74:57
 
     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
     ..\evidencias\test-results\defectos-problem-user-CP-4-0d589-leccionado-con-problem-user-firefox\test-failed-1.png
@@ -1764,7 +2146,7 @@
 ]]>
 </failure>
 </testcase>
-<testcase name="problem_user › CP-46 | BUG-06 | el enlace About lleva a una pagina valida con problem_user" classname="defectos.spec.ts" time="2.868">
+<testcase name="problem_user › CP-46 | BUG-06 | el enlace About lleva a una pagina valida con problem_user" classname="defectos.spec.ts" time="14.51">
 <properties>
 <property name="enlace About" value="https://saucelabs.com/error/404 -&gt; HTTP 404">
 </property>
@@ -1797,7 +2179,7 @@
       86 |   });
       87 | });
       88 |
-        at C:\Users\ingsu\mi_app\lib\playwright\proyecto\auditoria-qa-saucedemo\tests\defectos.spec.ts:85:58
+        at .\tests\defectos.spec.ts:85:58
 
     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
     ..\evidencias\test-results\defectos-problem-user-CP-4-25a80-ina-valida-con-problem-user-firefox\test-failed-1.png
@@ -1819,7 +2201,7 @@
 ]]>
 </failure>
 </testcase>
-<testcase name="error_user › CP-47 | BUG-08 | Add to cart y Remove responden en todos los productos con error_user" classname="defectos.spec.ts" time="3.188">
+<testcase name="error_user › CP-47 | BUG-08 | Add to cart y Remove responden en todos los productos con error_user" classname="defectos.spec.ts" time="10.92">
 <properties>
 <property name="excepciones" value="[excepcion] Failed to add item to the cart. | [excepcion] Failed to add item to the cart. | [excepcion] Failed to add item to the cart. | [excepcion] Failed to remove item from cart. | [excepcion] Failed to remove item from cart. | [excepcion] Failed to remove item from cart.">
 </property>
@@ -1862,7 +2244,7 @@
        99 |   });
       100 |
       101 |   test('CP-48 | BUG-09 | el campo Last Name acepta texto con error_user', { tag: '@defecto' }, async ({ page }) => {
-        at C:\Users\ingsu\mi_app\lib\playwright\proyecto\auditoria-qa-saucedemo\tests\defectos.spec.ts:98:57
+        at .\tests\defectos.spec.ts:98:57
 
     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
     ..\evidencias\test-results\defectos-error-user-CP-47--e7c32-os-productos-con-error-user-firefox\test-failed-1.png
@@ -1893,7 +2275,7 @@
 ]]>
 </failure>
 </testcase>
-<testcase name="error_user › CP-48 | BUG-09 | el campo Last Name acepta texto con error_user" classname="defectos.spec.ts" time="2.33">
+<testcase name="error_user › CP-48 | BUG-09 | el campo Last Name acepta texto con error_user" classname="defectos.spec.ts" time="13.655">
 <system-out>
 <![CDATA[
 [[ATTACHMENT|..\test-results\defectos-error-user-CP-48--a8bb0-acepta-texto-con-error-user-firefox\test-failed-1.png]]
@@ -1920,7 +2302,7 @@
       107 |   });
       108 |
       109 |   test('CP-49 | BUG-10 | Finish completa la compra con error_user', { tag: '@defecto' }, async ({ page }) => {
-        at C:\Users\ingsu\mi_app\lib\playwright\proyecto\auditoria-qa-saucedemo\tests\defectos.spec.ts:106:43
+        at .\tests\defectos.spec.ts:106:43
 
     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
     ..\evidencias\test-results\defectos-error-user-CP-48--a8bb0-acepta-texto-con-error-user-firefox\test-failed-1.png
@@ -1950,7 +2332,7 @@
 ]]>
 </failure>
 </testcase>
-<testcase name="error_user › CP-49 | BUG-10 | Finish completa la compra con error_user" classname="defectos.spec.ts" time="7.624">
+<testcase name="error_user › CP-49 | BUG-10 | Finish completa la compra con error_user" classname="defectos.spec.ts" time="17.196">
 <system-out>
 <![CDATA[
 [[ATTACHMENT|..\test-results\defectos-error-user-CP-49--03b05-ta-la-compra-con-error-user-firefox\test-failed-1.png]]
@@ -1973,7 +2355,7 @@
 
     Call log:
       - Expect "toHaveURL" with timeout 5000ms
-        14 × locator resolved to <html lang="en">…</html>
+        13 × locator resolved to <html lang="en">…</html>
            - unexpected value "https://www.saucedemo.com/checkout-step-two.html"
 
 
@@ -1984,7 +2366,7 @@
       118 |     await expect(co.confirmacion).toHaveText('Thank you for your order!');
       119 |   });
       120 | });
-        at C:\Users\ingsu\mi_app\lib\playwright\proyecto\auditoria-qa-saucedemo\tests\defectos.spec.ts:117:24
+        at .\tests\defectos.spec.ts:117:24
 
     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
     ..\evidencias\test-results\defectos-error-user-CP-49--03b05-ta-la-compra-con-error-user-firefox\test-failed-1.png
@@ -2014,7 +2396,7 @@
 ]]>
 </failure>
 </testcase>
-<testcase name="CP-50 | BUG-11 | el login de performance_glitch_user tarda menos de 2000 ms" classname="defectos.spec.ts" time="31.424">
+<testcase name="CP-50 | BUG-11 | el login de performance_glitch_user tarda menos de 2000 ms" classname="defectos.spec.ts" time="37.12">
 <system-out>
 <![CDATA[
 [[ATTACHMENT|..\test-results\defectos-CP-50-BUG-11-el-l-8792c-user-tarda-menos-de-2000-ms-firefox\test-failed-1.png]]
@@ -2026,15 +2408,15 @@
 [[ATTACHMENT|..\test-results\defectos-CP-50-BUG-11-el-l-8792c-user-tarda-menos-de-2000-ms-firefox\trace.zip]]
 ]]>
 </system-out>
-<failure message="tiempos: 5107, 5221, 5152, 5143, 5123 ms" type="expect.toBeLessThan">
+<failure message="tiempos: 5120, 5112, 5126, 5118, 5115 ms" type="expect.toBeLessThan">
 <![CDATA[  [firefox] › defectos.spec.ts:122:1 › CP-50 | BUG-11 | el login de performance_glitch_user tarda menos de 2000 ms @defecto @rendimiento 
 
-    Error: tiempos: 5107, 5221, 5152, 5143, 5123 ms
+    Error: tiempos: 5120, 5112, 5126, 5118, 5115 ms
 
     expect(received).toBeLessThan(expected)
 
     Expected: < 2000
-    Received:   5149
+    Received:   5118
 
       144 |   // Umbral de 2000 ms: limite usual para que una accion se perciba como fluida (ver plan de pruebas)
       145 |   expect(resumen.promedio_standard).toBeLessThan(2000);
@@ -2043,23 +2425,19 @@
       147 | });
       148 |
       149 | test('CP-51 | BUG-13 | los elementos de visual_user estan alineados igual que en standard_user', { tag: '@defecto' }, async ({ page }) => {
-        at C:\Users\ingsu\mi_app\lib\playwright\proyecto\auditoria-qa-saucedemo\tests\defectos.spec.ts:146:101
+        at .\tests\defectos.spec.ts:146:101
 
     attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
     ..\evidencias\test-results\defectos-CP-50-BUG-11-el-l-8792c-user-tarda-menos-de-2000-ms-firefox\test-failed-1.png
     ────────────────────────────────────────────────────────────────────────────────────────────────
 
-    attachment #3: errores-consola-y-red.txt (text/plain) ──────────────────────────────────────────
-    [consola] [JavaScript Error: "downloadable font: download failed (font-family: "DM Sans" style:normal weight:500 width:100 src index:0): status=2152398850 source: https://fonts.gstatic.com/s/dmsans/v17/rP2Yp2ywxg089UriI5-g4vlH9VoD8Cmcqbu0-K6z8GXhnU0.woff2"]
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #4: video (video/webm) ──────────────────────────────────────────────────────────────
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
     ..\evidencias\test-results\defectos-CP-50-BUG-11-el-l-8792c-user-tarda-menos-de-2000-ms-firefox\video.webm
     ────────────────────────────────────────────────────────────────────────────────────────────────
 
     Error Context: ..\evidencias\test-results\defectos-CP-50-BUG-11-el-l-8792c-user-tarda-menos-de-2000-ms-firefox\error-context.md
 
-    attachment #6: trace (application/zip) ─────────────────────────────────────────────────────────
+    attachment #5: trace (application/zip) ─────────────────────────────────────────────────────────
     ..\evidencias\test-results\defectos-CP-50-BUG-11-el-l-8792c-user-tarda-menos-de-2000-ms-firefox\trace.zip
     Usage:
 
@@ -2069,7 +2447,7 @@
 ]]>
 </failure>
 </testcase>
-<testcase name="CP-51 | BUG-13 | los elementos de visual_user estan alineados igual que en standard_user" classname="defectos.spec.ts" time="3.044">
+<testcase name="CP-51 | BUG-13 | los elementos de visual_user estan alineados igual que en standard_user" classname="defectos.spec.ts" time="8.065">
 <system-out>
 <![CDATA[
 [[ATTACHMENT|..\test-results\defectos-CP-51-BUG-13-los--88245--igual-que-en-standard-user-firefox\test-failed-1.png]]
@@ -2106,7 +2484,7 @@
       170 | });
       171 |
       172 | test('CP-53 | BUG-18 | las paginas internas responden HTTP 200 al abrirlas directamente', { tag: '@defecto' }, async ({ page }) => {
-        at C:\Users\ingsu\mi_app\lib\playwright\proyecto\auditoria-qa-saucedemo\tests\defectos.spec.ts:169:70
+        at .\tests\defectos.spec.ts:169:70
 
     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
     ..\evidencias\test-results\defectos-CP-51-BUG-13-los--88245--igual-que-en-standard-user-firefox\test-failed-1.png
@@ -2128,7 +2506,7 @@
 ]]>
 </failure>
 </testcase>
-<testcase name="CP-53 | BUG-18 | las paginas internas responden HTTP 200 al abrirlas directamente" classname="defectos.spec.ts" time="3.554">
+<testcase name="CP-53 | BUG-18 | las paginas internas responden HTTP 200 al abrirlas directamente" classname="defectos.spec.ts" time="12.526">
 <properties>
 <property name="estados HTTP" value="/inventory.html -&gt; 404 | /cart.html -&gt; 404 | /checkout-step-one.html -&gt; 404">
 </property>
@@ -2167,7 +2545,7 @@
           |                   ^
       182 | });
       183 |
-        at C:\Users\ingsu\mi_app\lib\playwright\proyecto\auditoria-qa-saucedemo\tests\defectos.spec.ts:181:19
+        at .\tests\defectos.spec.ts:181:19
 
     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
     ..\evidencias\test-results\defectos-CP-53-BUG-18-las--d5ec5-00-al-abrirlas-directamente-firefox\test-failed-1.png
@@ -2196,8 +2574,138 @@
 </failure>
 </testcase>
 </testsuite>
-<testsuite name="regresion.spec.ts" timestamp="2026-11-16T23:39:17.287Z" hostname="firefox" tests="3" failures="3" skipped="0" time="11.911" errors="0">
-<testcase name="CP-39 | BUG-01 | regresion del flujo de compra con problem_user" classname="regresion.spec.ts" time="3.489">
+<testsuite name="inventario.spec.ts" timestamp="2026-11-16T19:18:45.895Z" hostname="firefox" tests="5" failures="0" skipped="0" time="48.214" errors="0">
+<testcase name="Catalogo, ordenamiento y detalle › CP-03 | ordenar por nombre A-Z y Z-A" classname="inventario.spec.ts" time="10.645">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\inventario-Catalogo-ordena-e06ff-rdenar-por-nombre-A-Z-y-Z-A-firefox\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Catalogo, ordenamiento y detalle › CP-04 | ordenar por precio menor a mayor y mayor a menor" classname="inventario.spec.ts" time="4.97">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\inventario-Catalogo-ordena-8341d-nor-a-mayor-y-mayor-a-menor-firefox\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Catalogo, ordenamiento y detalle › CP-07 | el detalle muestra el producto seleccionado" classname="inventario.spec.ts" time="3.122">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\inventario-Catalogo-ordena-abdd6-ra-el-producto-seleccionado-firefox\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Catalogo, ordenamiento y detalle › CP-56 | la opcion All Items del menu vuelve al catalogo" classname="inventario.spec.ts" time="2.977">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\inventario-Catalogo-ordena-ca4f8-del-menu-vuelve-al-catalogo-firefox\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Catalogo, ordenamiento y detalle › CP-57 | Dynamic Catalog muestra productos en Lazy Load, Spinner y Slider" classname="inventario.spec.ts" time="26.5">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\inventario-Catalogo-ordena-50ad6--Lazy-Load-Spinner-y-Slider-firefox\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="login.spec.ts" timestamp="2026-11-16T19:18:45.895Z" hostname="firefox" tests="12" failures="0" skipped="0" time="23.929" errors="0">
+<testcase name="Login y sesion › CP-01 | login valido con standard_user (smoke)" classname="login.spec.ts" time="2.075">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\login-Login-y-sesion-CP-01-51b5d-do-con-standard-user-smoke--firefox\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Login y sesion › CP-06 | logout desde el menu cierra la sesion" classname="login.spec.ts" time="2.923">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\login-Login-y-sesion-CP-06-b6170-de-el-menu-cierra-la-sesion-firefox\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Login y sesion › CP-08 | acceso a /inventory.html sin sesion redirige al login" classname="login.spec.ts" time="1.411">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\login-Login-y-sesion-CP-08-bf1a2-in-sesion-redirige-al-login-firefox\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Login y sesion › CP-12 | usuario con mayusculas no es aceptado" classname="login.spec.ts" time="1.721">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\login-Login-y-sesion-CP-12-32e9a-n-mayusculas-no-es-aceptado-firefox\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Login y sesion › CP-13 | contrasena en mayusculas no es aceptada" classname="login.spec.ts" time="1.651">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\login-Login-y-sesion-CP-13-f881c-n-mayusculas-no-es-aceptada-firefox\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Login y sesion › CP-22 | tabla de decision login R1: Usuario vacio, contrasena cualquiera" classname="login.spec.ts" time="1.749">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\login-Login-y-sesion-CP-22-7a45a-vacio-contrasena-cualquiera-firefox\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Login y sesion › CP-23 | tabla de decision login R2: Usuario no vacio (valido, invalido o bloqueado), contrasena vacia" classname="login.spec.ts" time="1.745">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\login-Login-y-sesion-CP-23-6dbf7--bloqueado-contrasena-vacia-firefox\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Login y sesion › CP-24 | tabla de decision login R3: Usuario valido, contrasena correcta" classname="login.spec.ts" time="1.982">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\login-Login-y-sesion-CP-24-b8e49--valido-contrasena-correcta-firefox\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Login y sesion › CP-25 | tabla de decision login R4: Usuario bloqueado, contrasena correcta" classname="login.spec.ts" time="1.664">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\login-Login-y-sesion-CP-25-a2b5a-oqueado-contrasena-correcta-firefox\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Login y sesion › CP-26 | tabla de decision login R5: Usuario valido o bloqueado, contrasena incorrecta" classname="login.spec.ts" time="1.902">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\login-Login-y-sesion-CP-26-2f578-ueado-contrasena-incorrecta-firefox\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Login y sesion › CP-27 | tabla de decision login R6: Usuario invalido, contrasena correcta o incorrecta" classname="login.spec.ts" time="1.902">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\login-Login-y-sesion-CP-27-d86dc-asena-correcta-o-incorrecta-firefox\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Login y sesion › CP-36 | Back despues de logout no debe mostrar el catalogo" classname="login.spec.ts" time="3.204">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\login-Login-y-sesion-CP-36-bdb26-no-debe-mostrar-el-catalogo-firefox\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="regresion.spec.ts" timestamp="2026-11-16T19:18:45.895Z" hostname="firefox" tests="4" failures="3" skipped="0" time="16.002" errors="0">
+<testcase name="CP-38 | regresion del flujo de compra con standard_user" classname="regresion.spec.ts" time="2.773">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\regresion-CP-38-regresion--f8635-de-compra-con-standard-user-firefox\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="CP-39 | BUG-01 | regresion del flujo de compra con problem_user" classname="regresion.spec.ts" time="7.984">
 <system-out>
 <![CDATA[
 [[ATTACHMENT|..\test-results\regresion-CP-39-BUG-01-reg-72c70--de-compra-con-problem-user-firefox\test-failed-1.png]]
@@ -2226,9 +2734,9 @@
       37 |     });
       38 |
       39 |     await test.step('3. el ordenamiento Z-A funciona', async () => {
-        at forEach (C:\Users\ingsu\mi_app\lib\playwright\proyecto\auditoria-qa-saucedemo\tests\regresion.spec.ts:36:65)
-        at C:\Users\ingsu\mi_app\lib\playwright\proyecto\auditoria-qa-saucedemo\tests\regresion.spec.ts:36:12
-        at C:\Users\ingsu\mi_app\lib\playwright\proyecto\auditoria-qa-saucedemo\tests\regresion.spec.ts:33:5
+        at forEach (.\tests\regresion.spec.ts:36:65)
+        at .\tests\regresion.spec.ts:36:12
+        at .\tests\regresion.spec.ts:33:5
 
     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
     ..\evidencias\test-results\regresion-CP-39-BUG-01-reg-72c70--de-compra-con-problem-user-firefox\test-failed-1.png
@@ -2250,7 +2758,7 @@
 ]]>
 </failure>
 </testcase>
-<testcase name="CP-40 | BUG-07 | regresion del flujo de compra con error_user" classname="regresion.spec.ts" time="3.854">
+<testcase name="CP-40 | BUG-07 | regresion del flujo de compra con error_user" classname="regresion.spec.ts" time="3.224">
 <system-out>
 <![CDATA[
 [[ATTACHMENT|..\test-results\regresion-CP-40-BUG-07-reg-721f4-jo-de-compra-con-error-user-firefox\test-failed-1.png]]
@@ -2291,8 +2799,8 @@
       44 |       await inv.ordenar('az');
       45 |     });
       46 |
-        at C:\Users\ingsu\mi_app\lib\playwright\proyecto\auditoria-qa-saucedemo\tests\regresion.spec.ts:43:23
-        at C:\Users\ingsu\mi_app\lib\playwright\proyecto\auditoria-qa-saucedemo\tests\regresion.spec.ts:39:5
+        at .\tests\regresion.spec.ts:43:23
+        at .\tests\regresion.spec.ts:39:5
 
     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
     ..\evidencias\test-results\regresion-CP-40-BUG-07-reg-721f4-jo-de-compra-con-error-user-firefox\test-failed-1.png
@@ -2318,7 +2826,7 @@
 ]]>
 </failure>
 </testcase>
-<testcase name="CP-41 | BUG-12 | regresion del flujo de compra con visual_user" classname="regresion.spec.ts" time="4.568">
+<testcase name="CP-41 | BUG-12 | regresion del flujo de compra con visual_user" classname="regresion.spec.ts" time="2.021">
 <system-out>
 <![CDATA[
 [[ATTACHMENT|..\test-results\regresion-CP-41-BUG-12-reg-549d5-o-de-compra-con-visual-user-firefox\test-failed-1.png]]
@@ -2345,12 +2853,12 @@
     -   49.99,
     -   7.99,
     -   15.99,
-    +   74.78,
-    +   3.36,
-    +   65.08,
-    +   20.54,
-    +   49.78,
-    +   41.27,
+    +   95.53,
+    +   41.77,
+    +   50.42,
+    +   55.25,
+    +   27.13,
+    +   29.06,
       ]
 
       28 |       const precios = await inv.listaPrecios();
@@ -2360,8 +2868,8 @@
       31 |     });
       32 |
       33 |     await test.step('2. cada producto muestra su propia imagen', async () => {
-        at C:\Users\ingsu\mi_app\lib\playwright\proyecto\auditoria-qa-saucedemo\tests\regresion.spec.ts:30:23
-        at C:\Users\ingsu\mi_app\lib\playwright\proyecto\auditoria-qa-saucedemo\tests\regresion.spec.ts:27:5
+        at .\tests\regresion.spec.ts:30:23
+        at .\tests\regresion.spec.ts:27:5
 
     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
     ..\evidencias\test-results\regresion-CP-41-BUG-12-reg-549d5-o-de-compra-con-visual-user-firefox\test-failed-1.png
