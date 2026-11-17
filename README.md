@@ -11,7 +11,6 @@ en **Playwright + TypeScript**, siguiendo el patrón Page Object Model con datos
 
 | Qué | Archivo |
 |---|---|
-| **Guía para correr el proyecto y verificar los 19 bugs** (abrir con doble clic, funciona sin internet) | [`docs/Guia_de_verificacion.html`](docs/Guia_de_verificacion.html) |
 | Plan de pruebas | `docs/01_Plan_de_pruebas.docx` |
 | Casos de prueba (57) | `docs/02_Casos_de_prueba.xlsx` |
 | Reporte de defectos (19 fichas con capturas) | `docs/03_Reporte_de_defectos.docx` |
